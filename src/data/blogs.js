@@ -1,17 +1,17 @@
 export const blogs = [
-    {
-        slug: "how-ai-is-changing-digital-marketing-education",
-        title: "How AI Is Changing Digital Marketing Education",
-        excerpt: "AI is transforming digital marketing education by introducing new tools and reshaping how students learn, practice, and prepare for real work.",
-        date: "Apr 23, 2026",
-        readTime: "6 min read",
-        category: "AI & Automation",
-        author: "Harsh Pareek",
-        authorRole: "Agency Owner · 15+ Years",
-        accentColor: "#0EA5E9",
-        tags: ["ai", "digital-marketing", "education", "automation"],
-        cover: "https://www.operatingmedia.com/wp-content/uploads/2026/04/Article-1000-x-500-px-27.png",
-        content: `
+  {
+    slug: "how-ai-is-changing-digital-marketing-education",
+    title: "How AI Is Changing Digital Marketing Education",
+    excerpt: "AI is transforming digital marketing education by introducing new tools and reshaping how students learn, practice, and prepare for real work.",
+    date: "Apr 23, 2026",
+    readTime: "6 min read",
+    category: "AI & Automation",
+    author: "Harsh Pareek",
+    authorRole: "Agency Owner · 15+ Years",
+    accentColor: "#0EA5E9",
+    tags: ["ai", "digital-marketing", "education", "automation"],
+    cover: "https://www.operatingmedia.com/wp-content/uploads/2026/04/Article-1000-x-500-px-27.png",
+    content: `
       <h2>Why AI matters in Digital Marketing</h2>
       <p>Digital marketing evolves rapidly, and AI accelerates that pace. Students must now grasp how AI assistants, automation, and prediction influence content, search, ads, and customer engagement. Digital marketing education cannot rely on static lectures or outdated case studies.</p>
       <p>AI enables personalized support. In AI-enabled environments, students get faster feedback, targeted practice, and learning paths tailored to their strengths and weaknesses. This makes learning more efficient for all levels.</p>
@@ -56,20 +56,20 @@ export const blogs = [
       <p>AI is making digital marketing education more practical, personalized, and aligned with employer needs. Institutes must update syllabi, improve learning methods, and prepare students for a world where automation and human thinking coexist.</p>
       <p>This is a major opportunity for students. The more they master AI tools and digital workflows, the better prepared they'll be for future roles. For institutes like Operating Media, now is the time to teach digital marketing to match industry trends, not outdated practices.</p>
     `,
-    },
-    {
-        slug: "students-can-start-learning-digital-marketing-before-college",
-        title: "Students Can Start Learning Digital Marketing Before College",
-        excerpt: "At Operating Media, we believe students do not need to wait until college to learn digital marketing. The earlier you begin, the more time you have to build practical skills.",
-        date: "Apr 20, 2026",
-        readTime: "8 min read",
-        category: "Digital Marketing Course",
-        author: "Shraddha Rane",
-        authorRole: "Corporate Trainer · 8+ Years",
-        accentColor: "#10B981",
-        tags: ["students", "beginners", "digital-marketing", "career"],
-        cover: "https://www.operatingmedia.com/wp-content/uploads/2026/04/Article-1000-x-500-px-26.png",
-        content: `
+  },
+  {
+    slug: "students-can-start-learning-digital-marketing-before-college",
+    title: "Students Can Start Learning Digital Marketing Before College",
+    excerpt: "At Operating Media, we believe students do not need to wait until college to learn digital marketing. The earlier you begin, the more time you have to build practical skills.",
+    date: "Apr 20, 2026",
+    readTime: "8 min read",
+    category: "Digital Marketing Course",
+    author: "Shraddha Rane",
+    authorRole: "Corporate Trainer · 8+ Years",
+    accentColor: "#10B981",
+    tags: ["students", "beginners", "digital-marketing", "career"],
+    cover: "https://www.operatingmedia.com/wp-content/uploads/2026/04/Article-1000-x-500-px-26.png",
+    content: `
       <p>At Operating Media, we believe students do not need to wait until college to learn digital marketing. The earlier you begin, the more time you have to build practical skills, explore interests, and discover which digital career fits you best. Digital marketing is a beginner-friendly, flexible path that aligns with how students already use the internet daily.</p>
       <p>If you're curious about business, content, social media, websites, advertising, or analytics, this is a great place to start. By learning digital marketing before college, you gain a head start on how the online world works and how brands grow. As a result, you can discover your strengths early and make better decisions about your future.</p>
 
@@ -112,20 +112,20 @@ export const blogs = [
       <p>Students can start digital marketing before college, and we believe it's a smart way to get ahead. It gives you time to explore, build confidence, and identify which digital career to pursue. It also helps you start college with clear direction and practical online experience.</p>
       <p>At Operating Media, our goal is to turn early curiosity into real skill. Whether you begin with our Diploma, move to our Advanced Diploma, or continue in our Master's Program, our learning path grows with you. You don't need to wait years to start digital marketing. If you're ready to learn, this is a great place to begin.</p>
     `,
-    },
-    {
-        slug: "the-future-of-digital-marketing-careers-in-india",
-        title: "The Future of Digital Marketing Careers in India",
-        excerpt: "The future of digital marketing careers in India looks strong, but it is also changing fast. Companies are investing more in online growth, creating demand for skilled professionals.",
-        date: "Apr 8, 2026",
-        readTime: "7 min read",
-        category: "Digital Marketing Course",
-        author: "Zahid Shaikh",
-        authorRole: "SEO Authority · 14+ Years",
-        accentColor: "#F59E0B",
-        tags: ["career", "india", "future", "digital-marketing"],
-        cover: "https://www.operatingmedia.com/wp-content/uploads/2026/04/Article-1000-x-500-px-25.png",
-        content: `
+  },
+  {
+    slug: "the-future-of-digital-marketing-careers-in-india",
+    title: "The Future of Digital Marketing Careers in India",
+    excerpt: "The future of digital marketing careers in India looks strong, but it is also changing fast. Companies are investing more in online growth, creating demand for skilled professionals.",
+    date: "Apr 8, 2026",
+    readTime: "7 min read",
+    category: "Digital Marketing Course",
+    author: "Zahid Shaikh",
+    authorRole: "SEO Authority · 14+ Years",
+    accentColor: "#F59E0B",
+    tags: ["career", "india", "future", "digital-marketing"],
+    cover: "https://www.operatingmedia.com/wp-content/uploads/2026/04/Article-1000-x-500-px-25.png",
+    content: `
       <p>The future of digital marketing careers in India looks strong, but it is also changing fast. Companies are investing more in online growth, which is creating demand for people who understand performance, data, content, automation, and AI-driven strategy. For students, freshers, and career switchers, this means digital marketing is no longer just a backup option; it is becoming one of the most practical career paths for long-term growth.</p>
 
       <h2>Why the field is growing</h2>
@@ -168,20 +168,20 @@ export const blogs = [
       <h2>Final thoughts</h2>
       <p>The future of digital marketing careers in India is bright, but the people who benefit most will be the ones who keep learning and adapting quickly. AI, automation, analytics, and strategy will shape the next wave of opportunities, while basic execution roles may become less valuable on their own. For students and professionals who are willing to build real skills, digital marketing offers one of the most future-ready career paths in India.</p>
     `,
-    },
-    {
-        slug: "what-makes-a-good-digital-marketing-institute-in-mumbai",
-        title: "What Makes a Good Digital Marketing Institute in Mumbai?",
-        excerpt: "Selecting the right digital marketing institute shapes your future in this dynamic field. In Mumbai, the best institute equips you with real-world skills, up-to-date knowledge, and a clear path from classroom to career.",
-        date: "Mar 25, 2026",
-        readTime: "7 min read",
-        category: "Digital Marketing Course",
-        author: "Hemant Mane",
-        authorRole: "Digital Marketing Manager · 12+ Years",
-        accentColor: "#EC4899",
-        tags: ["mumbai", "institute", "training", "career"],
-        cover: "https://www.operatingmedia.com/wp-content/uploads/2026/04/Article-1000-x-500-px-24.png",
-        content: `
+  },
+  {
+    slug: "what-makes-a-good-digital-marketing-institute-in-mumbai",
+    title: "What Makes a Good Digital Marketing Institute in Mumbai?",
+    excerpt: "Selecting the right digital marketing institute shapes your future in this dynamic field. In Mumbai, the best institute equips you with real-world skills, up-to-date knowledge, and a clear path from classroom to career.",
+    date: "Mar 25, 2026",
+    readTime: "7 min read",
+    category: "Digital Marketing Course",
+    author: "Hemant Mane",
+    authorRole: "Digital Marketing Manager · 12+ Years",
+    accentColor: "#EC4899",
+    tags: ["mumbai", "institute", "training", "career"],
+    cover: "https://www.operatingmedia.com/wp-content/uploads/2026/04/Article-1000-x-500-px-24.png",
+    content: `
       <p>Selecting the right digital marketing institute shapes your future in this dynamic field. In Mumbai, with its abundance of choices, the best institute is not the most visible, but the one that equips you with real-world skills, up-to-date knowledge, and a clear progression from classroom to career.</p>
       <p>A good institute helps you grasp how digital marketing works beyond theory. It prepares you to use tools, run campaigns, read data, and think like a marketer who delivers results.</p>
 
@@ -220,20 +220,20 @@ export const blogs = [
       <p>A good digital marketing institute in Mumbai offers practical training, updated topics, clear learning progression, and support for real careers. It prepares learners to apply digital marketing competently in the workplace.</p>
       <p>Institutes like Operating Media are a good fit because they let students advance from foundational diplomas to advanced programs and focused certifications, helping learners build job-ready profiles step by step.</p>
     `,
-    },
-    {
-        slug: "how-to-choose-the-right-digital-marketing-course",
-        title: "How to Choose the Right Digital Marketing Course for Your Career Goal",
-        excerpt: "Digital marketing is a broad field, so the right course for one person may not be right for another. Your career goal should always come first.",
-        date: "Mar 10, 2026",
-        readTime: "8 min read",
-        category: "Digital Marketing Course",
-        author: "Vikram Kamble",
-        authorRole: "Digital Marketing Coach · 8+ Years",
-        accentColor: "#7C3AED",
-        tags: ["course", "career", "mumbai", "training"],
-        cover: "https://www.operatingmedia.com/wp-content/uploads/2026/04/Article-1000-x-500-px-23.png",
-        content: `
+  },
+  {
+    slug: "how-to-choose-the-right-digital-marketing-course",
+    title: "How to Choose the Right Digital Marketing Course for Your Career Goal",
+    excerpt: "Digital marketing is a broad field, so the right course for one person may not be right for another. Your career goal should always come first.",
+    date: "Mar 10, 2026",
+    readTime: "8 min read",
+    category: "Digital Marketing Course",
+    author: "Vikram Kamble",
+    authorRole: "Digital Marketing Coach · 8+ Years",
+    accentColor: "#7C3AED",
+    tags: ["course", "career", "mumbai", "training"],
+    cover: "https://www.operatingmedia.com/wp-content/uploads/2026/04/Article-1000-x-500-px-23.png",
+    content: `
       <p>Embarking on your digital marketing journey is an exciting adventure! In a bustling city like Mumbai, your best course isn't always the most famous; it's the one that aligns with your career goals, builds practical skills, and truly prepares you for the real world.</p>
       <p>Digital marketing is a broad field, so the right course for one person may not be right for another. A beginner seeking a first job, a student seeking a strong foundation, and a professional aiming for a higher role all need different kinds of learning. That is why your career goal should always come first.</p>
 
@@ -272,20 +272,20 @@ export const blogs = [
       <p>The right digital marketing course aligns with your career goals and equips you with practical skills. It should build confidence, clarify the market, and demonstrate your abilities.</p>
       <p>For those wanting a structured path, Operating Media offers practical learning with its Diploma, Advanced Diploma, and Master's Program, plus specialized certifications to support diverse career goals. This flexibility makes it easier to choose a course that fits your needs.</p>
     `,
-    },
-    {
-        slug: "top-10-digital-marketing-skills-that-will-get-you-hired-in-2026",
-        title: "Top 10 Digital Marketing Skills That Will Get You Hired in 2026",
-        excerpt: "In 2026, employers want digital marketers who use the right tools, analyze data, and deliver results. Here are the 10 skills that matter most.",
-        date: "Feb 20, 2026",
-        readTime: "9 min read",
-        category: "Digital Marketing Course",
-        author: "Rahul Singh",
-        authorRole: "Analytics Specialist · 12+ Years",
-        accentColor: "#0EA5E9",
-        tags: ["skills", "hiring", "2026", "career", "seo", "ppc"],
-        cover: "https://www.operatingmedia.com/wp-content/uploads/2026/03/Article-1000-x-500-px-22.png",
-        content: `
+  },
+  {
+    slug: "top-10-digital-marketing-skills-that-will-get-you-hired-in-2026",
+    title: "Top 10 Digital Marketing Skills That Will Get You Hired in 2026",
+    excerpt: "In 2026, employers want digital marketers who use the right tools, analyze data, and deliver results. Here are the 10 skills that matter most.",
+    date: "Feb 20, 2026",
+    readTime: "9 min read",
+    category: "Digital Marketing Course",
+    author: "Rahul Singh",
+    authorRole: "Analytics Specialist · 12+ Years",
+    accentColor: "#0EA5E9",
+    tags: ["skills", "hiring", "2026", "career", "seo", "ppc"],
+    cover: "https://www.operatingmedia.com/wp-content/uploads/2026/03/Article-1000-x-500-px-22.png",
+    content: `
       <p>In 2026, employers want digital marketers who use the right tools, analyze data, and deliver results. The best candidates blend creativity, technical expertise, and strong execution.</p>
       <p>Students, freshers, and career switchers can benefit from shifting employer needs. In digital marketing, your background matters less than your ability to learn and use new skills. With the right skill set, you can move into roles with better pay, growth, and flexibility.</p>
 
@@ -328,20 +328,20 @@ export const blogs = [
       <h2>Final thoughts</h2>
       <p>If you want to get hired in 2026, focus on skills that are practical, measurable, and future-ready. SEO, performance marketing, analytics, AI, content, and strategy are all essential parts of a modern digital marketing career. With the right training and consistent practice, you can build a profile that stands out.</p>
     `,
-    },
-    {
-        slug: "stuck-in-a-low-paying-job-how-digital-marketing-can-break-the-ceiling",
-        title: "Stuck in a Low-Paying Job? How a Digital Marketing Upgrade Can Break the Ceiling in 2026",
-        excerpt: "Are you working nonstop but seeing no real increase in your paycheck? Digital marketing values skills over background — and in 2026, it's one of the top ways to break the salary ceiling.",
-        date: "Feb 5, 2026",
-        readTime: "10 min read",
-        category: "Digital Marketing Course",
-        author: "Harsh Pareek",
-        authorRole: "Agency Owner · 15+ Years",
-        accentColor: "#FF6B00",
-        tags: ["career-switch", "salary", "growth", "digital-marketing", "2026"],
-        cover: "https://www.operatingmedia.com/wp-content/uploads/2026/03/Article-1000-x-500-px-21-1.png",
-        content: `
+  },
+  {
+    slug: "stuck-in-a-low-paying-job-how-digital-marketing-can-break-the-ceiling",
+    title: "Stuck in a Low-Paying Job? How a Digital Marketing Upgrade Can Break the Ceiling in 2026",
+    excerpt: "Are you working nonstop but seeing no real increase in your paycheck? Digital marketing values skills over background — and in 2026, it's one of the top ways to break the salary ceiling.",
+    date: "Feb 5, 2026",
+    readTime: "10 min read",
+    category: "Digital Marketing Course",
+    author: "Harsh Pareek",
+    authorRole: "Agency Owner · 15+ Years",
+    accentColor: "#FF6B00",
+    tags: ["career-switch", "salary", "growth", "digital-marketing", "2026"],
+    cover: "https://www.operatingmedia.com/wp-content/uploads/2026/03/Article-1000-x-500-px-21-1.png",
+    content: `
       <p>Are you working nonstop but seeing no real increase in your paycheck? You're not alone. Many in support roles hit a salary ceiling not through fault, but because of the job's built-in limits.</p>
       <p>Digital marketing values skills over background. If you generate leads or improve conversions, you earn more. In 2026, it's a top choice to move from low-paying jobs to rewarding careers.</p>
 
@@ -396,5 +396,5 @@ export const blogs = [
       <p>Being stuck in a low-paying job can be frustrating, but it does not have to define your future. In 2026, digital marketing offers one of the clearest ways to build a stronger career without waiting years for change. It is practical, flexible, and tied to real business results.</p>
       <p>If you choose the right path and build marketable skills, you can move from underpaid to in demand. Don't let old limits hold you back — take action now, upgrade your skills, and build the future you deserve.</p>
     `,
-    },
+  },
 ];

@@ -94,7 +94,7 @@ function SidebarLatest({ currentSlug }) {
                 {latest.map((b) => {
                     const color = catColor(b.category);
                     return (
-                        <Link key={b.slug} to={`/blogs/${b.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
+                        <Link key={b.slug} to={`/blogs/${b.slug}/`} style={{ textDecoration: "none", color: "inherit" }}>
                             <div className="latest-item" style={{ display: "flex", gap: 12, alignItems: "flex-start", transition: "opacity 0.2s" }}>
                                 <div style={{
                                     width: 56, height: 56, borderRadius: 10, flexShrink: 0, overflow: "hidden",

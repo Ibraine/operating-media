@@ -91,7 +91,7 @@ function FeaturedCard({ blog }) {
     const color = categoryColor(blog.category);
 
     return (
-        <Link to={`/blogs/${blog.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
+        <Link to={`/blogs/${blog.slug}/`} style={{ textDecoration: "none", color: "inherit" }}>
             <div
                 ref={ref}
                 onMouseEnter={() => setHovered(true)}
@@ -207,7 +207,7 @@ function BlogCard({ blog, index }) {
     const color = categoryColor(blog.category);
 
     return (
-        <Link to={`/blogs/${blog.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
+        <Link to={`/blogs/${blog.slug}/`} style={{ textDecoration: "none", color: "inherit" }}>
             <div
                 ref={ref}
                 onMouseEnter={() => setHovered(true)}

@@ -188,7 +188,7 @@ const Navbar = () => {
             </AnimatePresence>
           </div>
 
-          <Link to="/corporate-training" className="text-gray-800 no-underline hover:text-[#ECAB00] transition-colors">Corporate Training</Link>
+          <Link to="/corporate-training/" className="text-gray-800 no-underline hover:text-[#ECAB00] transition-colors">Corporate Training</Link>
 
           {/* INFORMATION */}
           <div className="relative" onMouseEnter={() => setInfoOpen(true)} onMouseLeave={() => setInfoOpen(false)}>
@@ -304,7 +304,7 @@ const Navbar = () => {
 
               <div className="h-px bg-gray-100 my-1" />
 
-              <Link to="/corporate-training" onClick={closeMobile} className="px-3 py-3 font-semibold text-gray-800 hover:text-[#ECAB00] no-underline">Corporate Training</Link>
+              <Link to="/corporate-training/" onClick={closeMobile} className="px-3 py-3 font-semibold text-gray-800 hover:text-[#ECAB00] no-underline">Corporate Training</Link>
 
               <div className="h-px bg-gray-100 my-1" />
 
