@@ -363,10 +363,23 @@ function BlogsHero() {
 export default function BlogsPage() {
     useFonts();
     const [activeCategory, setActiveCategory] = useState("All");
+    const [currentPage, setCurrentPage] = useState(1);
+    const ITEMS_PER_PAGE = 13;
+
     const categories = ["All", ...new Set(blogs.map(b => b.category))];
     const filtered = activeCategory === "All" ? blogs : blogs.filter(b => b.category === activeCategory);
-    const featured = filtered[0];
-    const rest = filtered.slice(1);
+
+    // Reset to page 1 when category changes
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [activeCategory]);
+
+    const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const paginatedBlogs = filtered.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+    const featured = currentPage === 1 ? paginatedBlogs[0] : null;
+    const rest = currentPage === 1 ? paginatedBlogs.slice(1) : paginatedBlogs;
     const [headerRef, headerInView] = useInView(0.05);
 
     return (
@@ -382,6 +395,16 @@ export default function BlogsPage() {
                 }
                 .cat-btn:hover { border-color: #ECAB00; color: #ECAB00; }
                 .cat-btn.active { background: #ECAB00; color: #fff; border-color: #ECAB00; box-shadow: 0 4px 16px rgba(255,107,0,0.28); }
+
+                .pag-btn {
+                    font-family: 'Satoshi', sans-serif; font-weight: 700; font-size: 13px;
+                    padding: 9px 18px; border-radius: 8px;
+                    border: 1.5px solid #ece9e2; background: #fff; color: #6b7280;
+                    cursor: pointer; transition: all 0.2s;
+                }
+                .pag-btn:hover:not(:disabled) { border-color: #ECAB00; color: #ECAB00; }
+                .pag-btn.active { background: #ECAB00; color: #fff; border-color: #ECAB00; }
+                .pag-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
                 @media (max-width: 767px) {
                     .blogs-filter-row { flex-direction: column !important; align-items: flex-start !important; }
@@ -422,7 +445,7 @@ export default function BlogsPage() {
                     {featured && <div style={{ marginBottom: 20 }}><FeaturedCard blog={featured} /></div>}
 
                     {/* Divider */}
-                    {rest.length > 0 && (
+                    {featured && rest.length > 0 && (
                         <div style={{ display: "flex", alignItems: "center", gap: 16, margin: "36px 0 32px" }}>
                             <span style={{ display: "block", width: 20, height: 1.5, background: "#ECAB00", borderRadius: 2 }} />
                             <span style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 900, fontSize: 10, textTransform: "uppercase", letterSpacing: "0.3em", color: "#ECAB00" }}>More Articles</span>
@@ -439,6 +462,46 @@ export default function BlogsPage() {
                             alignItems: "stretch",
                         }}>
                             {rest.map((blog, i) => <BlogCard key={blog.slug} blog={blog} index={i} />)}
+                        </div>
+                    )}
+
+                    {/* Pagination UI */}
+                    {totalPages > 1 && (
+                        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 8, marginTop: 56 }}>
+                            <button 
+                                onClick={() => {
+                                    setCurrentPage(prev => Math.max(prev - 1, 1));
+                                    window.scrollTo({ top: 400, behavior: 'smooth' });
+                                }}
+                                disabled={currentPage === 1}
+                                className="pag-btn"
+                            >
+                                ← Prev
+                            </button>
+                            
+                            {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                                <button
+                                    key={page}
+                                    onClick={() => {
+                                        setCurrentPage(page);
+                                        window.scrollTo({ top: 400, behavior: 'smooth' });
+                                    }}
+                                    className={`pag-btn ${currentPage === page ? "active" : ""}`}
+                                >
+                                    {page}
+                                </button>
+                            ))}
+
+                            <button 
+                                onClick={() => {
+                                    setCurrentPage(prev => Math.min(prev + 1, totalPages));
+                                    window.scrollTo({ top: 400, behavior: 'smooth' });
+                                }}
+                                disabled={currentPage === totalPages}
+                                className="pag-btn"
+                            >
+                                Next →
+                            </button>
                         </div>
                     )}
 
