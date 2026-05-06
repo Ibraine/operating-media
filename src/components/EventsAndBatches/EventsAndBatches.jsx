@@ -11,7 +11,7 @@ const batches = [
 ];
 
 const TRUST = [
-  'ISO 9001:2015 Certified',
+  'ISO 21001:2025 Certified',
   'Google Certified Trainers',
   '100% Placement Assistance',
 ];

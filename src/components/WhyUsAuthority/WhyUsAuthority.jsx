@@ -201,7 +201,7 @@ export default function WhyUsAuthority() {
               <div className="flex items-center gap-3 text-gray-500 bg-white px-4 py-2 rounded-xl shadow-sm border border-gray-100">
                 <ShieldCheck size={26} className="text-[#ecab00]" />
                 <div className="flex flex-col">
-                  <span className="font-black text-[13px] text-[#0f172a] leading-none">ISO 9001:2015</span>
+                  <span className="font-black text-[13px] text-[#0f172a] leading-none">ISO 21001:2025</span>
                   <span className="font-bold text-[10px] uppercase tracking-widest text-gray-400 mt-1">Certified</span>
                 </div>
               </div>

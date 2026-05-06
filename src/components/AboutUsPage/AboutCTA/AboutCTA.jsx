@@ -130,7 +130,7 @@ const AboutCTA = () => {
           <p
             style={{ fontFamily: SATOSHI, fontWeight: 700, fontSize: "10px", color: "#fff", textTransform: "uppercase", letterSpacing: "0.5em" }}
           >
-            ISO 9001:2015 Certified Institution
+            ISO 21001:2025 Certified Institution
           </p>
         </div> */}
       </div>
