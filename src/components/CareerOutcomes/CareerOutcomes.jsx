@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const CAREER_OUTCOMES = [
     {
         role: "Digital Marketing Executive",
-        salary: "₹15K–₹35K/month",
+        salary: "",
         hasSalary: true,
     },
     { role: "SEO Specialist", hasSalary: false },
