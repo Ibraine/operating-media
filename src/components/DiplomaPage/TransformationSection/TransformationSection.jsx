@@ -35,7 +35,7 @@ const OUTCOMES = [
 const SPECS = [
     { iconName: 'mappin', label: 'Centers', value: 'Andheri & Borivali' },
     { iconName: 'calendar', label: 'Batches', value: 'Weekdays & Weekends' },
-    { iconName: 'users', label: 'Batch Size', value: 'Max 10 Students' },
+    { iconName: 'users', label: 'Batch Size', value: 'Max 12 Students' },
 ];
 
 const CHECKLIST = [
@@ -47,15 +47,15 @@ const CHECKLIST = [
 
 const BATCH_STATS = [
     { target: 2, suffix: '', label: 'Months' },
-    { target: 65, suffix: '+', label: 'Hours' },
-    { target: 10, suffix: '', label: 'Students' },
+    { target: 80, suffix: '+', label: 'Hours' },
+    { target: 12, suffix: '', label: 'Students' },
 ];
 
 const PILLS = [
     { iconName: 'zap', text: 'Beginner-Friendly' },
     { iconName: 'sparkles', text: '50+ Tools Included' },
     { iconName: 'trophy', text: 'Diploma Certified' },
-    { iconName: 'users', text: 'Max 10 Students' },
+    { iconName: 'users', text: 'Max 12 Students' },
 ];
 
 const AVATARS = [

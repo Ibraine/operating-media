@@ -123,7 +123,7 @@ export default function GAHeroSection() {
                                         <Star key={i} size={16} className="text-[#ECAB00] fill-[#ECAB00]" />
                                     ))}
                                 </div>
-                                <span className="font-bold text-[15px] text-[#0f172a]">16,000+ Alumni</span>
+                                <span className="font-bold text-[15px] text-[#0f172a]">16000+ Students Trained</span>
                             </div>
                             <span className="hidden sm:block w-1.5 h-1.5 rounded-full bg-gray-300" />
                             <div className="flex items-center gap-2">

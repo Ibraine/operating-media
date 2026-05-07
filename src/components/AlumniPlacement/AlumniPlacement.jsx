@@ -116,7 +116,7 @@ export default function AlumniPlacement() {
           </h2>
           
           <p className="mt-5 text-gray-500 font-medium text-[16px] md:text-[18px] max-w-lg leading-relaxed">
-            See where our graduates are making an impact. Over 1,600+ success stories and counting.
+            See where our graduates are making an impact. Over 16000+ success stories and counting.
           </p>
         </motion.div>
       </div>

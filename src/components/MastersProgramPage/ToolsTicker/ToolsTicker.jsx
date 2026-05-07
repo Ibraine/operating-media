@@ -101,7 +101,7 @@ const ToolsTicker = () => {
             </div>
 
             <h2 className="font-black text-[32px] md:text-[40px] lg:text-[46px] text-[#0f172a] leading-[1.1] tracking-tight mb-4">
-              Master <span className="relative inline-block text-[#ECAB00]">
+              Master's <span className="relative inline-block text-[#ECAB00]">
                 120+ Industry
                 <svg className="absolute w-full h-[10px] -bottom-1 left-0 text-[#ECAB00]/50 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="transparent"/>
