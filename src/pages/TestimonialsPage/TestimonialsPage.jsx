@@ -484,7 +484,7 @@ function CTABanner() {
 
             <div className="relative z-10 flex flex-col gap-3 shrink-0">
                 <Link
-                    to="/contact"
+                    to="/contact-us/"
                     className="inline-flex items-center justify-center gap-2 font-black text-[14px] text-[#0f172a] px-8 py-4 rounded-full no-underline transition-all duration-200 hover:-translate-y-0.5"
                     style={{
                         background: "#ECAB00",
