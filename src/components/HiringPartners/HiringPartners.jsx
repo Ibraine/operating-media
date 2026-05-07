@@ -22,37 +22,37 @@ function FadeUp({ children, delay = 0, className = "" }) {
    LOGOS DATA (Fixed Broken Links - Only Stable SVGs)
 ═══════════════════════════════════════════════════════════ */
 const ROW_1 = [
-  { name: "Google", url: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
+  { name: "Google", url: "/icon/Google_2015_logo.svg" },
   { name: "Meta", url: "/images/Meta.svg" },
-  { name: "Amazon", url: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
-  { name: "LinkedIn", url: "https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" },
-  { name: "Spotify", url: "https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" },
-  { name: "Airbnb", url: "https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg" },
-  { name: "Oyo", url: "https://upload.wikimedia.org/wikipedia/commons/1/19/OYO_Rooms_Logo.svg" },
-  { name: "Paytm", url: "https://upload.wikimedia.org/wikipedia/commons/2/24/Paytm_Logo_%28standalone%29.svg" },
-  { name: "MakeMyTrip", url: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Makemytrip_logo.svg" },
+  { name: "Amazon", url: "/icon/Amazon_logo.svg" },
+  { name: "LinkedIn", url: "/icon/LinkedIn_Logo.svg" },
+  { name: "Spotify", url: "/icon/Spotify_logo_with_text.svg" },
+  { name: "Airbnb", url: "/icon/Airbnb_Logo_Bélo.svg" },
+  { name: "Oyo", url: "/icon/oyo.svg" },
+  { name: "Paytm", url: "/icon/Paytm_Logo_(standalone).svg" },
+  { name: "MakeMyTrip", url: "/icon/mmt.svg" },
 ];
 
 const ROW_2 = [
-  { name: "Ogilvy", url: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ogilvy_logo.svg" },
-  { name: "GroupM", url: "https://upload.wikimedia.org/wikipedia/commons/2/2a/GroupM_logo.svg" },
-  { name: "WPP", url: "https://upload.wikimedia.org/wikipedia/commons/9/91/WPP_Logo.svg" },
-  { name: "Publicis", url: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Publicis_Groupe_logo.svg" },
-  { name: "Dentsu", url: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Dentsu_logo.svg" },
-  { name: "Havas", url: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Havas_logo.svg" },
-  { name: "Adobe", url: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_logo.svg" },
-  { name: "HubSpot", url: "/images/HubSpot.svg" },
+  { name: "Ogilvy", url: "/icon/Ogilvy.svg" },
+  { name: "GroupM", url: "/icon/groupm.png" },
+  { name: "WPP", url: "/icon/wpp.svg" },
+  { name: "Publicis", url: "/icon/pg.png" },
+  { name: "Dentsu", url: "/icon/dentsu.svg" },
+  { name: "Havas", url: "/icon/havas.svg" },
+  { name: "Adobe", url: "/icon/adobe.svg" },
+  { name: "HubSpot", url: "/icon/HubSpot_Logo.svg" },
 ];
 
 const ROW_3 = [
-  { name: "ICICI Bank", url: "https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg" },
-  { name: "HDFC Bank", url: "https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg" },
-  { name: "Colgate", url: "https://upload.wikimedia.org/wikipedia/commons/4/49/Colgate-Palmolive_logo.svg" },
-  { name: "Godrej", url: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Godrej_logo.svg" },
-  { name: "Marico", url: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Marico_Logo.svg" },
-  { name: "Bajaj", url: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Bajaj_Auto_Logo.svg" },
-  { name: "Jio", url: "https://upload.wikimedia.org/wikipedia/commons/8/83/Jio_logo.svg" },
-  { name: "Airtel", url: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Bharti_Airtel_logo.svg" },
+  { name: "ICICI Bank", url: "/icon/ICICI_Bank_Logo.svg" },
+  { name: "HDFC Bank", url: "/icon/HDFC_Bank_Logo.svg" },
+  { name: "Colgate", url: "/icon/colgate.svg" },
+  { name: "Godrej", url: "/icon/godrej.svg" },
+  { name: "Marico", url: "/icon/marico.svg" },
+  { name: "Bajaj", url: "/icon/bajaj.svg" },
+  { name: "Jio", url: "/icon/jio.svg" },
+  { name: "Airtel", url: "/icon/airtel.svg" },
 ];
 
 /* ═══════════════════════════════════════════════════════════

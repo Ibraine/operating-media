@@ -1,0 +1,28 @@
+<svg version="1.1" id="Layer_1" xmlns:x="ns_extend;" xmlns:i="ns_ai;" xmlns:graph="ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 213 45" style="enable-background:new 0 0 213 45;" xml:space="preserve">
+ <style type="text/css">
+  .st0{fill:#E60000;}
+ </style>
+ <metadata>
+  <sfw xmlns="ns_sfw;">
+   <slices>
+   </slices>
+   <sliceSourceBounds bottomLeftOrigin="true" height="45" width="213" x="0" y="0">
+   </sliceSourceBounds>
+  </sfw>
+ </metadata>
+ <g>
+  <path class="st0" d="M33.3,13.6L6.7,26.1V0.8H0v43.3h6.7V33.1l26.6-12.5v23.6H40V0.8h-6.7V13.6z">
+  </path>
+  <path class="st0" d="M180.5,13.1c0.2-3.7,6.2-6.5,12.5-6.5c6.3,0,12.5,2.9,12.5,6.7h7c0-8-8.8-13.3-19.4-13.3
+		c-10.7,0-19.4,5.2-19.4,13.3V17L206,32.3c-0.6,3.5-6.6,6.1-12.7,6.1c-6.4,0-12.7-2.9-12.7-6.7h-7c0,8,9,13.3,19.7,13.3
+		C204,45,213,39.8,213,31.7v-3.4L180.5,13.1L180.5,13.1z">
+  </path>
+  <path class="st0" d="M124.7,0.8L108.2,40L91.7,0.8h-7.3l18.3,43.3h11L132,0.8H124.7z">
+  </path>
+  <path class="st0" d="M91.6,44.2L73.3,0.8h-11L44,44.2h7.3l1.5-3.5l25.1-11.8l6.4,15.3H91.6z M67.8,5l7.6,18l-18.9,8.9L67.8,5z">
+  </path>
+  <path class="st0" d="M172.4,44.2L154.2,0.8h-11l-18.3,43.3h7.3l1.5-3.5l25.1-11.8l6.4,15.3H172.4z M148.7,5l7.6,18l-18.9,8.9
+		L148.7,5z">
+  </path>
+ </g>
+</svg>
