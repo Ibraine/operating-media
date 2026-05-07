@@ -422,10 +422,11 @@ export default function ContactHero() {
               Join 16,000+ students who've built careers through Operating Media.
             </p>
           </div>
-
-          <button className="relative z-10 shrink-0 flex items-center gap-2 bg-[#ECAB00] hover:bg-white text-[#0A0F1C] font-black text-[16px] px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_10px_20px_-10px_rgba(236,171,0,0.5)] active:scale-95 group">
-            Enroll Now <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-          </button>
+          <a href="#">
+            <button className="relative z-10 shrink-0 flex items-center gap-2 bg-[#ECAB00] hover:bg-white text-[#0A0F1C] font-black text-[16px] px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_10px_20px_-10px_rgba(236,171,0,0.5)] active:scale-95 group">
+              Enroll Now <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </button>
+          </a>
         </div>
       </section>
 
