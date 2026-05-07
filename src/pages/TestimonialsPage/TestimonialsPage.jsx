@@ -37,17 +37,17 @@ const SHORT_ID = "kl8XbbODq8M";
 
 
 const videos = [
+  { id: "I2xj4eIsVP8", name: "Dhanshree" },
+  { id: "ltYRY5hYgoM", name: "Bhavini" },
+  { id: "ootRcNXIW9g", name: "Himanshi" },
+  { id: "z5PQNWYtgs8", name: "Pranav" },
   { id: "MFGeJ-_aYoQ", name: "Aryan Jain" },
   { id: "7jMBE5Yrqgk", name: "Gauri" },
-  { id: "z5PQNWYtgs8", name: "Pranav" },
   { id: "e86nFlOC7f8", name: "Javal Desai" },
-  { id: "ootRcNXIW9g", name: "Himanshi" },
   { id: "Vy1Ei-US_r8", name: "Shantanu" },
   { id: "GlvxX861O8Y", name: "Pooja Verma" },
   { id: "LtZpNs7XiCc", name: "Haldi Padiyar" },
   { id: "hAjwmJ-t82U", name: "Monali" },
-  { id: "ltYRY5hYgoM", name: "Bhavini" },
-  { id: "I2xj4eIsVP8", name: "Dhanshree" },
   { id: "kl8XbbODq8M", name: "Haransh" },
   { id: "oBM0j4dRM8E", name: "Sharanya" },
   { id: "k6xWMghXaAA", name: "Aman" },
@@ -55,7 +55,7 @@ const videos = [
   { id: "eRqK9oHb7IQ", name: "Dakshna" },
 ].map(v => ({
   ...v,
-  thumb: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`
+  thumb: `https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg`
 })).slice(0, 16);
 
 const textTestimonials = [
@@ -207,6 +207,9 @@ function VideoCard({ video, index, onPlay }) {
                     src={video.thumb}
                     alt={video.name}
                     className="absolute inset-0 w-full h-full object-cover"
+                    onError={(e) => {
+                        e.currentTarget.src = `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`;
+                    }}
                     style={{
                         opacity: hovered ? 0 : 1,
                         transform: hovered ? "scale(1.1)" : "scale(1)",
