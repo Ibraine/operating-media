@@ -10,7 +10,7 @@ export const blogs = [
     authorRole: "Agency Owner · 15+ Years",
     accentColor: "#0EA5E9",
     tags: ["ai", "digital-marketing", "education", "automation"],
-    cover: "/blogs/Article-1000-x-500-px-27-rmfk4f3gxyzwd43t72dfc9sk8tfbcz3odioxu7mx34.png",
+    cover: "/blogimg/Article-1000-x-500-px-27-rmfk4f3gxyzwd43t72dfc9sk8tfbcz3odioxu7mx34.png",
     content: `
       <h2>Why AI matters in Digital Marketing</h2>
       <p>Digital marketing evolves rapidly, and AI accelerates that pace. Students must now grasp how AI assistants, automation, and prediction influence content, search, ads, and customer engagement. Digital marketing education cannot rely on static lectures or outdated case studies.</p>
@@ -68,7 +68,7 @@ export const blogs = [
     authorRole: "Corporate Trainer · 8+ Years",
     accentColor: "#10B981",
     tags: ["students", "beginners", "digital-marketing", "career"],
-    cover: "/blogs/Article-1000-x-500-px-26-rmac4xl5i4tguo99ka6dwiunbvi5jxnexkkywfutj4.png",
+    cover: "/blogimg/Article-1000-x-500-px-26-rmac4xl5i4tguo99ka6dwiunbvi5jxnexkkywfutj4.png",
     content: `
       <p>At Operating Media, we believe students do not need to wait until college to learn digital marketing. The earlier you begin, the more time you have to build practical skills, explore interests, and discover which digital career fits you best. Digital marketing is a beginner-friendly, flexible path that aligns with how students already use the internet daily.</p>
       <p>If you're curious about business, content, social media, websites, advertising, or analytics, this is a great place to start. By learning digital marketing before college, you gain a head start on how the online world works and how brands grow. As a result, you can discover your strengths early and make better decisions about your future.</p>
@@ -124,7 +124,7 @@ export const blogs = [
     authorRole: "SEO Authority · 14+ Years",
     accentColor: "#F59E0B",
     tags: ["career", "india", "future", "digital-marketing"],
-    cover: "/blogs/Article-1000-x-500-px-25-rlpgh64xs61kku2lkjuq5ykrcdmnpq9ok6kgb9mvwg.png",
+    cover: "/blogimg/Article-1000-x-500-px-25-rlpgh64xs61kku2lkjuq5ykrcdmnpq9ok6kgb9mvwg.png",
     content: `
       <p>The future of digital marketing careers in India looks strong, but it is also changing fast. Companies are investing more in online growth, which is creating demand for people who understand performance, data, content, automation, and AI-driven strategy. For students, freshers, and career switchers, this means digital marketing is no longer just a backup option; it is becoming one of the most practical career paths for long-term growth.</p>
 
@@ -180,7 +180,7 @@ export const blogs = [
     authorRole: "Digital Marketing Manager · 12+ Years",
     accentColor: "#EC4899",
     tags: ["mumbai", "institute", "training", "career"],
-    cover: "/blogs/Article-1000-x-500-px-24-rlf00zonso4r0xd9s1pi5b061klg7421n4fj6dl4ow.png",
+    cover: "/blogimg/Article-1000-x-500-px-24-rlf00zonso4r0xd9s1pi5b061klg7421n4fj6dl4ow.png",
     content: `
       <p>Selecting the right digital marketing institute shapes your future in this dynamic field. In Mumbai, with its abundance of choices, the best institute is not the most visible, but the one that equips you with real-world skills, up-to-date knowledge, and a clear progression from classroom to career.</p>
       <p>A good institute helps you grasp how digital marketing works beyond theory. It prepares you to use tools, run campaigns, read data, and think like a marketer who delivers results.</p>
@@ -232,7 +232,7 @@ export const blogs = [
     authorRole: "Digital Marketing Coach · 8+ Years",
     accentColor: "#7C3AED",
     tags: ["course", "career", "mumbai", "training"],
-    cover: "/blogs/Article-1000-x-500-px-23-rlezu96atewrtj5j44vra078s5sr17baps49czkpa8.png",
+    cover: "/blogimg/Article-1000-x-500-px-23-rlezu96atewrtj5j44vra078s5sr17baps49czkpa8.png",
     content: `
       <p>Embarking on your digital marketing journey is an exciting adventure! In a bustling city like Mumbai, your best course isn't always the most famous; it's the one that aligns with your career goals, builds practical skills, and truly prepares you for the real world.</p>
       <p>Digital marketing is a broad field, so the right course for one person may not be right for another. A beginner seeking a first job, a student seeking a strong foundation, and a professional aiming for a higher role all need different kinds of learning. That is why your career goal should always come first.</p>
@@ -284,7 +284,7 @@ export const blogs = [
     authorRole: "Analytics Specialist · 12+ Years",
     accentColor: "#0EA5E9",
     tags: ["skills", "hiring", "2026", "career", "seo", "ppc"],
-    cover: "/blogs/Article-1000-x-500-px-22-rl9rihvu5fxkqd4p51q2acqoo4d2qf56x3e2v5zmyo.png",
+    cover: "/blogimg/Article-1000-x-500-px-22-rl9rihvu5fxkqd4p51q2acqoo4d2qf56x3e2v5zmyo.png",
     content: `
       <p>In 2026, employers want digital marketers who use the right tools, analyze data, and deliver results. The best candidates blend creativity, technical expertise, and strong execution.</p>
       <p>Students, freshers, and career switchers can benefit from shifting employer needs. In digital marketing, your background matters less than your ability to learn and use new skills. With the right skill set, you can move into roles with better pay, growth, and flexibility.</p>
@@ -340,7 +340,7 @@ export const blogs = [
     authorRole: "Agency Owner · 15+ Years",
     accentColor: "#FF6B00",
     tags: ["career-switch", "salary", "growth", "digital-marketing", "2026"],
-    cover: "/blogs/Article-1000-x-500-px-21-1-rl4jqedufpvahkjrcyify8o7v80sfq0ytpwiqp94hs.png",
+    cover: "/blogimg/Article-1000-x-500-px-21-1-rl4jqedufpvahkjrcyify8o7v80sfq0ytpwiqp94hs.png",
     content: `
       <p>Are you working nonstop but seeing no real increase in your paycheck? You're not alone. Many in support roles hit a salary ceiling not through fault, but because of the job's built-in limits.</p>
       <p>Digital marketing values skills over background. If you generate leads or improve conversions, you earn more. In 2026, it's a top choice to move from low-paying jobs to rewarding careers.</p>
@@ -408,7 +408,7 @@ export const blogs = [
     authorRole: "Agency Owner · 15+ Years",
     accentColor: "#0EA5E9",
     tags: ["students", "career", "digital-marketing", "beginners", "india"],
-    cover: "/blogs/Article-1000-x-500-px-21-rksdb56glvs5hulwhk57439aqpohohlg5uukwv8s8w.png",
+    cover: "/blogimg/Article-1000-x-500-px-21-rksdb56glvs5hulwhk57439aqpohohlg5uukwv8s8w.png",
     content: `
     <p>Board exams are finally over. For weeks you have lived with timetables, revisions, and pressure from every direction—school, coaching, and family. Now you suddenly have something you haven’t had in a long time: free time and a blank page for your future.</p>
 
@@ -497,7 +497,7 @@ export const blogs = [
     authorRole: "Agency Owner · 15+ Years",
     accentColor: "#F59E0B",
     tags: ["skills", "career", "digital-marketing", "2026", "ai", "performance"],
-    cover: "/blogs/Article-1000-x-500-px-20-scaled-rk0hes3x4ackyyi2tosohzgvjwxgzmuxzo1gtkx534.png",
+    cover: "/blogimg/Article-1000-x-500-px-20-scaled-rk0hes3x4ackyyi2tosohzgvjwxgzmuxzo1gtkx534.png",
     content: `
     <p>In 2026, job descriptions for digital marketers look very different from what they did even three years ago. Instead of simple requirements like “manage social media” or “run Facebook Ads,” companies are asking for professionals who understand AI tools, data pipelines, tracking architecture, and multi-channel performance at a deep level. Technical marketers sit at the intersection of strategy, tools, and automation—and that’s exactly why they are among the highest paid in the industry.</p>
 
@@ -621,7 +621,7 @@ export const blogs = [
     authorRole: "Agency Owner · 15+ Years",
     accentColor: "#7C3AED",
     tags: ["career", "post-graduation", "courses", "skills", "2026"],
-    cover: "/blogs/Article-1000-x-500-px-19-rjq3oazpiu6q7vvmif1enob54ybrkeivu73hi40740.png",
+    cover: "/blogimg/Article-1000-x-500-px-19-rjq3oazpiu6q7vvmif1enob54ybrkeivu73hi40740.png",
     content: `
     <p>Earning a Post-Graduate degree proves your academic discipline, but the 2026 job market demands specialized execution. If you find yourself over-qualified on paper but under-skilled for high-level corporate roles, the solution is a specialized professional course.</p>
 
@@ -848,7 +848,7 @@ export const blogs = [
     authorRole: "Agency Owner · 15+ Years",
     accentColor: "#EC4899",
     tags: ["career", "digital-marketing", "skills", "masters", "2026"],
-    cover: "/blogs/Article-1000-x-500-px-18-scaled-rj3gloufi2cwzhnwrwsj96jvcocbhsdjlqi3kald6o.png",
+    cover: "/blogimg/Article-1000-x-500-px-18-scaled-rj3gloufi2cwzhnwrwsj96jvcocbhsdjlqi3kald6o.png",
     content: `
     <p>If you spend five minutes on the internet today, you’ll be flooded with advertisements promising to make you a “Digital Marketing Expert” in five days for the price of a pizza. These short-term certificate courses have flooded the market with what we call “Clickers”—individuals who know where the buttons are on a Facebook dashboard but have no fundamental understanding of why they are pressing them.</p>
 
@@ -956,7 +956,7 @@ export const blogs = [
     authorRole: "Agency Owner · 15+ Years",
     accentColor: "#14B8A6",
     tags: ["career-switch", "professionals", "digital-marketing", "career-growth"],
-    cover: "/blogs/Article-1000-x-500-px-17-scaled-rj1plbtskb550il3ewd9j3fb8qt2xe4yqdzpk7wyyo.png",
+    cover: "/blogimg/Article-1000-x-500-px-17-scaled-rj1plbtskb550il3ewd9j3fb8qt2xe4yqdzpk7wyyo.png",
     content: `
     <h2>Transition into Digital Marketing at Any Age</h2>
     <p>A common myth persists in the professional world: that digital marketing is a “young person’s game.” Many professionals feel they’ve missed the opportunity to switch careers. But that’s not true.</p>
@@ -1003,7 +1003,7 @@ export const blogs = [
     authorRole: "Agency Owner · 15+ Years",
     accentColor: "#6366F1",
     tags: ["income", "freelancing", "digital-marketing", "side-hustle", "business"],
-    cover: "/blogs/Article-1000-x-500-px-15-rikax05bmfrc5gprv2owc44b6vrww77oz5elo2c0lc.png",
+    cover: "/blogimg/Article-1000-x-500-px-15-rikax05bmfrc5gprv2owc44b6vrww77oz5elo2c0lc.png",
     content: `
     <p>In the fast-paced corporate environment of Mumbai, the traditional “linear career” is becoming a thing of the past. Relying on a single source of income in an era of economic shifts and AI-driven changes is no longer a safe bet—it is a risk. Today, the most successful professionals are those who treat their careers like an investment portfolio, diversifying their income through Digital Assets.</p>
 
@@ -1071,7 +1071,7 @@ export const blogs = [
     "authorRole": "Agency Owner · 15+ Years",
     "accentColor": "#6366F1",
     "tags": ["digital-marketing", "performance-marketing", "learning", "ads", "career"],
-    "cover": "",
+    "cover": "/blogimg/Article-1000-x-500-px-14-rhzev9tgc3v1c8tkfszu1kqte8r1nxdkcmdbbutpfk.png",
     "content": `
     <p>In the high-stakes digital economy of 2026, the gap between “knowing” and “doing” has never been wider.</p>
 
@@ -1156,7 +1156,7 @@ export const blogs = [
     "authorRole": "Agency Owner · 15+ Years",
     "accentColor": "#6366F1",
     "tags": ["career", "digital-marketing", "skills", "future", "ai", "growth"],
-    "cover": "",
+    "cover": "/blogimg/Article-1000-x-500-px-13-rhoz14oyks47z83vytrqhcz9gn3mlundsmu78i3ocg.png",
     "content": `
     <p>In the professional landscape of 2026, the concept of “job security” has been replaced by a much more powerful metric: Skill Equity.</p>
 
@@ -1256,7 +1256,7 @@ export const blogs = [
     "authorRole": "Agency Owner · 15+ Years",
     "accentColor": "#6366F1",
     "tags": ["digital-marketing", "career", "ai", "business", "skills"],
-    "cover": "https://www.operatingmedia.com/wp-content/uploads/2026/04/Article-universal-language.png",
+    "cover": "/blogimg/Article-1000-x-500-px-12-rhjqfnqjafucx46ypjgtq5r8d9jernx4nvfe7qx2bk.png",
     "content": `
     <p>The year is 2026, and a quiet but profound shift has occurred in the global professional hierarchy. A decade ago, digital marketing was a “department”—a group of specialists managing social media and email blasts. Today, that silo has collapsed. In the modern economy, digital marketing is no longer a niche profession; it is the universal language of business.</p>
 
