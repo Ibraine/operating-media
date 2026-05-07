@@ -47,7 +47,7 @@ export default function WPCertification() {
                             </p>
                         </div>
 
-                        <div className="relative overflow-hidden bg-[#131B2F] rounded-[1.5rem] p-6 lg:p-8 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)] border border-white/10">
+                        {/* <div className="relative overflow-hidden bg-[#131B2F] rounded-[1.5rem] p-6 lg:p-8 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)] border border-white/10">
                             <div className="absolute top-[-50%] right-[-10%] w-[200px] h-[200px] bg-[#ECAB00]/20 rounded-full blur-[50px] pointer-events-none" />
                             <div className="relative z-10">
                                 <div className="flex items-center gap-3 mb-5">
@@ -62,7 +62,7 @@ export default function WPCertification() {
                                     ))}
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </motion.div>
 
                     {/* RIGHT: FLOATING CERTIFICATES */}

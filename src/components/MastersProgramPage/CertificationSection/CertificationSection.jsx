@@ -18,12 +18,12 @@ export default function CertificationSection() {
       {/* ── Background Subtle Grid & Glow for Dark Theme ── */}
       <div
         className="absolute inset-0 pointer-events-none z-0"
-        style={{ 
-          backgroundImage: 'linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)', 
-          backgroundSize: '40px 40px' 
+        style={{
+          backgroundImage: 'linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
         }}
       />
-      
+
       <div className="absolute top-[10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#ECAB00]/15 blur-[120px] pointer-events-none z-0" />
       <div className="absolute bottom-[10%] right-[-5%] w-[600px] h-[600px] rounded-full bg-[#2563eb]/15 blur-[120px] animate-pulse-slow pointer-events-none z-0" />
 
@@ -55,7 +55,7 @@ export default function CertificationSection() {
                 Lead the Industry.
                 {/* Underline Effect */}
                 <svg className="absolute w-full h-[10px] -bottom-1 left-0 text-[#ECAB00]/40 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
-                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="transparent"/>
+                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="transparent" />
                 </svg>
               </span>
             </h2>
@@ -78,10 +78,10 @@ export default function CertificationSection() {
             </div>
 
             {/* ── NAVY BLUE BOX: Global Certifications ── */}
-            <div className="relative overflow-hidden bg-[#131B2F] rounded-[1.5rem] p-6 lg:p-8 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)] border border-white/10">
-              {/* Inner Box Glow */}
+            {/* <div className="relative overflow-hidden bg-[#131B2F] rounded-[1.5rem] p-6 lg:p-8 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)] border border-white/10">
+
               <div className="absolute top-[-50%] right-[-10%] w-[200px] h-[200px] bg-[#ECAB00]/20 rounded-full blur-[50px] pointer-events-none" />
-              
+
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-5">
                   <Award className="text-[#ECAB00]" size={24} />
@@ -89,8 +89,8 @@ export default function CertificationSection() {
                     Preparation for Global Exams
                   </p>
                 </div>
-                
-                {/* Logos Grid */}
+
+
                 <div className="flex flex-wrap gap-3">
                   {globalPartners.map((partner, i) => (
                     <div
@@ -98,18 +98,18 @@ export default function CertificationSection() {
                       className="flex items-center justify-center bg-white px-4 py-3 rounded-xl shadow-sm hover:shadow-[0_5px_15px_rgba(236,171,0,0.2)] transition-all duration-300 hover:-translate-y-1 group cursor-default"
                       title={partner.name}
                     >
-                      <img 
-                        src={partner.url} 
-                        alt={partner.name} 
-                        className="h-5 md:h-6 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" 
+                      <img
+                        src={partner.url}
+                        alt={partner.name}
+                        className="h-5 md:h-6 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
                         loading="lazy"
                       />
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
-            
+            </div> */}
+
           </motion.div>
 
           {/* ── RIGHT: FLOATING CERTIFICATES ── */}
@@ -118,7 +118,7 @@ export default function CertificationSection() {
             <div className="absolute w-[400px] h-[400px] bg-[#2563eb]/20 rounded-full blur-[80px] -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
             <div className="flex flex-col sm:flex-row gap-6 md:gap-8 relative z-10 w-full max-w-[600px]">
-              
+
               {/* Diploma Card (Floats Up & Down) */}
               <motion.div
                 animate={{ y: [0, -15, 0] }}
