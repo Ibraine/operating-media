@@ -8,48 +8,73 @@ const S = { fontFamily: "'Satoshi', sans-serif" };
 // ── Unified Premium Data ──
 const PROGRAMS = [
   {
-    id: "ug",
+    id: "Master's",
     icon: "🎓",
-    label: "UG in Digital Business",
-    badge: "For Undergrads",
-    duration: "1 Year",
-    students: "2,400+",
-    level: "Beginner",
-    desc: "Perfect for fresh graduates looking to build a strong foundation in the digital ecosystem.",
-    outcomes: ["Full digital marketing foundation", "Live project experience", "Google & Meta certification", "Internship placement support"],
+    label: "Master's in Digital Marketing",
+    badge: "Master's",
+    duration: "8 Months",
+    students: "16000+",
+    level: "15+",
+    desc: "Don’t just watch videos. Manage REAL money on Google & Meta Ads. The only course in Mumbai where we fund your ad campaigns for practical learning.",
+outcomes: [
+  "Ecommerce Creation",
+  "Video Editing Tool",
+  "Lead Generation",
+  "Photoshop Basics",
+  "Real Market Places Listing",
+  "Free Hosting + Domain",
+],
   },
   {
-    id: "mba",
+    id: "Advance",
     icon: "🏆",
-    label: "MBA-Level PG Program",
-    badge: "Highest Placements",
-    duration: "11 Months",
-    students: "5,800+",
-    level: "Advanced",
-    desc: "Our flagship program designed to turn you into a 360° digital strategy master.",
-    outcomes: ["360° digital strategy mastery", "Agency simulation projects", "Guaranteed placement support", "Live client campaign management"],
+    label: "Advance in Digital Marketing",
+    badge: "Advance",
+    duration: "4 Months",
+    students: "16000+",
+    level: "15+",
+    desc: "The fast-track program for students and business owners. Master the ‘Big 3’ revenue drivers: Google Ads, Social Media, and SEO along with 25 other modules. No fluff, just execution.",
+outcomes: [
+  "Blog Creation & Monetization",
+  "Digital Planning and Strategy",
+  "Content and Media Marketing",
+  "Media Buying and Planning",
+  "Influencer Marketing",
+  "Whatsapp Chat & Automation"
+],
   },
   {
-    id: "ai",
+    id: "Diploma",
     icon: "🤖",
-    label: "Online AI Programs",
-    badge: "Trending",
-    duration: "6 Months",
-    students: "1,200+",
-    level: "Intermediate",
-    desc: "Future-proof your marketing career with cutting-edge AI and automation workflows.",
-    outcomes: ["AI-driven marketing workflows", "ChatGPT & automation tools", "Remote-ready curriculum", "AI content & ad creation"],
-  },
+    label: "Diploma in Digital Marketing",
+    badge: "Diploma",
+    duration: "2-3 Months",
+   students: "16000+",
+    level: "15+",
+    desc: "This course offers a comprehensive overview of digital media, teaching you how to integrate and use it to meet business and marketing goals.",
+outcomes: [
+  "Website Creation on WordPress",
+  "Page Design using Elementor",
+  "Search Engine Optimization",
+  "Google Analytics 4",
+  "Search Engine Marketing (SEM)",
+  "Social Media Advertising (Paid)"
+],  },
   {
-    id: "cert",
+    id: "Certification",
     icon: "📋",
-    label: "4–6 Month Certification",
-    badge: "Fast Track",
-    duration: "4–6 Months",
-    students: "3,100+",
-    level: "Beginner",
-    desc: "A fast-track certification program designed for rapid entry into the digital marketing industry.",
-    outcomes: ["Core digital marketing skills", "SEO, PPC & Social Media", "Industry-recognised certificate", "Job-ready portfolio"],
+    label: "Certification Programs",
+    badge: "Certification",
+    duration: "1 Months",
+    students: "16000+",
+    level: "15+",
+    desc: "Industry-recognized certification programs designed to build practical digital skills with real-world project experience.",
+    outcomes: [ "Hands-on practical training",
+  "Live campaign execution",
+  "Website & landing page creation",
+  "SEO and social media strategies",
+  "Google Ads & analytics setup",
+  "Industry certification guidance"],
   }
 ];
 
@@ -223,21 +248,22 @@ export default function InfoSection() {
                     <div className="flex gap-8 w-full sm:w-auto">
                       <div>
                         <p className="font-black text-[24px] lg:text-[28px] text-[#0A0F1C] leading-none mb-1">{prog.students}</p>
-                        <p className="font-bold text-[10px] lg:text-[11px] text-gray-400 uppercase tracking-widest">Enrolled</p>
+                        <p className="font-bold text-[10px] lg:text-[11px] text-gray-400 uppercase tracking-widest">Students Trained</p>
                       </div>
                       <div className="w-px h-12 bg-gray-200 hidden sm:block" />
                       <div>
                         <p className="font-black text-[24px] lg:text-[28px] text-[#0A0F1C] leading-none mb-1">{prog.level}</p>
-                        <p className="font-bold text-[10px] lg:text-[11px] text-gray-400 uppercase tracking-widest">Difficulty</p>
+                        <p className="font-bold text-[10px] lg:text-[11px] text-gray-400 uppercase tracking-widest">Years of Experience</p>
                       </div>
                     </div>
 
                     <div className="w-full sm:w-auto">
+                      <a href="/contact-us/">
                       <button className="group relative w-full sm:w-auto flex items-center justify-center gap-2 px-8 h-[54px] rounded-xl font-bold text-[15px] text-[#0A0F1C] bg-[#ecab00] hover:bg-[#d99c00] shadow-[0_10px_30px_-10px_rgba(236,171,0,0.5)] active:scale-95 transition-all duration-300 overflow-hidden">
                         <span className="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-shine" />
-                        <span className="relative z-10">Enroll Now</span>
+                        <span className="relative z-10">Book Free Demo Class</span>
                         <ArrowRight size={18} strokeWidth={3} className="relative z-10 group-hover:translate-x-1 transition-transform" />
-                      </button>
+                      </button></a>
                     </div>
 
                   </div>
