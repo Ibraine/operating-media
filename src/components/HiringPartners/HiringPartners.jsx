@@ -145,7 +145,7 @@ export default function HiringPartners() {
             </h2>
 
             <p className="font-medium text-[16px] md:text-[18px] text-gray-600 leading-relaxed max-w-lg">
-              Join 11,000+ successful alumni placed at India's leading agencies, global brands, and fastest-growing startups.
+              Join 16000+ successful alumni placed at India's leading agencies, global brands, and fastest-growing startups.
             </p>
           </FadeUp>
 

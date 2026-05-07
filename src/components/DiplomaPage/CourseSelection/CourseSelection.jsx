@@ -24,32 +24,32 @@ export default function CourseSelection() {
                     <div className="relative bg-[#0f172a] text-white rounded-[1.5rem] p-6 lg:p-8 border border-[#0f172a] shadow-[0_15px_40px_-10px_rgba(15,23,42,0.25)] hover:shadow-[0_20px_50px_-10px_rgba(15,23,42,0.35)] hover:-translate-y-1 transition-all duration-300 flex flex-col">
                         <div className="mb-4">
                             <span className="inline-block bg-[#ECAB00] text-[#0f172a] font-bold text-[13px] uppercase tracking-wide px-4 py-1.5 rounded-full">
-                                For Freshers & Students
+                                Digital Marketing
                             </span>
                         </div>
                         <h3 className="font-black text-[22px] md:text-[24px] lg:text-[26px] leading-[1.25] mb-2">
-                            Your First Step into Digital Marketing. Done Right.
+                            Start Your Digital Marketing Journey the Right Way.
                         </h3>
                         <p className="text-gray-300 font-medium text-[15px] mb-5 pb-5 border-b border-white/10">
-                            Build job-ready skills · Get certified · Land your first role in 2 months
+                            Learn practical skills • Get certified • Become job-ready faster
                         </p>
                         <ul className="space-y-3.5 flex-1">
                             <li className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#ECAB00] mt-2 shrink-0" />
                                 <p className="text-[15px] leading-relaxed text-gray-300">
-                                    <span className="font-bold text-white">Built for:</span> Freshers, graduates and students with zero prior experience in digital marketing
+                                    <span className="font-bold text-white">Built for:</span> Freshers, students, and beginners looking to build a strong foundation in digital marketing
                                 </p>
                             </li>
                             <li className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#ECAB00] mt-2 shrink-0" />
                                 <p className="text-[15px] leading-relaxed text-gray-300">
-                                    <span className="font-bold text-white">What you learn:</span> SEO, Google Ads, Social Media Marketing, WordPress, Analytics & Creative Design
+                                    <span className="font-bold text-white">What you learn:</span> SEO, Google Ads, Social Media Marketing, WordPress, Canva, Analytics & Content Creation
                                 </p>
                             </li>
                             <li className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#ECAB00] mt-2 shrink-0" />
                                 <p className="text-[15px] leading-relaxed text-gray-300">
-                                    <span className="font-bold text-white">Outcome:</span> Entry-level digital marketing roles at agencies and brands with a recognised diploma
+                                    <span className="font-bold text-white">Outcome:</span> Build industry-ready skills for internships, freelancing, and entry-level digital marketing roles
                                 </p>
                             </li>
                         </ul>
@@ -59,32 +59,32 @@ export default function CourseSelection() {
                     <div className="relative bg-white text-[#0f172a] rounded-[1.5rem] p-6 lg:p-8 border border-gray-200 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] hover:shadow-xl hover:border-[#0f172a]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col">
                         <div className="mb-4">
                             <span className="inline-block border border-[#0f172a] text-[#0f172a] bg-gray-50 font-bold text-[13px] uppercase tracking-wide px-4 py-1.5 rounded-full">
-                                For Business Owners
+                                Digital Marketing
                             </span>
                         </div>
                         <h3 className="font-black text-[22px] md:text-[24px] lg:text-[26px] leading-[1.25] mb-2">
-                            Take Control of Your Own Digital Presence.
+                            Grow Your Business Without Depending on Agencies
                         </h3>
                         <p className="text-gray-600 font-medium text-[15px] mb-5 pb-5 border-b border-gray-100">
-                            Weekend batches available · Learn at your own pace
+                           Grow Your Business Without Depending on Agencies
                         </p>
                         <ul className="space-y-3.5 flex-1">
                             <li className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#0f172a] mt-2 shrink-0" />
                                 <p className="text-[15px] leading-relaxed text-gray-600">
-                                    <span className="font-bold text-[#0f172a]">Built for:</span> Small business owners and entrepreneurs who want to handle their own digital campaigns
+                                    <span className="font-bold text-[#0f172a]">Built for:</span> Small business owners and entrepreneurs who want to manage their own digital presence
                                 </p>
                             </li>
                             <li className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#0f172a] mt-2 shrink-0" />
                                 <p className="text-[15px] leading-relaxed text-gray-600">
-                                    <span className="font-bold text-[#0f172a]">What you learn:</span> Website creation, Google Ads, Social Media Ads, SEO & Analytics
+                                    <span className="font-bold text-[#0f172a]">What you learn:</span> Website creation, Google Ads, Social Media Ads, SEO, lead generation & analytics
                                 </p>
                             </li>
                             <li className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#0f172a] mt-2 shrink-0" />
                                 <p className="text-[15px] leading-relaxed text-gray-600">
-                                    <span className="font-bold text-[#0f172a]">Outcome:</span> Run your own ads, rank on Google and generate leads — without outsourcing
+                                    <span className="font-bold text-[#0f172a]">Outcome:</span> Generate leads, grow your brand online, and manage marketing campaigns confidently
                                 </p>
                             </li>
                         </ul>

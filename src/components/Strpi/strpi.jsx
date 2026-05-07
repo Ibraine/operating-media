@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
-export default function FullWidthInstituteStats() {
-  const [mounted, setMounted] = useState(false);
+export default function CompactInstituteStats() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
-    // Animation trigger on mount
-    setTimeout(() => setMounted(true), 100);
-
-    // Inject Satoshi Font
+    // Inject Font
     if (!document.querySelector('link[data-font="satoshi"]')) {
       const link = document.createElement("link");
       link.rel = "stylesheet";
@@ -15,83 +13,84 @@ export default function FullWidthInstituteStats() {
       link.href = "https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap";
       document.head.appendChild(link);
     }
+
+    // Scroll Animation Observer
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
   }, []);
 
-  // 5 Key Features Data
   const featuresData = [
-    {
-      icon: "🎯",
-      title: "Micro Batches (10 – 12 Students Only)",
-      desc: "Get personal attention (not crowded classrooms)"
-    },
-    {
-      icon: "🧠",
-      title: "Industry Expert Trainers (12+ Years Experience)",
-      desc: "Learn what actually works in real jobs"
-    },
-    {
-      icon: "🛠",
-      title: "100% Practical Training",
-      desc: "No theory overload—only real execution"
-    },
-    {
-      icon: "📈",
-      title: "Placement Assistance + Interview Training",
-      desc: "Resume + mock interviews included"
-    },
-    {
-      icon: "🔁",
-      title: "LMS Access + Backup Lectures",
-      desc: "Never miss a concept"
-    }
+    { icon: "🎯", title: "Micro Batches", desc: "10-12 Students for personal attention" },
+    { icon: "🧠", title: "Expert Trainers", desc: "12+ Yrs Exp. Learn real job skills" },
+    { icon: "🛠", title: "100% Practical", desc: "No theory overload, only execution" },
+    { icon: "📈", title: "Placement Help", desc: "Resume & mock interviews included" },
+    { icon: "🔁", title: "LMS & Backups", desc: "Never miss out with lifetime access" }
   ];
 
   return (
     <section 
-      // Pura Edge-to-Edge Dark Navy Blue Background
-      className="w-full relative bg-[#0f172a] overflow-hidden py-12 md:py-16 selection:bg-[#ECAB00] selection:text-[#0f172a]"
+      ref={sectionRef}
+      // Height kam karne ke liye padding py-10 to py-14 rakhi hai
+      className="relative w-full bg-[#080d1a] overflow-hidden py-10 md:py-14 selection:bg-[#ECAB00] selection:text-black"
       style={{ fontFamily: "'Satoshi', sans-serif" }}
     >
-      {/* --- BACKGROUND EFFECTS --- */}
-      {/* 1. Subtle Mesh Grid (Tech Vibe) */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+      {/* --- BACKGROUND SUBTLE GRID --- */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       
-      {/* 2. Top Centered Golden Glow (Breathing Effect) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-full pointer-events-none">
-        <div className="w-full h-[300px] bg-[radial-gradient(ellipse_at_top,_#ECAB00_0%,_transparent_70%)] opacity-15 animate-pulse-slow blur-[50px]" />
-      </div>
+      {/* Center Golden Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] h-[200px] bg-[#ECAB00] opacity-[0.07] blur-[80px] rounded-full pointer-events-none" />
 
-      {/* --- MAIN CONTENT CONTAINER --- */}
-      <div className={`relative z-10 max-w-[1200px] mx-auto px-6 transition-all duration-1000 ease-out ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className="relative z-10 max-w-[1200px] mx-auto px-5 sm:px-6">
         
-        {/* --- TOP HEADING SECTION --- */}
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
-          <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-black text-white leading-tight mb-3">
-            Why 16,000+ <span className="text-[#ECAB00]">Students</span> Trust Operating Media
+        {/* --- COMPACT HEADING --- */}
+        <div className={`text-center max-w-2xl mx-auto mb-8 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-[26px] sm:text-[32px] md:text-[38px] font-black text-white leading-tight mb-2 tracking-tight">
+            Why 16,000+ Students <br className="hidden sm:block" /> 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ECAB00] to-[#FFE270]">Trust Operating Media</span>
           </h2>
-          <p className="text-[14px] sm:text-[15px] md:text-[16px] text-white/70 font-medium leading-relaxed max-w-2xl mx-auto">
-            Join our community of students who transformed their careers with advanced AI-powered courses, expert-led training, and guaranteed placement support.
+          <p className="text-[14px] md:text-[15px] text-white/60 font-medium">
+            AI-powered courses, expert training & guaranteed placement support.
           </p>
         </div>
 
-        {/* --- 5 KEY FEATURES SECTION --- */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-8 md:mt-10">
+        {/* --- COMPACT FEATURE CARDS (FLEX WRAP FOR PERFECT ALIGNMENT) --- */}
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4">
           {featuresData.map((feature, index) => (
             <div 
               key={index}
-              className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex items-start gap-4 p-5 md:p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:bg-white/[0.05] hover:border-[#ECAB00]/50 hover:-translate-y-1 transition-all duration-300 group cursor-default"
+              className="group relative overflow-hidden flex items-center gap-4 w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] max-w-[400px] bg-white/[0.03] border border-white/5 rounded-2xl p-4 transition-all duration-300 hover:bg-white/[0.06] hover:border-[#ECAB00]/40 hover:-translate-y-1 hover:shadow-[0_10px_20px_-10px_rgba(236,171,0,0.2)] cursor-default"
+              style={{ 
+                opacity: isVisible ? 1 : 0, 
+                transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+                transition: `all 0.5s cubic-bezier(0.16, 1, 0.3, 1) ${index * 100}ms` 
+              }}
             >
-              {/* Icon */}
-              <div className="text-2xl md:text-3xl shrink-0 group-hover:scale-110 transition-transform duration-300 drop-shadow-md">
-                {feature.icon}
+              {/* Shimmer Light Effect (Eye-Catchy Animation) */}
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/[0.05] to-transparent group-hover:animate-shimmer pointer-events-none" />
+
+              {/* Glowing Icon Box */}
+              <div className="shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-white/[0.04] border border-white/10 text-2xl group-hover:bg-[#ECAB00]/10 group-hover:border-[#ECAB00]/50 group-hover:scale-110 transition-all duration-300 shadow-inner relative">
+                {/* Small glow behind icon on hover */}
+                <div className="absolute inset-0 bg-[#ECAB00] opacity-0 group-hover:opacity-20 blur-md rounded-xl transition-opacity duration-300"></div>
+                <span className="relative z-10">{feature.icon}</span>
               </div>
               
-              {/* Text */}
+              {/* Text Info */}
               <div className="flex flex-col text-left">
-                <h4 className="text-white font-bold text-[15px] md:text-[16px] leading-snug mb-1.5 group-hover:text-[#ECAB00] transition-colors duration-300">
+                <h4 className="text-white font-bold text-[15px] md:text-[16px] leading-tight mb-0.5 group-hover:text-[#ECAB00] transition-colors duration-300">
                   {feature.title}
                 </h4>
-                <p className="text-white/60 text-[13px] md:text-[14px] leading-relaxed font-medium">
+                <p className="text-white/50 text-[12px] md:text-[13px] leading-snug font-medium line-clamp-2">
                   {feature.desc}
                 </p>
               </div>
@@ -101,14 +100,13 @@ export default function FullWidthInstituteStats() {
 
       </div>
 
-      {/* --- CUSTOM CSS FOR ANIMATIONS --- */}
+      {/* --- CUSTOM CSS FOR SHIMMER EFFECT --- */}
       <style>{`
-        .animate-pulse-slow {
-          animation: pulseGlow 5s ease-in-out infinite;
+        @keyframes shimmer {
+          100% { transform: translateX(100%); }
         }
-        @keyframes pulseGlow {
-          0%, 100% { opacity: 0.1; transform: scale(1); }
-          50% { opacity: 0.2; transform: scale(1.1); }
+        .animate-shimmer {
+          animation: shimmer 1.5s infinite;
         }
       `}</style>
     </section>

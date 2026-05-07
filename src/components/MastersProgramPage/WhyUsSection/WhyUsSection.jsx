@@ -30,7 +30,7 @@ const FEATURES = [
   {
     Icon: Zap,
     title: 'Agency-Style Training',
-    desc: '200+ hours of learning built entirely around simulated real-world agency workflows.',
+    desc: '380+ hours of learning built entirely around simulated real-world agency workflows.',
   },
   {
     Icon: CreditCard,

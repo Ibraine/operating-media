@@ -13,7 +13,7 @@ export default function CourseSelection() {
                         Core Skills. <span className="text-[#ECAB00]">Maximum Impact.</span> Zero Fluff.
                     </h2>
                     <p className="text-[16px] md:text-[18px] text-gray-600 font-medium">
-                        Not everyone needs a 12-month master's degree. Pick the track that suits your goal.
+                        Skip outdated theory-heavy programs. Choose the digital marketing path built for your career goals.
                     </p>
                 </div>
 
@@ -24,32 +24,32 @@ export default function CourseSelection() {
                     <div className="relative bg-[#0f172a] text-white rounded-[1.5rem] p-6 lg:p-8 border border-[#0f172a] shadow-[0_15px_40px_-10px_rgba(15,23,42,0.25)] hover:shadow-[0_20px_50px_-10px_rgba(15,23,42,0.35)] hover:-translate-y-1 transition-all duration-300 flex flex-col">
                         <div className="mb-4">
                             <span className="inline-block bg-[#ECAB00] text-[#0f172a] font-bold text-[13px] uppercase tracking-wide px-4 py-1.5 rounded-full">
-                                For Business Owners
+                                Digital Marketing
                             </span>
                         </div>
                         <h3 className="font-black text-[22px] md:text-[24px] lg:text-[26px] leading-[1.25] mb-2">
-                            Stop Outsourcing. Start Running Your Own Ads.
+                            Build Real Digital Marketing Skills That Drive Results
                         </h3>
                         <p className="text-gray-300 font-medium text-[15px] mb-5 pb-5 border-b border-white/10">
-                            Manage real ad budgets · Rank your own website · Run social campaigns
+                            Get hands-on learning, live projects, certifications, and career-focused mentorship.
                         </p>
                         <ul className="space-y-3.5 flex-1">
                             <li className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#ECAB00] mt-2 shrink-0" />
                                 <p className="text-[15px] leading-relaxed text-gray-300">
-                                    <span className="font-bold text-white">Built for:</span> Business owners who want to stop outsourcing and start running their own ads
+                                    <span className="font-bold text-white">70+ Industry Tools:</span> Learn tools used for ads, analytics, automation, content creation, and AI marketing.
                                 </p>
                             </li>
                             <li className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#ECAB00] mt-2 shrink-0" />
                                 <p className="text-[15px] leading-relaxed text-gray-300">
-                                    <span className="font-bold text-white">What you learn:</span> Google Ads, Social Media Ads, SEO, Email Marketing, AI Automation
+                                    <span className="font-bold text-white">Placement Assistance:</span> Resume building, interview preparation, portfolio guidance, and career support.
                                 </p>
                             </li>
                             <li className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#ECAB00] mt-2 shrink-0" />
                                 <p className="text-[15px] leading-relaxed text-gray-300">
-                                    <span className="font-bold text-white">Outcome:</span> Self-reliant marketing that generates real revenue
+                                    <span className="font-bold text-white">Flexible Learning:</span> Weekend & weekday batches available for students and working professionals.
                                 </p>
                             </li>
                         </ul>
@@ -72,19 +72,19 @@ export default function CourseSelection() {
                             <li className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#0f172a] mt-2 shrink-0" />
                                 <p className="text-[15px] leading-relaxed text-gray-600">
-                                    <span className="font-bold text-[#0f172a]">Built for:</span> Working professionals who want to switch careers without quitting their current job
+                                    <span className="font-bold text-[#0f172a]">360° Marketing Training:</span> Master SEO, Meta Ads, Google Ads, social media, email marketing, and branding.
                                 </p>
                             </li>
                             <li className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#0f172a] mt-2 shrink-0" />
                                 <p className="text-[15px] leading-relaxed text-gray-600">
-                                    <span className="font-bold text-[#0f172a]">What you learn:</span> Performance marketing, SEO, content strategy, social media, analytics
+                                    <span className="font-bold text-[#0f172a]">AI-Powered Marketing Systems:</span> Learn advanced AI automation, chatbot workflows, and performance optimization.
                                 </p>
                             </li>
                             <li className="flex items-start gap-3">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#0f172a] mt-2 shrink-0" />
                                 <p className="text-[15px] leading-relaxed text-gray-600">
-                                    <span className="font-bold text-[#0f172a]">Outcome:</span> Digital marketing roles at top agencies and brands
+                                    <span className="font-bold text-[#0f172a]">Agency & Freelancing Skills:</span> Build client acquisition, reporting, strategy planning, and business scaling skills.
                                 </p>
                             </li>
                         </ul>

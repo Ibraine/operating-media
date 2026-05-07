@@ -14,7 +14,7 @@ export default function CourseSelection() {
             Choose your path. <span className="text-[#ECAB00]">Digital Marketing</span> in both. Business Strategy in one.
           </h2>
           <p className="text-[16px] md:text-[18px] text-gray-600 font-medium">
-            Pick the program that matches your career goal.
+           Choose the program that matches your career goals — become a skilled digital marketer or step into leadership with advanced business strategy and AI-driven marketing expertise.
           </p>
         </div>
 
@@ -27,16 +27,16 @@ export default function CourseSelection() {
             {/* Badge */}
             <div className="mb-4">
               <span className="inline-block bg-[#ECAB00] text-[#0f172a] font-bold text-[13px] uppercase tracking-wide px-4 py-1.5 rounded-full">
-                For the Leader
+                Digital Marketing
               </span>
             </div>
 
             {/* Title & Duration */}
             <h3 className="font-black text-[22px] md:text-[24px] lg:text-[26px] leading-[1.25] mb-2">
-              PG in Digital Marketing & Business Strategy (PGDBS)
+             Lead the Future of Digital Business
             </h3>
             <p className="text-gray-300 font-medium text-[15px] mb-5 pb-5 border-b border-white/10">
-              Learning Duration: 1000 Hours
+              Learning Duration: 8 Months
             </p>
 
             {/* List */}
@@ -44,19 +44,19 @@ export default function CourseSelection() {
               <li className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#ECAB00] mt-2 shrink-0" />
                 <p className="text-[15px] leading-relaxed text-gray-300">
-                  <span className="font-bold text-white">Built for:</span> Those who want to run the room, not just the campaign
+                  <span className="font-bold text-white">Live Ad Campaign Execution: </span> Run real Google & Meta ad campaigns with practical budget handling experience.
                 </p>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#ECAB00] mt-2 shrink-0" />
                 <p className="text-[15px] leading-relaxed text-gray-300">
-                  <span className="font-bold text-white">What you learn:</span> Digital marketing, AI strategy, P&L management, sales & entrepreneurship
+                  <span className="font-bold text-white">AI-Driven Marketing Strategy:</span> Learn how modern brands use AI tools for automation, targeting, and growth.
                 </p>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#ECAB00] mt-2 shrink-0" />
                 <p className="text-[15px] leading-relaxed text-gray-300">
-                  <span className="font-bold text-white">Outcome:</span> Business roles at India's top brands and startups
+                  <span className="font-bold text-white">Ecommerce & Marketplace Training:</span> Build online stores and learn product listing on platforms like Amazon & Flipkart.
                 </p>
               </li>
             </ul>
@@ -68,16 +68,16 @@ export default function CourseSelection() {
             {/* Badge */}
             <div className="mb-4">
               <span className="inline-block border border-[#0f172a] text-[#0f172a] bg-gray-50 font-bold text-[13px] uppercase tracking-wide px-4 py-1.5 rounded-full">
-                For the Specialist
+               Digital Marketing
               </span>
             </div>
 
             {/* Title & Duration */}
             <h3 className="font-black text-[22px] md:text-[24px] lg:text-[26px] leading-[1.25] mb-2">
-              PG in Digital Marketing (PGDM)
+              Why Students Choose Operating Media
             </h3>
             <p className="text-gray-600 font-medium text-[15px] mb-5 pb-5 border-b border-gray-100">
-              Learning Duration: 750 Hours
+              Gain practical skills, certifications, live project experience, and career-focused mentorship with Operating Media.
             </p>
 
             {/* List */}
@@ -85,19 +85,19 @@ export default function CourseSelection() {
               <li className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#0f172a] mt-2 shrink-0" />
                 <p className="text-[15px] leading-relaxed text-gray-600">
-                  <span className="font-bold text-[#0f172a]">Built for:</span> Those who want to master every digital marketing channel
+                  <span className="font-bold text-[#0f172a]">120+ Marketing & AI Tools:</span> Work with industry tools used for automation, analytics, design, and performance marketing.
                 </p>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#0f172a] mt-2 shrink-0" />
                 <p className="text-[15px] leading-relaxed text-gray-600">
-                  <span className="font-bold text-[#0f172a]">What you learn:</span> Performance marketing, SEO, content, social media, analytics
+                  <span className="font-bold text-[#0f172a]">100% Placement Assistance:</span> Receive interview preparation, portfolio guidance, and career support.
                 </p>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#0f172a] mt-2 shrink-0" />
                 <p className="text-[15px] leading-relaxed text-gray-600">
-                  <span className="font-bold text-[#0f172a]">Outcome:</span> Marketing roles at top digital agencies
+                  <span className="font-bold text-[#0f172a]">0% EMI Available:</span> Affordable payment options designed for students and working professionals.
                 </p>
               </li>
             </ul>

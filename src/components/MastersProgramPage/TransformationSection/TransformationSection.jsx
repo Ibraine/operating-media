@@ -48,15 +48,15 @@ const CHECKLIST = [
 ];
 
 const BATCH_STATS = [
-  { target: 7, suffix: '', label: 'Months' },
-  { target: 200, suffix: '+', label: 'Hours' },
+  { target: 8, suffix: '', label: 'Months' },
+  { target: 380, suffix: '+', label: 'Hours' },
   { target: 12, suffix: '', label: 'Students' },
 ];
 
 const PILLS = [
   { iconName: 'zap', text: 'Real Ad Budgets' },
   { iconName: 'sparkles', text: 'AI Tools Included' },
-  { iconName: 'trophy', text: '7-Month Program' },
+  { iconName: 'trophy', text: '8-Month Program' },
   { iconName: 'users', text: 'Max 12 Students' },
 ];
 

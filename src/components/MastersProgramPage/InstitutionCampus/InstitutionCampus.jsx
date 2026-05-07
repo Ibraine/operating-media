@@ -151,8 +151,7 @@ export default function InstitutionCampus() {
               Operating Media.
             </h2>
             <p className="max-w-md text-gray-600 font-medium text-[15px] md:text-[16px] leading-relaxed border-l-[3px] border-[#ecab00] pl-5 lg:pb-2">
-              Student life is anything but ordinary. From surprise agency visits to vibrant celebrations, every moment is an experience.
-            </p>
+Experience a dynamic learning environment filled with creativity, collaboration, live projects, industry exposure, and unforgettable student experiences beyond the classroom.            </p>
           </div>
         </motion.div>
       </div>

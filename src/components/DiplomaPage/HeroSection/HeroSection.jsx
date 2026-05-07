@@ -73,7 +73,7 @@ export default function HeroSection() {
 
                         {/* Subtext */}
                         <p className={`text-[16px] md:text-[18px] text-gray-600 font-medium leading-relaxed max-w-[500px] mb-10 transition-all duration-700 delay-400 ease-out ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                            The perfect entry point for beginners &amp; career switchers. Master SEO, Google Ads, Social Media &amp; more — <span className="font-bold text-[#ECAB00]">65+ hours</span> of hands-on training across 50+ industry tools.
+                            The perfect entry point for beginners &amp; career switchers. Master SEO, Google Ads, Social Media &amp; more — <span className="font-bold text-[#ECAB00]">80+ hours</span> of hands-on training across 50+ industry tools.
                         </p>
 
                         {/* Buttons */}
@@ -107,7 +107,7 @@ export default function HeroSection() {
                             <span className="hidden sm:block w-1.5 h-1.5 rounded-full bg-gray-300" />
                             <div className="flex items-center gap-2">
                                 <Users size={18} className="text-[#2563eb]" />
-                                <span className="font-medium text-[15px] text-gray-500">Placed at 200+ companies</span>
+                                <span className="font-medium text-[15px] text-gray-500">96% Placement Rate</span>
                             </div>
                         </div>
 
@@ -128,7 +128,7 @@ export default function HeroSection() {
 
                             {/* Inside Card Stats */}
                             <div className="px-2 py-6 grid grid-cols-3 divide-x divide-gray-100">
-                                {[{ v: '2', l: 'Months' }, { v: '65+', l: 'Hours' }, { v: '50+', l: 'Tools' }].map((s, i) => (
+                                {[{ v: '2', l: 'Months' }, { v: '80+', l: 'Hours' }, { v: '50+', l: 'Tools' }].map((s, i) => (
                                     <div key={i} className="flex flex-col items-center">
                                         <span className="font-black text-2xl text-[#0f172a] leading-none mb-1">{s.v}</span>
                                         <span className="font-bold text-[10px] text-[#2563eb] uppercase tracking-widest">{s.l}</span>

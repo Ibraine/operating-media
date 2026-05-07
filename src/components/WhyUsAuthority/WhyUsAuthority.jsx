@@ -35,7 +35,7 @@ const REASONS = [
     Icon: Trophy,
   },
   {
-    title: "1,600+ Students Trained",
+    title: "16000+ Students Trained",
     desc: "A growing network of placed professionals working at top agencies across India.",
     Icon: Users2,
   },
