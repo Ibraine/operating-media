@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, Award } from 'lucide-react';
 
 const globalPartners = [
-    { name: "Google Ads", url: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg" },
-    { name: "Meta Blueprint", url: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
-    { name: "HubSpot", url: "https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg" },
-    { name: "Microsoft Ads", url: "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" },
+    { name: "Google Ads", url: "/images/Google.svg" },
+    { name: "Meta Blueprint", url: "/images/Meta.svg" },
+    { name: "HubSpot", url: "/images/HubSpot.svg" },
+    { name: "Microsoft Ads", url: "/images/Microsoft.svg" },
 ];
 
 export default function WPCertification() {
@@ -72,7 +72,7 @@ export default function WPCertification() {
                             <motion.div animate={{ y: [0, -15, 0] }} transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }} className="bg-white p-3 md:p-4 rounded-[1.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/10 w-full sm:w-1/2 z-20 group transform rotate-[-2deg] hover:rotate-0 hover:z-30 hover:scale-105 transition-all duration-500">
                                 <div className="overflow-hidden rounded-xl border border-gray-100 bg-[#fdfdfd] p-1 shadow-inner relative">
                                     <div className="absolute inset-0 bg-gradient-to-tr from-[#0A0F1C]/5 to-transparent pointer-events-none" />
-                                    <img src="https://www.operatingmedia.com/wp-content/uploads/2024/06/OM-Certificate-New-724x1024.png" alt="Advanced Diploma Certificate" className="w-full h-auto object-cover rounded-lg" loading="lazy" />
+                                    <img src="/images/OM-Certificate-New.webp" alt="Advanced Diploma Certificate" className="w-full h-auto object-cover rounded-lg" loading="lazy" />
                                 </div>
                                 <div className="mt-4 px-2 pb-2 text-center">
                                     <p className="text-[10px] md:text-[11px] uppercase text-[#2563eb] font-bold tracking-[0.2em] mb-1">Outcome 01</p>
@@ -82,7 +82,7 @@ export default function WPCertification() {
                             <motion.div animate={{ y: [0, 15, 0] }} transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 1 }} className="bg-white p-3 md:p-4 rounded-[1.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/10 w-full sm:w-1/2 sm:mt-16 z-10 group transform rotate-[3deg] hover:rotate-0 hover:z-30 hover:scale-105 transition-all duration-500">
                                 <div className="overflow-hidden rounded-xl border border-gray-100 bg-[#fdfdfd] p-1 shadow-inner relative">
                                     <div className="absolute inset-0 bg-gradient-to-tr from-[#ECAB00]/10 to-transparent pointer-events-none" />
-                                    <img src="https://www.operatingmedia.com/wp-content/uploads/2024/06/Om-Certificate-Masters-724x1024.png" alt="Google Certification" className="w-full h-auto object-cover rounded-lg" loading="lazy" />
+                                    <img src="/images/Om-Certificate-Masters.webp" alt="Google Certification" className="w-full h-auto object-cover rounded-lg" loading="lazy" />
                                 </div>
                                 <div className="mt-4 px-2 pb-2 text-center">
                                     <p className="text-[10px] md:text-[11px] uppercase text-[#ECAB00] font-bold tracking-[0.2em] mb-1">Outcome 02</p>

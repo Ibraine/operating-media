@@ -3,11 +3,19 @@ import { motion } from 'framer-motion';
 import { MapPin, Rocket, ShieldCheck, ArrowUpRight, Sparkles, Clock } from 'lucide-react';
 import { useModal } from '../../context/ModalContext';
 
-const batches = [
-  { type: 'Weekday', andheri: '12:00 PM – 2:00 PM', borivali: '08:00 AM – 09:30 AM' },
-  { type: 'Weekday', andheri: '04:00 PM – 06:00 PM', borivali: '10:00 AM – 12:00 PM' },
-  { type: 'Weekday', andheri: '07:00 PM – 09:00 PM', borivali: '02:30 PM – 04:30 PM' },
-  { type: 'Sunday', andheri: '11:00 AM – 04:00 PM', borivali: '11:00 AM – 04:00 PM' },
+// ── Separated Batch Data ──
+const ANDHERI_BATCHES = [
+  { type: 'Weekday', time: '10:00 AM – 12:00 PM' },
+  { type: 'Weekday', time: '12:00 PM – 2:00 PM' },
+  { type: 'Weekday', time: '04:00 PM – 06:00 PM' },
+  { type: 'Weekday', time: '07:00 PM – 09:00 PM' },
+];
+
+const BORIVALI_BATCHES = [
+  { type: 'Weekday', time: '08:00 AM – 09:30 AM' },
+  { type: 'Weekday', time: '10:00 AM – 12:00 PM' },
+  { type: 'Weekday', time: '02:30 PM – 04:30 PM' },
+  { type: 'Sunday', time: '11:00 AM – 04:00 PM' },
 ];
 
 const TRUST = [
@@ -16,7 +24,7 @@ const TRUST = [
   '100% Placement Assistance',
 ];
 
-function BatchTable({ campus, dataKey, delay }) {
+function BatchTable({ campus, batches, delay }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -25,7 +33,7 @@ function BatchTable({ campus, dataKey, delay }) {
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay }}
       className="overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(236,171,0,0.15)] hover:border-[#ecab00]/30 transition-all duration-500 relative z-10"
     >
-      {/* ── Table Header (Clean Minimal Design) ── */}
+      {/* ── Table Header ── */}
       <div className="flex items-center justify-between border-b border-gray-100 bg-gray-50/50 px-6 py-5">
         <h4 className="flex items-center gap-3 font-bold text-[18px] text-[#0f172a] tracking-tight">
           <div className="w-9 h-9 rounded-full bg-[#ecab00]/10 flex items-center justify-center">
@@ -33,8 +41,7 @@ function BatchTable({ campus, dataKey, delay }) {
           </div>
           {campus}
         </h4>
-        
-        {/* Pulsating Premium Badge */}
+
         <div className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1.5 shadow-sm">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ecab00] opacity-75"></span>
@@ -62,13 +69,11 @@ function BatchTable({ campus, dataKey, delay }) {
                 <tr key={i} className="group hover:bg-[#ecab00]/[0.03] transition-colors duration-300">
                   <td className="py-4 pr-3 rounded-l-xl">
                     {isSunday ? (
-                      // Highlighted Sunday Badge
                       <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#ecab00]/30 bg-[#ecab00]/10 px-2.5 py-1.5 shadow-sm group-hover:scale-105 transition-transform duration-300">
                         <Sparkles size={12} className="text-[#ecab00]" />
                         <span className="font-bold text-[11px] uppercase tracking-widest text-[#d99c00]">Sunday Batch</span>
                       </span>
                     ) : (
-                      // Standard Weekday Badge
                       <span className="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-gray-50 px-2.5 py-1.5 text-gray-500">
                         <Clock size={12} />
                         <span className="font-bold text-[11px] uppercase tracking-widest">Weekday</span>
@@ -76,7 +81,7 @@ function BatchTable({ campus, dataKey, delay }) {
                     )}
                   </td>
                   <td className={`py-4 text-right font-black text-[15px] tracking-tight rounded-r-xl transition-colors duration-300 ${isSunday ? 'text-[#d99c00]' : 'text-[#0f172a] group-hover:text-[#ecab00]'}`}>
-                    {b[dataKey]}
+                    {b.time}
                   </td>
                 </tr>
               );
@@ -90,7 +95,7 @@ function BatchTable({ campus, dataKey, delay }) {
 
 export default function EventsAndBatches() {
   const { openBrochureModal } = useModal();
-  // Inject Satoshi font dynamically
+
   useEffect(() => {
     if (!document.querySelector('link[data-font="satoshi"]')) {
       const link = document.createElement('link');
@@ -102,23 +107,16 @@ export default function EventsAndBatches() {
   }, []);
 
   return (
-    <section 
+    <section
       className="relative w-full overflow-hidden bg-white font-sans selection:bg-[#ecab00] selection:text-[#0f172a]"
       style={{ fontFamily: "'Satoshi', sans-serif" }}
     >
-      
-      {/* ── Minimal Ambient Grid (Halka Line Background) ── */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.03] z-0" 
-           style={{ backgroundImage: 'linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(90deg, #0f172a 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-
-      {/* ── Subtle Orange Glow ── */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden flex justify-center z-0">
-        <div className="absolute -top-[10%] right-[-5%] h-[600px] w-[600px] rounded-full bg-[#ecab00]/5 blur-[120px] animate-pulse-slow" />
-      </div>
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03] z-0"
+        style={{ backgroundImage: 'linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(90deg, #0f172a 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
       <div className="relative z-10 mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-12 pt-16 pb-20 lg:pt-20 lg:pb-28">
 
-        {/* ── Section Header (Fixed Desktop 46px) ── */}
+        {/* ── Section Header ── */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -133,9 +131,9 @@ export default function EventsAndBatches() {
                 Enrollment Schedule
               </span>
             </div>
-            
+
             <h2 className="font-black text-[32px] md:text-[38px] lg:text-[46px] leading-[1.15] tracking-tight text-[#0f172a] mb-4 bg-white/50 backdrop-blur-sm inline-block rounded-lg px-2 -ml-2">
-              Upcoming <br className="hidden lg:block"/>
+              Upcoming <br className="hidden lg:block" />
               <span className="text-[#ecab00]">
                 Batches 2025
               </span>
@@ -149,13 +147,13 @@ export default function EventsAndBatches() {
           </div>
         </motion.div>
 
-        {/* ── Batch Tables Grid ── */}
+        {/* ── Batch Tables Grid (Passing separated data here) ── */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 relative z-10">
-          <BatchTable campus="Andheri Campus" dataKey="andheri" delay={0.1} />
-          <BatchTable campus="Borivali Campus" dataKey="borivali" delay={0.2} />
+          <BatchTable campus="Andheri Campus" batches={ANDHERI_BATCHES} delay={0.1} />
+          <BatchTable campus="Borivali Campus" batches={BORIVALI_BATCHES} delay={0.2} />
         </div>
 
-        {/* ── Trust Indicators Strip (SINGLE LINE) ── */}
+        {/* ── Trust Indicators Strip ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -176,7 +174,7 @@ export default function EventsAndBatches() {
           </div>
         </motion.div>
 
-        {/* ════ CTA BENTO BOX (Clean & Floating) ════ */}
+        {/* ── CTA BENTO BOX ── */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -184,25 +182,16 @@ export default function EventsAndBatches() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           className="relative overflow-hidden w-full rounded-[32px] bg-[#0f172a] py-12 px-8 lg:px-14 shadow-[0_20px_40px_-15px_rgba(15,23,42,0.4)] z-10"
         >
-          {/* Faint Background Grid Lines inside CTA */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-[radial-gradient(ellipse_at_right,_rgba(236,171,0,0.15)_0%,_transparent_80%)] pointer-events-none" />
-
-          {/* Inner Container */}
           <div className="relative z-10 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between w-full">
-
-            {/* Left Text */}
             <div className="text-center lg:text-left">
               <h3 className="font-black text-[28px] md:text-[34px] lg:text-[40px] leading-[1.1] tracking-tight text-white drop-shadow-md">
-                Start Your Career <br className="hidden md:block"/> Transformation Today.
+                Start Your Career <br className="hidden md:block" /> Transformation Today.
               </h3>
               <p className="font-medium text-[16px] md:text-[18px] text-white/70 mt-3">Reserve your seat in the next batch before it fills up.</p>
             </div>
 
-            {/* Right Buttons */}
             <div className="flex flex-col sm:flex-row shrink-0 gap-4 w-full lg:w-auto">
-              
-              {/* Primary Button */}
               <a href="/contact-us/">
                 <button className="group relative w-full sm:w-auto flex items-center justify-center gap-2 rounded-2xl bg-[#ecab00] px-8 py-4 shadow-[0_10px_30px_rgba(236,171,0,0.4)] hover:shadow-[0_15px_40px_rgba(236,171,0,0.6)] active:scale-95 transition-all duration-300 overflow-hidden cursor-pointer">
                   <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-shine" />
@@ -211,30 +200,23 @@ export default function EventsAndBatches() {
                   <ArrowUpRight size={18} className="text-[#0f172a] group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform relative z-10" />
                 </button>
               </a>
-              
-              {/* Secondary Button */}
-              <button 
+              <button
                 onClick={openBrochureModal}
                 className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-2xl border-2 border-white/20 px-8 py-4 text-white hover:border-[#ecab00] hover:bg-[#ecab00]/10 active:scale-95 transition-all duration-300 font-bold text-[16px] cursor-pointer"
               >
                 Download Brochure
               </button>
-
             </div>
-
           </div>
         </motion.div>
-
       </div>
 
-      {/* ── Custom Animations ── */}
       <style>{`
         @keyframes shine { 100% { transform: translateX(100%); } }
         .animate-shine { animation: shine 1.5s ease; }
         .animate-pulse-slow { animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
         @keyframes pulse { 0%, 100% { opacity: 0.6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
       `}</style>
-      
     </section>
   );
 }

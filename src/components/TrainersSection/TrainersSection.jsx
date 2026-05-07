@@ -16,8 +16,8 @@ const ZAHID_IMAGE = "/images/zahid.png";
 // Add up to 8 mentors here.
 const MENTORS = [
   { name: "Harsh Pareek", role: "SEO & Growth Strategist", img: DEFAULT_IMAGE },
-  { name: "Shraddha Rane", role: "Digital Marketing Expert", img: SHRADDHA_IMAGE }, 
-  { name: "Neelkamal Mukharjee", role: "E-Commerce Expert", img: NEEL_IMAGE },
+  { name: "Shraddha Rane", role: "Digital Marketing Expert", img: SHRADDHA_IMAGE },
+  { name: "Nilkamal Mukharjee", role: "E-Commerce Expert", img: NEEL_IMAGE },
   { name: "Rahul Shinde", role: "Analytics Lead", img: RAHUL_IMAGE },
   { name: "Hemant Mane", role: "Performance Marketing Lead", img: HEMANT_IMAGE },
   { name: "Zahid Shaikh", role: "Social Media Specialist", img: ZAHID_IMAGE },
@@ -29,7 +29,7 @@ const MENTORS = [
 function MentorCard({ mentor }) {
   return (
     <div className="group flex flex-col rounded-[24px] bg-white border border-gray-100 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.08)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(236,171,0,0.25)] hover:border-[#ecab00]/40 transition-all duration-500 cursor-default overflow-hidden w-full max-w-[290px] mx-auto relative">
-      
+
       {/* ── Photo Area (Full Bleed Object Cover) ── */}
       <div className="relative h-[280px] sm:h-[320px] w-full overflow-hidden bg-gray-100">
         <img
@@ -38,10 +38,10 @@ function MentorCard({ mentor }) {
           // Changed to object-cover so it completely fills the space without weird borders
           className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-[8s] ease-out"
         />
-        
+
         {/* Dark Overlay that rises on hover to make text/icons pop */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        
+
         {/* Hidden LinkedIn Icon that pops up on hover (Premium Touch) */}
         <div className="absolute bottom-4 right-4 bg-[#ecab00] p-2.5 rounded-full text-[#0f172a] translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 shadow-lg cursor-pointer">
           <Linkedin size={18} fill="currentColor" strokeWidth={1} />
@@ -53,11 +53,11 @@ function MentorCard({ mentor }) {
         <h3 className="font-black text-[20px] md:text-[22px] text-[#0f172a] tracking-tight leading-tight mb-1 transition-colors group-hover:text-[#ecab00]">
           {mentor.name}
         </h3>
-        <p className="font-bold text-[12px] uppercase tracking-widest text-[#ecab00]">
+        {/* <p className="font-bold text-[12px] uppercase tracking-widest text-[#ecab00]">
           {mentor.role}
-        </p>
+        </p> */}
       </div>
-      
+
     </div>
   );
 }
@@ -86,7 +86,7 @@ export default function TrainersSection() {
       else setCardsToShow(4); // Large Desktop
     };
 
-    handleResize(); 
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -109,16 +109,16 @@ export default function TrainersSection() {
   const visibleCards = MENTORS.slice(startIndex, startIndex + cardsToShow);
 
   return (
-    <section 
-      className="relative w-full py-16 lg:py-24 bg-[#FAFCFF] overflow-hidden selection:bg-[#ecab00] selection:text-[#0f172a]" 
+    <section
+      className="relative w-full py-16 lg:py-24 bg-[#FAFCFF] overflow-hidden selection:bg-[#ecab00] selection:text-[#0f172a]"
       style={{ fontFamily: "'Satoshi', sans-serif" }}
     >
       {/* ── Background Grid ── */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
-           style={{ backgroundImage: 'linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(90deg, #0f172a 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        style={{ backgroundImage: 'linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(90deg, #0f172a 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
       {/* ── Header ── */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -134,16 +134,16 @@ export default function TrainersSection() {
 
         {/* Fixed 46px Desktop Heading */}
         <h2 className="font-black text-[32px] md:text-[38px] lg:text-[46px] leading-[1.1] tracking-tight text-[#0f172a]">
-          Learn from Real <br className="block sm:hidden"/>
+          Learn from Real <br className="block sm:hidden" />
           <span className="text-[#ecab00]">Industry Professionals.</span>
         </h2>
       </motion.div>
 
       {/* ── Carousel Area ── */}
       <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col items-center px-4 sm:px-6">
-        
+
         <div className="flex w-full items-center justify-center">
-          
+
           {/* Left Arrow (Desktop/Tablet) */}
           <button
             onClick={prevSlide}
@@ -162,11 +162,10 @@ export default function TrainersSection() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className={`grid gap-6 lg:gap-8 w-full max-w-[1250px] mx-auto ${
-                  cardsToShow === 1 ? 'grid-cols-1' : 
-                  cardsToShow === 2 ? 'grid-cols-2' : 
-                  cardsToShow === 3 ? 'grid-cols-3' : 'grid-cols-4'
-                }`}
+                className={`grid gap-6 lg:gap-8 w-full max-w-[1250px] mx-auto ${cardsToShow === 1 ? 'grid-cols-1' :
+                  cardsToShow === 2 ? 'grid-cols-2' :
+                    cardsToShow === 3 ? 'grid-cols-3' : 'grid-cols-4'
+                  }`}
               >
                 {visibleCards.map((mentor, i) => (
                   <MentorCard key={`${startIndex}-${i}`} mentor={mentor} />
@@ -199,8 +198,8 @@ export default function TrainersSection() {
           {totalPages > 1 && (
             <div className="flex items-center gap-2.5">
               {Array.from({ length: totalPages }).map((_, i) => (
-                <div 
-                  key={i} 
+                <div
+                  key={i}
                   className={`transition-all duration-300 rounded-full ${currentPage === i ? 'w-6 h-2 bg-[#ecab00]' : 'w-2 h-2 bg-gray-300'}`}
                 />
               ))}

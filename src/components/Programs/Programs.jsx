@@ -115,43 +115,39 @@ function CourseCard({ course, inView, index }) {
   const { openBrochureModal } = useModal();
   return (
     <div
-      className={`group bg-white rounded-[2rem] border-[1px] transition-all duration-500 ease-out overflow-hidden flex flex-col shadow-sm transform hover:-translate-y-2
+      className={`group bg-white rounded-[2rem] border-[1.5px] transition-all duration-500 ease-out overflow-hidden flex flex-col shadow-sm transform hover:-translate-y-2
         ${course.borderColor} ${course.shadowHover} 
         ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      {/* ── TOP BADGE STRIP (Blue #2563EB, White Text, 18px Font) ── */}
-
-
-      {/* ── Image Section ── */}
-      <div className="relative h-[200px] w-full overflow-hidden">
+      {/* ── Image Section: Height set to 240px to prevent cutting ── */}
+      <div className="relative h-[240px] w-full overflow-hidden bg-gray-50">
         <img
           src={course.image}
           alt={course.title}
-          className="w-full h-full object-cover transition-transform duration-[8s] ease-out group-hover:scale-110"
+          className="w-full h-full object-cover object-top transition-transform duration-[8s] ease-out group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
       </div>
 
-      {/* ── Content Section ── */}
-      <div className="pt-8 pb-7 px-6 flex flex-col flex-1 bg-white relative z-20">
+      {/* ── Content Section: Adjusted padding to prevent clipping ── */}
+      <div className="pt-6 pb-6 px-5 flex flex-col flex-1 bg-white relative z-20">
 
         {/* Title & Desc */}
-        <div className="text-center mb-7">
-          <h3 className={`font-black text-[20px] md:text-[22px] leading-snug mb-3 transition-colors ${course.titleColor}`}>
+        <div className="text-center mb-6">
+          <h3 className={`font-black text-[18px] md:text-[20px] leading-tight mb-2 transition-colors ${course.titleColor}`}>
             {course.title}
           </h3>
-          <p className="font-medium text-[14px] text-gray-500 leading-relaxed">
+          <p className="font-medium text-[13px] text-gray-500 leading-relaxed px-2">
             {course.desc}
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-3 mb-8 flex-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-2 mb-6 flex-1">
           {course.features.map((feature, idx) => (
-            <div key={idx} className="flex items-start gap-2.5">
+            <div key={idx} className="flex items-start gap-2">
               <CheckCircleIcon />
-              <span className="font-semibold text-[13px] text-gray-700 leading-tight pt-[1px]">
+              <span className="font-bold text-[12px] text-gray-700 leading-tight pt-[2px]">
                 {feature}
               </span>
             </div>
@@ -161,11 +157,11 @@ function CourseCard({ course, inView, index }) {
         {/* Divider */}
         <div className="w-full h-[1px] bg-gray-100 mb-6" />
 
-        {/* ── Buttons Section ── */}
-        <div className="flex flex-col xl:flex-row gap-3 w-full mt-auto">
+        {/* ── Buttons Section: Fixed side-by-side grid ── */}
+        <div className="grid grid-cols-2 gap-3 w-full mt-auto">
           {/* Primary Button */}
-          <a href="/contact-us/">
-            <button className="flex-1 w-full flex items-center justify-center gap-1.5 py-3.5 px-3 rounded-xl bg-[#FFB800] hover:bg-[#F5A500] text-gray-900 font-extrabold text-[14px] transition-all duration-300 active:scale-95 shadow-sm group/btn">
+          <a href="/contact-us/" className="w-full">
+            <button className="w-full flex items-center justify-center gap-1.5 py-3.5 px-2 rounded-xl bg-[#FFB800] hover:bg-[#F5A500] text-gray-900 font-black text-[12px] xl:text-[13px] transition-all duration-300 active:scale-95 shadow-sm">
               <span className="whitespace-nowrap">Book Free Demo</span>
               <ArrowRight />
             </button>
@@ -174,18 +170,16 @@ function CourseCard({ course, inView, index }) {
           {/* Secondary Button */}
           <button
             onClick={openBrochureModal}
-            className="flex-1 w-full flex items-center justify-center gap-1.5 py-3.5 px-3 rounded-xl bg-white border-2 border-[#FFB800] text-[#D97706] hover:bg-[#FFFBEB] font-extrabold text-[14px] transition-all duration-300 active:scale-95 group/btn"
+            className="w-full flex items-center justify-center gap-1.5 py-3.5 px-2 rounded-xl bg-white border-2 border-[#FFB800] text-[#D97706] hover:bg-[#FFFBEB] font-black text-[12px] xl:text-[13px] transition-all duration-300 active:scale-95"
           >
-            <span className="whitespace-nowrap">Download Brochure</span>
+            <span className="whitespace-nowrap">Brochure</span>
             <Download />
           </button>
         </div>
-
       </div>
     </div>
   );
 }
-
 // ── Main Section Component ───────────────────────────────────
 export default function CoursesSection() {
   const [ref, inView] = useInView(0.1);
@@ -218,9 +212,9 @@ export default function CoursesSection() {
           <div className={`lg:w-[60%] transition-all duration-[800ms] ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <h2 className="font-black text-[32px] md:text-[38px] lg:text-[46px] leading-[1.15] tracking-tight text-[#0F172A]">
               Choose the Right Program  <br className="hidden md:block" />
-              for Your 
-               <span className="relative inline-block text-[#ECAB00]">
-               &nbsp; Career Goal
+              for Your
+              <span className="relative inline-block text-[#ECAB00]">
+                &nbsp; Career Goal
                 {/* Blue Animated Underline Effect */}
                 <svg className={`absolute w-full h-[10px] -bottom-1 left-0 text-[#ECAB00]/30 transition-all duration-1000 ease-out delay-500 ${inView ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"}`} viewBox="0 0 100 20" preserveAspectRatio="none" style={{ transformOrigin: 'left' }}>
                   <path d="M0 15 Q 50 0 100 15" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round" />

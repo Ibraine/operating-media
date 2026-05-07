@@ -4,10 +4,10 @@ import { ShieldCheck, Award } from 'lucide-react';
 
 // ── Added 2 new logos (Microsoft Ads & Google Analytics) ──
 const globalPartners = [
-  { name: "Google Ads", url: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg" },
-  { name: "Meta Blueprint", url: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
-  { name: "HubSpot", url: "https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg" },
-  { name: "Microsoft Ads", url: "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" },
+  { name: "Google Ads", url: "/images/Google.svg" },
+  { name: "Meta Blueprint", url: "/images/Meta.svg" },
+  { name: "HubSpot", url: "/images/HubSpot.svg" },
+  { name: "Microsoft Ads", url: "/images/Microsoft.svg" },
 ];
 
 export default function CertificationSection() {
@@ -128,7 +128,7 @@ export default function CertificationSection() {
                 <div className="overflow-hidden rounded-xl border border-gray-100 bg-[#fdfdfd] p-1 shadow-inner relative">
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#0A0F1C]/5 to-transparent pointer-events-none" />
                   <img
-                    src="https://www.operatingmedia.com/wp-content/uploads/2024/06/OM-Certificate-New-724x1024.png"
+                    src="/images/OM-Certificate-New.webp"
                     alt="Diploma Certificate"
                     className="w-full h-auto object-cover rounded-lg"
                     loading="lazy"
@@ -153,7 +153,7 @@ export default function CertificationSection() {
                 <div className="overflow-hidden rounded-xl border border-gray-100 bg-[#fdfdfd] p-1 shadow-inner relative">
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#ECAB00]/10 to-transparent pointer-events-none" />
                   <img
-                    src="https://www.operatingmedia.com/wp-content/uploads/2024/06/Om-Certificate-Masters-724x1024.png"
+                    src="/images/Om-Certificate-Masters.webp"
                     alt="Master's Certificate"
                     className="w-full h-auto object-cover rounded-lg"
                     loading="lazy"

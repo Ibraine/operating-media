@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 import { FileDown, GraduationCap, ArrowRight } from 'lucide-react';
 
 const placementData = [
-  { name: "Shekhar Singh", role: "Social Media Marketing", photo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Shekhar-Singh-1-1.png", companyLogo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Group-802-1.png" },
-  { name: "Shahnawaaz Khan", role: "Ads Operation", photo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Shahnawaaz-Khan.png", companyLogo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Hotstar_logo.svg.png" },
-  { name: "Ashish Yadav", role: "E-commerce Executive", photo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Group-803.png", companyLogo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Lumina-Datamatics-Logo-with-TradeMark-and-Registered-Mark-1-1.png" },
-  { name: "Amruta Singh", role: "SEO Executive", photo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Amruta-Singh.png", companyLogo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Untitled-design-77-Photoroom-1.png" },
-  { name: "Bhavini Dave", role: "Social Media Marketing", photo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Bhavini.png", companyLogo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Ibraine-Registered-Logo-Transparent-2.webp" },
-  { name: "Tisha Soni", role: "Social Media Marketing", photo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Tisha-Soni-2.png", companyLogo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Group-802-1.png" },
-  { name: "Akansha Singh", role: "SEO Executive", photo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Akansha-Singh.png", companyLogo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/qtq_95.webp" },
-  { name: "Sakina Shaikh", role: "Digital Marketing Intern", photo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Sakeena.png", companyLogo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/webisdom-black.png" },
-  { name: "Aryan Pote", role: "Social Media Executive", photo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Aryan-Pote.png", companyLogo: "https://www.operatingmedia.com/wp-content/uploads/2025/01/Ibraine-Registered-Logo-Transparent-2.webp" },
+  { name: "Shekhar Singh", role: "Social Media Marketing", photo: "/images/Shekhar-Singh-1-1.webp", companyLogo: "/images/Group-802-1.webp" },
+  { name: "Shahnawaaz Khan", role: "Ads Operation", photo: "/images/Shahnawaaz-Khan.webp", companyLogo: "/images/Hotstar_logo.svg.webp" },
+  { name: "Ashish Yadav", role: "E-commerce Executive", photo: "/images/Group-803.webp", companyLogo: "/images/Lumina-Datamatics-Logo-with-TradeMark-and-Registered-Mark-1-1.webp" },
+  { name: "Amruta Singh", role: "SEO Executive", photo: "/images/Amruta-Singh.webp", companyLogo: "/images/Untitled-design-77-Photoroom-1.webp" },
+  { name: "Bhavini Dave", role: "Social Media Marketing", photo: "/images/Bhavini.webp", companyLogo: "/images/Ibraine-Registered-Logo-Transparent-2.webp" },
+  { name: "Tisha Soni", role: "Social Media Marketing", photo: "/images/Tisha-Soni-2.webp", companyLogo: "/images/Group-802-1.webp" },
+  { name: "Akansha Singh", role: "SEO Executive", photo: "/images/Akansha-Singh.webp", companyLogo: "/images/qtq_95.webp" },
+  { name: "Sakina Shaikh", role: "Digital Marketing Intern", photo: "/images/Sakeena.webp", companyLogo: "/images/webisdom-black.webp" },
+  { name: "Aryan Pote", role: "Social Media Executive", photo: "/images/Aryan-Pote.webp", companyLogo: "/images/Ibraine-Registered-Logo-Transparent-2.webp" },
 ];
 
 // Doubled to ensure seamless infinite marquee scrolling

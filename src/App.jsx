@@ -14,7 +14,6 @@ import AdvanceDiploma from './pages/AdvanceProgram/AdvanceDiploma.jsx';
 import DiplomaPage from './pages/DiplomaPage/DiplomaPage.jsx';
 import PlacementsPage from './pages/PlacementsPage/PlacementsPage.jsx';
 import Reviewspage from './pages/Reviewspage/Reviewspage.jsx';
-// import TrainersPage from "./pages/TrainersPage/TrainersPage";
 import TestimonialsPage from './pages/TestimonialsPage/TestimonialsPage.jsx';
 import Trainer from './pages/Trainer/Trainer.jsx';
 import BlogsPage from './pages/BlogsPage/BlogsPage.jsx';

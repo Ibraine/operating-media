@@ -140,7 +140,7 @@ export default function GAHeroSection() {
                             <div className="rounded-[1.5rem] overflow-hidden relative group">
                                 <div className="absolute inset-0 bg-black/5 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500 z-10 pointer-events-none" />
                                 <img
-                                    src="https://www.operatingmedia.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-08-11-at-12.45.57-2-1.png"
+                                    src="/images/ga4.webp"
                                     alt="Google Analytics Course"
                                     className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
                                 />

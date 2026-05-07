@@ -23,7 +23,7 @@ function FadeUp({ children, delay = 0, className = "" }) {
 ═══════════════════════════════════════════════════════════ */
 const ROW_1 = [
   { name: "Google", url: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
-  { name: "Meta", url: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
+  { name: "Meta", url: "/images/Meta.svg" },
   { name: "Amazon", url: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
   { name: "LinkedIn", url: "https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" },
   { name: "Spotify", url: "https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" },
@@ -41,7 +41,7 @@ const ROW_2 = [
   { name: "Dentsu", url: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Dentsu_logo.svg" },
   { name: "Havas", url: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Havas_logo.svg" },
   { name: "Adobe", url: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_logo.svg" },
-  { name: "HubSpot", url: "https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg" },
+  { name: "HubSpot", url: "/images/HubSpot.svg" },
 ];
 
 const ROW_3 = [

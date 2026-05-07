@@ -120,7 +120,7 @@ export default function HeroSection() {
                             <div className="rounded-[1.5rem] overflow-hidden relative group">
                                 <div className="absolute inset-0 bg-black/5 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500 z-10 pointer-events-none" />
                                 <img
-                                    src="https://www.operatingmedia.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-16-at-2.20.54-PM-1.jpeg"
+                                    src="/images/diploma.webp"
                                     alt="Diploma Student"
                                     className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
                                 />
