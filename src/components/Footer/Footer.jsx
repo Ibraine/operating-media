@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 // --- SVGs for Icons ---
 const IconChevron = () => (<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>);
@@ -24,11 +25,12 @@ const Footer = () => {
   }, []);
 
   const courses = [
-    "Diploma in Digital Marketing",
-    "Advanced Digital Marketing",
-    "Social Media Marketing",
-    "SEO Training",
-    "Performance Marketing"
+    { label: "Master's in Digital Marketing", to: "/courses/masters-program-in-digital-marketing/" },
+    { label: "Advance Diploma in Digital Marketing", to: "/courses/advance-diploma-in-digital-marketing/" },
+    { label: "Diploma in Digital Marketing", to: "/courses/diploma-in-digital-marketing/" },
+    { label: "PPC Course", to: "/courses/pay-per-click-management-courses/" },
+    { label: "SEO Training", to: "/courses/search-engine-optimization-courses/" },
+    { label: "Google Analytics", to: "/courses/google-analytics-courses/" }
   ];
 
   const locations = [
@@ -153,11 +155,11 @@ const Footer = () => {
 
           {/* Column 1: Brand & About */}
           <div className="flex flex-col lg:pr-10">
-            <div className="mb-6 select-none">
+            <Link to="/" className="mb-6 select-none no-underline block">
               <h2 className="text-[26px] font-black leading-none tracking-wider text-white">OPERATING</h2>
               <h2 className="text-[26px] font-black leading-none tracking-[0.2em] text-transparent" style={{ WebkitTextStroke: '1px white' }}>MEDIA</h2>
               <p className="text-[10px] font-semibold tracking-widest mt-1 text-gray-400">digitize your career ®</p>
-            </div>
+            </Link>
 
             <p className="text-gray-400 text-[14px] leading-[1.7] mb-8 pr-4">
               Operating Media is a leading digital marketing training institute focused on practical learning, live projects, and industry-relevant skills. We help students and professionals build successful careers in the digital world.
@@ -178,16 +180,17 @@ const Footer = () => {
             <ul className="space-y-4">
               {courses.map((course, idx) => (
                 <li key={idx}>
-                  <a href="#" className="course-link">
+                  <Link to={course.to} className="course-link">
                     <span className="chevron-box">
                       <IconChevron />
                     </span>
-                    <span className="text-[15px]">{course}</span>
-                  </a>
+                    <span className="text-[15px]">{course.label}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
+
 
           {/* Column 3: Details */}
           <div className="flex flex-col lg:px-10">
