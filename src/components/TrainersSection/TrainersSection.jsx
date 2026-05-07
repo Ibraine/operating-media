@@ -1,222 +1,361 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, GraduationCap, Linkedin } from "lucide-react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { ChevronLeft, ChevronRight, GraduationCap, Linkedin, Award } from "lucide-react";
 
-// ── Shared Image & Base Data ──
-const DEFAULT_IMAGE = "/images/Harsh-Ibraine.webp";
-const NEEL_IMAGE = "/images/neel.png";
-const RAHUL_IMAGE = "/images/rahul.png";
-const RAHULS_IMAGE = "/images/rahuls.png";
-const VIKRAM_IMAGE = "/images/vikram.png";
-const SHRADDHA_IMAGE = "/images/shraddha.png";
-const HEMANT_IMAGE = "/images/hemant.png";
-const ZAHID_IMAGE = "/images/zahid.png";
-
-
-// Add up to 8 mentors here.
 const MENTORS = [
-  { name: "Harsh Pareek", role: "SEO & Growth Strategist", img: DEFAULT_IMAGE },
-  { name: "Shraddha Rane", role: "Digital Marketing Expert", img: SHRADDHA_IMAGE },
-  { name: "Nilkamal Mukharjee", role: "E-Commerce Expert", img: NEEL_IMAGE },
-  { name: "Rahul Shinde", role: "Analytics Lead", img: RAHUL_IMAGE },
-  { name: "Hemant Mane", role: "Performance Marketing Lead", img: HEMANT_IMAGE },
-  { name: "Zahid Shaikh", role: "Social Media Specialist", img: ZAHID_IMAGE },
-  { name: "Rahul Singh", role: "Content Strategy Head", img: RAHULS_IMAGE },
-  { name: "Vikram Kamble", role: "Brand Manager", img: VIKRAM_IMAGE },
+  { name: "Harsh Pareek",       role: "SEO & Growth Strategist",      img: "/images/Harsh-Ibraine.webp", initials: "HP" },
+  { name: "Shraddha Rane",      role: "Digital Marketing Expert",      img: "/images/shraddha.png",       initials: "SR" },
+  { name: "Nilkamal Mukharjee", role: "E-Commerce Expert",             img: "/images/neel.png",           initials: "NM" },
+  { name: "Rahul Shinde",       role: "Analytics Lead",                img: "/images/rahul.png",          initials: "RS" },
+  { name: "Hemant Mane",        role: "Performance Marketing Lead",    img: "/images/hemant.png",         initials: "HM" },
+  { name: "Zahid Shaikh",       role: "Social Media Specialist",       img: "/images/zahid.png",          initials: "ZS" },
+  { name: "Rahul Singh",        role: "Content Strategy Head",         img: "/images/rahuls.png",         initials: "RS" },
+  { name: "Vikram Kamble",      role: "Brand Manager",                 img: "/images/vikram.png",         initials: "VK" },
 ];
 
-// ── Ultra-Premium Full-Bleed Card Component ──
-function MentorCard({ mentor }) {
-  return (
-    <div className="group flex flex-col rounded-[24px] bg-white border border-gray-100 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.08)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(236,171,0,0.25)] hover:border-[#ecab00]/40 transition-all duration-500 cursor-default overflow-hidden w-full max-w-[290px] mx-auto relative">
+// Triple the list so we always have cards on both sides
+const LOOPED = [...MENTORS, ...MENTORS, ...MENTORS];
 
-      {/* ── Photo Area (Full Bleed Object Cover) ── */}
-      <div className="relative h-[280px] sm:h-[320px] w-full overflow-hidden bg-gray-100">
-        <img
-          src={mentor.img}
-          alt={mentor.name}
-          // Changed to object-cover so it completely fills the space without weird borders
-          className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-[8s] ease-out"
+const AVATAR_COLORS = [
+  { bg: "#E6F1FB", text: "#185FA5" },
+  { bg: "#E1F5EE", text: "#0F6E56" },
+  { bg: "#FAEEDA", text: "#854F0B" },
+  { bg: "#EEEDFE", text: "#534AB7" },
+  { bg: "#FAECE7", text: "#993C1D" },
+  { bg: "#EAF3DE", text: "#3B6D11" },
+  { bg: "#FCEBEB", text: "#A32D2D" },
+  { bg: "#FBEAF0", text: "#993556" },
+];
+
+const GAP = 20; // px gap between cards
+
+function MentorCard({ mentor, cardWidth }) {
+  const [imgError, setImgError] = useState(false);
+  const globalIndex = MENTORS.findIndex(m => m.name === mentor.name);
+  const avatarColor = AVATAR_COLORS[globalIndex % AVATAR_COLORS.length];
+
+  return (
+    <div
+      className="group flex-shrink-0 flex flex-col rounded-2xl bg-white border border-gray-100 overflow-hidden"
+      style={{
+        width: cardWidth,
+        boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
+        transition: "box-shadow 0.3s ease, border-color 0.3s ease",
+      }}
+      onMouseEnter={e => {
+        e.currentTarget.style.boxShadow = "0 8px 32px rgba(236,171,0,0.15)";
+        e.currentTarget.style.borderColor = "rgba(236,171,0,0.3)";
+      }}
+      onMouseLeave={e => {
+        e.currentTarget.style.boxShadow = "0 2px 12px rgba(0,0,0,0.04)";
+        e.currentTarget.style.borderColor = "#f3f4f6";
+      }}
+    >
+      {/* Photo */}
+      <div className="relative w-full overflow-hidden bg-gray-50" style={{ aspectRatio: "4/5" }}>
+        {!imgError ? (
+          <img
+            src={mentor.img}
+            alt={mentor.name}
+            onError={() => setImgError(true)}
+            className="w-full h-full object-cover object-top"
+            style={{ display: "block", transition: "transform 0.4s ease" }}
+            onMouseEnter={e => e.currentTarget.style.transform = "scale(1.04)"}
+            onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+          />
+        ) : (
+          <div
+            className="w-full h-full flex items-center justify-center font-black text-5xl"
+            style={{ background: avatarColor.bg, color: avatarColor.text, fontFamily: "'Satoshi', sans-serif" }}
+          >
+            {mentor.initials}
+          </div>
+        )}
+
+        {/* Overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "linear-gradient(to top, rgba(15,23,42,0.55), transparent)",
+            opacity: 0,
+            transition: "opacity 0.3s ease",
+          }}
+          ref={el => {
+            if (!el) return;
+            const card = el.closest(".group");
+            const show = () => el.style.opacity = "1";
+            const hide = () => el.style.opacity = "0";
+            card.addEventListener("mouseenter", show);
+            card.addEventListener("mouseleave", hide);
+          }}
         />
 
-        {/* Dark Overlay that rises on hover to make text/icons pop */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        {/* Expert badge */}
+        <div
+          className="absolute top-3 left-3 flex items-center gap-1.5 rounded-full px-3 py-1"
+          style={{
+            background: "rgba(255,255,255,0.18)",
+            backdropFilter: "blur(10px)",
+            WebkitBackdropFilter: "blur(10px)",
+            border: "1px solid rgba(255,255,255,0.3)",
+            opacity: 0,
+            transition: "opacity 0.3s ease",
+          }}
+          ref={el => {
+            if (!el) return;
+            const card = el.closest(".group");
+            card.addEventListener("mouseenter", () => el.style.opacity = "1");
+            card.addEventListener("mouseleave", () => el.style.opacity = "0");
+          }}
+        >
+          <Award size={11} className="text-white" strokeWidth={2.5} />
+          <span className="text-white font-bold uppercase tracking-widest" style={{ fontSize: "9px" }}>Expert</span>
+        </div>
 
-        {/* Hidden LinkedIn Icon that pops up on hover (Premium Touch) */}
-        <div className="absolute bottom-4 right-4 bg-[#ecab00] p-2.5 rounded-full text-[#0f172a] translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 shadow-lg cursor-pointer">
-          <Linkedin size={18} fill="currentColor" strokeWidth={1} />
+        {/* LinkedIn */}
+        <div
+          className="absolute bottom-3 right-3 w-9 h-9 flex items-center justify-center rounded-xl cursor-pointer"
+          style={{
+            background: "#ecab00",
+            color: "#0f172a",
+            boxShadow: "0 4px 12px rgba(236,171,0,0.4)",
+            opacity: 0,
+            transition: "opacity 0.3s ease",
+          }}
+          ref={el => {
+            if (!el) return;
+            const card = el.closest(".group");
+            card.addEventListener("mouseenter", () => el.style.opacity = "1");
+            card.addEventListener("mouseleave", () => el.style.opacity = "0");
+          }}
+        >
+          <Linkedin size={17} fill="currentColor" strokeWidth={0} />
         </div>
       </div>
 
-      {/* ── Info Area ── */}
-      <div className="px-6 py-6 text-center bg-white relative z-20">
-        <h3 className="font-black text-[20px] md:text-[22px] text-[#0f172a] tracking-tight leading-tight mb-1 transition-colors group-hover:text-[#ecab00]">
+      {/* Info */}
+      <div className="px-5 py-5 text-center bg-white flex flex-col gap-1.5">
+        <h3
+          className="font-black text-[#0f172a] tracking-tight leading-snug"
+          style={{ fontSize: "clamp(15px, 1.3vw, 18px)", fontFamily: "'Satoshi', sans-serif" }}
+        >
           {mentor.name}
         </h3>
-        {/* <p className="font-bold text-[12px] uppercase tracking-widest text-[#ecab00]">
+        {/* <p
+          className="font-bold uppercase text-gray-400"
+          style={{
+            fontSize: "9.5px",
+            letterSpacing: "0.18em",
+            fontFamily: "'Satoshi', sans-serif",
+            transition: "color 0.3s ease",
+          }}
+          ref={el => {
+            if (!el) return;
+            const card = el.closest(".group");
+            card.addEventListener("mouseenter", () => el.style.color = "#ecab00");
+            card.addEventListener("mouseleave", () => el.style.color = "#9ca3af");
+          }}
+        >
           {mentor.role}
         </p> */}
       </div>
-
     </div>
   );
 }
 
 export default function TrainersSection() {
-  const [startIndex, setStartIndex] = useState(0);
-  const [cardsToShow, setCardsToShow] = useState(4);
+  const trackRef = useRef(null);
+  const offsetRef = useRef(0);          // current translateX (negative = moved left)
+  const rafRef = useRef(null);
+  const pausedRef = useRef(false);
+  const [cardWidth, setCardWidth] = useState(280);
+  const [itemsPerView, setItemsPerView] = useState(4);
+  const containerRef = useRef(null);
 
-  // Inject Satoshi font
-  useEffect(() => {
-    if (!document.querySelector('link[data-font="satoshi"]')) {
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.setAttribute("data-font", "satoshi");
-      link.href = "https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap";
-      document.head.appendChild(link);
-    }
+  const SPEED = 0.6; // px per frame
+
+  // Calculate card width from container
+  const recalc = useCallback(() => {
+    if (!containerRef.current) return;
+    const w = containerRef.current.offsetWidth;
+    let ipv = 4;
+    if (w < 500) ipv = 1;
+    else if (w < 780) ipv = 2;
+    else if (w < 1060) ipv = 3;
+    setItemsPerView(ipv);
+    const cw = (w - GAP * (ipv - 1)) / ipv;
+    setCardWidth(cw);
   }, []);
 
-  // Update cards per view based on screen size
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 640) setCardsToShow(1); // Mobile
-      else if (window.innerWidth < 1024) setCardsToShow(2); // Tablet
-      else if (window.innerWidth < 1280) setCardsToShow(3); // Laptop
-      else setCardsToShow(4); // Large Desktop
+    recalc();
+    const ro = new ResizeObserver(recalc);
+    if (containerRef.current) ro.observe(containerRef.current);
+    return () => ro.disconnect();
+  }, [recalc]);
+
+  // The width of one full set of MENTORS cards
+  const oneSetWidth = useCallback(() => {
+    return MENTORS.length * (cardWidth + GAP);
+  }, [cardWidth]);
+
+  // Animation loop
+  useEffect(() => {
+    if (!trackRef.current || cardWidth === 0) return;
+
+    const animate = () => {
+      if (!pausedRef.current) {
+        offsetRef.current -= SPEED;
+
+        // When we've scrolled exactly one full set, jump back silently
+        const setW = MENTORS.length * (cardWidth + GAP);
+        if (Math.abs(offsetRef.current) >= setW) {
+          offsetRef.current += setW;
+        }
+
+        if (trackRef.current) {
+          trackRef.current.style.transform = `translateX(${offsetRef.current}px)`;
+        }
+      }
+      rafRef.current = requestAnimationFrame(animate);
     };
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    rafRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [cardWidth]);
 
-  const totalPages = Math.ceil(MENTORS.length / cardsToShow);
-  const currentPage = Math.floor(startIndex / cardsToShow);
-
-  const nextSlide = () => {
-    if (startIndex + cardsToShow < MENTORS.length) {
-      setStartIndex((prev) => prev + cardsToShow);
+  // Manual nav — snap to next/prev card
+  const manualStep = (dir) => {
+    const step = cardWidth + GAP;
+    offsetRef.current -= dir * step;
+    const setW = MENTORS.length * (cardWidth + GAP);
+    if (Math.abs(offsetRef.current) >= setW) offsetRef.current += setW;
+    if (offsetRef.current > 0) offsetRef.current -= setW;
+    if (trackRef.current) {
+      trackRef.current.style.transition = "transform 0.35s ease";
+      trackRef.current.style.transform = `translateX(${offsetRef.current}px)`;
+      setTimeout(() => {
+        if (trackRef.current) trackRef.current.style.transition = "none";
+      }, 350);
     }
   };
 
-  const prevSlide = () => {
-    if (startIndex - cardsToShow >= 0) {
-      setStartIndex((prev) => prev - cardsToShow);
-    }
-  };
-
-  const visibleCards = MENTORS.slice(startIndex, startIndex + cardsToShow);
+  const NavBtn = ({ onClick, label, children }) => (
+    <button
+      onClick={onClick}
+      aria-label={label}
+      className="hidden lg:flex shrink-0 w-12 h-12 items-center justify-center rounded-full bg-white border border-gray-200 text-[#0f172a]"
+      style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)", transition: "background 0.2s, border-color 0.2s, color 0.2s" }}
+      onMouseEnter={e => { e.currentTarget.style.background = "#ecab00"; e.currentTarget.style.borderColor = "#ecab00"; e.currentTarget.style.color = "#fff"; }}
+      onMouseLeave={e => { e.currentTarget.style.background = "#fff"; e.currentTarget.style.borderColor = "#e5e7eb"; e.currentTarget.style.color = "#0f172a"; }}
+    >
+      {children}
+    </button>
+  );
 
   return (
     <section
-      className="relative w-full py-16 lg:py-24 bg-[#FAFCFF] overflow-hidden selection:bg-[#ecab00] selection:text-[#0f172a]"
-      style={{ fontFamily: "'Satoshi', sans-serif" }}
+      className="relative w-full py-20 lg:py-28 overflow-hidden"
+      style={{ background: "#FAFBFF", fontFamily: "'Satoshi', sans-serif" }}
     >
-      {/* ── Background Grid ── */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
-        style={{ backgroundImage: 'linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(90deg, #0f172a 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+      {/* Grid bg */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(90deg, #0f172a 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+          opacity: 0.025,
+        }}
+      />
 
-      {/* ── Header ── */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="relative z-10 flex flex-col items-center text-center mb-12 lg:mb-16 px-6"
-      >
-        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-gray-200 shadow-sm mb-5">
-          <GraduationCap size={16} className="text-[#ecab00]" strokeWidth={2.5} />
-          <span className="font-bold text-[11px] text-[#0f172a] uppercase tracking-widest">
-            Industry Expert Mentors
-          </span>
-        </div>
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-14">
 
-        {/* Fixed 46px Desktop Heading */}
-        <h2 className="font-black text-[32px] md:text-[38px] lg:text-[46px] leading-[1.1] tracking-tight text-[#0f172a]">
-          Learn from Real <br className="block sm:hidden" />
-          <span className="text-[#ecab00]">Industry Professionals.</span>
-        </h2>
-      </motion.div>
-
-      {/* ── Carousel Area ── */}
-      <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col items-center px-4 sm:px-6">
-
-        <div className="flex w-full items-center justify-center">
-
-          {/* Left Arrow (Desktop/Tablet) */}
-          <button
-            onClick={prevSlide}
-            disabled={startIndex === 0}
-            className="hidden sm:flex shrink-0 items-center justify-center w-14 h-14 rounded-full border border-gray-200 bg-white text-[#0f172a] hover:bg-[#ecab00] hover:text-[#0f172a] hover:border-[#ecab00] hover:shadow-md active:scale-95 transition-all duration-300 disabled:opacity-30 disabled:pointer-events-none mr-4 lg:mr-8 shadow-sm"
+        {/* Header */}
+        <div className="flex flex-col items-center text-center mb-14 lg:mb-20">
+          <div
+            className="flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-gray-100 mb-6"
+            style={{ boxShadow: "0 2px 10px rgba(0,0,0,0.06)" }}
           >
-            <ChevronLeft size={28} strokeWidth={2} />
-          </button>
-
-          {/* ── Animated Card Grid ── */}
-          <div className="flex-1 w-full flex justify-center">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={startIndex}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className={`grid gap-6 lg:gap-8 w-full max-w-[1250px] mx-auto ${cardsToShow === 1 ? 'grid-cols-1' :
-                  cardsToShow === 2 ? 'grid-cols-2' :
-                    cardsToShow === 3 ? 'grid-cols-3' : 'grid-cols-4'
-                  }`}
-              >
-                {visibleCards.map((mentor, i) => (
-                  <MentorCard key={`${startIndex}-${i}`} mentor={mentor} />
-                ))}
-              </motion.div>
-            </AnimatePresence>
+            <div className="w-2 h-2 rounded-full" style={{ background: "#ecab00" }} />
+            <GraduationCap size={14} strokeWidth={2.5} style={{ color: "#ecab00" }} />
+            <span className="font-bold text-[#0f172a] uppercase tracking-widest" style={{ fontSize: "11px" }}>
+              Expert Mentors
+            </span>
           </div>
 
-          {/* Right Arrow (Desktop/Tablet) */}
-          <button
-            onClick={nextSlide}
-            disabled={startIndex + cardsToShow >= MENTORS.length}
-            className="hidden sm:flex shrink-0 items-center justify-center w-14 h-14 rounded-full border border-gray-200 bg-white text-[#0f172a] hover:bg-[#ecab00] hover:text-[#0f172a] hover:border-[#ecab00] hover:shadow-md active:scale-95 transition-all duration-300 disabled:opacity-30 disabled:pointer-events-none ml-4 lg:ml-8 shadow-sm"
+          <h2
+            className="font-black text-[#0f172a] tracking-tighter leading-[1.1]"
+            style={{ fontSize: "clamp(28px, 4.5vw, 48px)" }}
           >
-            <ChevronRight size={28} strokeWidth={2} />
-          </button>
-
+            Learn From Real{" "}
+            <span className="relative inline-block" style={{ color: "#ecab00" }}>
+              Industry Professionals.
+              <span
+                className="absolute -bottom-1.5 left-0 w-full rounded-full"
+                style={{ height: "3px", background: "rgba(236,171,0,0.2)" }}
+              />
+            </span>
+          </h2>
         </div>
 
-        {/* ── Mobile Navigation Controls (Dots & Arrows) ── */}
-        <div className="flex sm:hidden items-center justify-between w-full max-w-[280px] mt-10">
-          <button
-            onClick={prevSlide}
-            disabled={startIndex === 0}
-            className="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 bg-white text-[#0f172a] hover:bg-[#ecab00] hover:text-[#0f172a] disabled:opacity-30 disabled:pointer-events-none transition-all shadow-sm"
-          >
-            <ChevronLeft size={22} strokeWidth={2} />
-          </button>
+        {/* Carousel */}
+        <div className="flex items-center gap-4 lg:gap-6">
+          <NavBtn onClick={() => manualStep(-1)} label="Previous">
+            <ChevronLeft size={22} strokeWidth={1.8} />
+          </NavBtn>
 
-          {totalPages > 1 && (
-            <div className="flex items-center gap-2.5">
-              {Array.from({ length: totalPages }).map((_, i) => (
-                <div
-                  key={i}
-                  className={`transition-all duration-300 rounded-full ${currentPage === i ? 'w-6 h-2 bg-[#ecab00]' : 'w-2 h-2 bg-gray-300'}`}
+          {/* Track container */}
+          <div
+            ref={containerRef}
+            className="flex-1 overflow-hidden"
+            onMouseEnter={() => { pausedRef.current = true; }}
+            onMouseLeave={() => { pausedRef.current = false; }}
+          >
+            <div
+              ref={trackRef}
+              className="flex"
+              style={{ gap: GAP, willChange: "transform" }}
+            >
+              {LOOPED.map((mentor, i) => (
+                <MentorCard
+                  key={`${mentor.name}-${i}`}
+                  mentor={mentor}
+                  cardWidth={cardWidth}
                 />
               ))}
             </div>
-          )}
+          </div>
 
+          <NavBtn onClick={() => manualStep(1)} label="Next">
+            <ChevronRight size={22} strokeWidth={1.8} />
+          </NavBtn>
+        </div>
+
+        {/* Mobile nav */}
+        <div className="mt-8 flex lg:hidden items-center justify-center gap-4">
           <button
-            onClick={nextSlide}
-            disabled={startIndex + cardsToShow >= MENTORS.length}
-            className="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 bg-white text-[#0f172a] hover:bg-[#ecab00] hover:text-[#0f172a] disabled:opacity-30 disabled:pointer-events-none transition-all shadow-sm"
+            onClick={() => manualStep(-1)}
+            aria-label="Previous"
+            className="w-11 h-11 flex items-center justify-center rounded-full bg-white border border-gray-200"
+            style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
           >
-            <ChevronRight size={22} strokeWidth={2} />
+            <ChevronLeft size={20} strokeWidth={1.8} />
+          </button>
+          <button
+            onClick={() => manualStep(1)}
+            aria-label="Next"
+            className="w-11 h-11 flex items-center justify-center rounded-full bg-white border border-gray-200"
+            style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+          >
+            <ChevronRight size={20} strokeWidth={1.8} />
           </button>
         </div>
 
       </div>
 
+      <style>{`
+        @import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap');
+        * { box-sizing: border-box; }
+      `}</style>
     </section>
   );
 }

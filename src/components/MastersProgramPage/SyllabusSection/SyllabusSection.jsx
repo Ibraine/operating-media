@@ -395,10 +395,10 @@ export default function SyllabusSection() {
           <p className="font-medium text-[15px] text-gray-500 mb-5">
             Want the complete curriculum with all tools?
           </p>
-          <button className="group flex items-center gap-2 bg-[#0f172a] hover:bg-[#ECAB00] text-white hover:text-[#0f172a] transition-all duration-300 rounded-xl px-8 py-4 font-bold text-[15px] shadow-lg hover:shadow-[0_10px_30px_-10px_rgba(236,171,0,0.5)] active:scale-95">
+          {/* <button className="group flex items-center gap-2 bg-[#0f172a] hover:bg-[#ECAB00] text-white hover:text-[#0f172a] transition-all duration-300 rounded-xl px-8 py-4 font-bold text-[15px] shadow-lg hover:shadow-[0_10px_30px_-10px_rgba(236,171,0,0.5)] active:scale-95">
             Download Full Syllabus
             <Download size={16} className="group-hover:-translate-y-0.5 transition-transform" />
-          </button>
+          </button> */}
         </motion.div>
       </div>
 

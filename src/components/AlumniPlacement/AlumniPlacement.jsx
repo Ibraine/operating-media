@@ -150,12 +150,12 @@ export default function AlumniPlacement() {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="mt-12 flex flex-col items-center justify-center gap-4 px-6 relative z-20"
       >
-        <button className="group relative overflow-hidden bg-[#0f172a] text-white px-8 py-4 md:px-10 md:py-4.5 rounded-2xl font-bold text-[15px] md:text-[16px] shadow-[0_10px_20px_rgba(15,23,42,0.15)] hover:shadow-[0_15px_30px_rgba(236,171,0,0.3)] hover:bg-[#ecab00] hover:text-[#0f172a] hover:-translate-y-1 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3">
+        {/* <button className="group relative overflow-hidden bg-[#0f172a] text-white px-8 py-4 md:px-10 md:py-4.5 rounded-2xl font-bold text-[15px] md:text-[16px] shadow-[0_10px_20px_rgba(15,23,42,0.15)] hover:shadow-[0_15px_30px_rgba(236,171,0,0.3)] hover:bg-[#ecab00] hover:text-[#0f172a] hover:-translate-y-1 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3">
           <span className="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-shine" />
           <FileDown size={20} className="text-[#ecab00] group-hover:text-[#0f172a] transition-colors" />
           <span className="relative z-10">Download Placements Report</span>
           <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform hidden sm:block" />
-        </button>
+        </button> */}
         
         <p className="text-[11px] md:text-[12px] uppercase tracking-[0.2em] text-gray-400 font-bold mt-2">
           Hired by 100+ Top Companies

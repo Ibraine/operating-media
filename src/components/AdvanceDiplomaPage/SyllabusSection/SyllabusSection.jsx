@@ -464,9 +464,9 @@ export default function SyllabusSection() {
 
                 <div className="mt-14 flex flex-col items-center justify-center text-center">
                     <p className="font-medium text-[16px] text-gray-500 mb-6">Want to see the detailed curriculum and all 70+ tools?</p>
-                    <div className="bg-[#0f172a] text-white hover:bg-[#ECAB00] hover:text-[#0f172a] transition-all duration-300 rounded-xl px-8 py-4 font-bold text-[15px] flex items-center justify-center cursor-pointer shadow-lg active:scale-95 group">
+                    {/* <div className="bg-[#0f172a] text-white hover:bg-[#ECAB00] hover:text-[#0f172a] transition-all duration-300 rounded-xl px-8 py-4 font-bold text-[15px] flex items-center justify-center cursor-pointer shadow-lg active:scale-95 group">
                         <span className="flex items-center gap-2">Download Full Syllabus <Download size={18} className="group-hover:-translate-y-1 transition-transform" /></span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

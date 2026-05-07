@@ -179,10 +179,10 @@ export default function PPCSyllabus() {
 
                 <div className="mt-14 flex flex-col items-center justify-center text-center">
                     <p className="font-medium text-[16px] text-gray-500 mb-6">Want to see the complete curriculum and tools list?</p>
-                    <button className="group bg-[#0f172a] text-white hover:bg-[#ECAB00] hover:text-[#0f172a] transition-all duration-300 rounded-xl px-8 py-4 font-bold text-[15px] flex items-center gap-2 cursor-pointer shadow-lg active:scale-95">
+                    {/* <button className="group bg-[#0f172a] text-white hover:bg-[#ECAB00] hover:text-[#0f172a] transition-all duration-300 rounded-xl px-8 py-4 font-bold text-[15px] flex items-center gap-2 cursor-pointer shadow-lg active:scale-95">
                         Download Full Syllabus
                         <Download size={18} className="group-hover:-translate-y-1 transition-transform" />
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </section>
