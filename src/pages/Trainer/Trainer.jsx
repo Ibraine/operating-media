@@ -174,7 +174,7 @@ function TrainersHero() {
                                 <button className="group relative flex items-center gap-3 bg-[#ECAB00] text-white px-8 py-4 rounded-xl font-bold text-[15px] overflow-hidden transition-all duration-300 hover:shadow-[0_10px_30px_-10px_rgba(236,171,0,0.5)] hover:-translate-y-1">
                                     <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                                     <span className="relative z-10 flex items-center gap-2">
-                                        Book a Demo
+                                        Book Free Demo
                                         <ArrowRight size={18} className="transform transition-transform duration-300 group-hover:translate-x-1.5" />
                                     </span>
                                 </button>
@@ -446,7 +446,7 @@ function WhyOurTrainers() {
 
                         <Link to="/contact-us/">
                             <button className="group flex items-center gap-2 bg-[#0f172a] text-white px-8 py-4 rounded-xl font-bold text-[15px] hover:bg-[#ECAB00] hover:text-[#0f172a] transition-all duration-300 shadow-md hover:shadow-[0_10px_20px_-10px_rgba(236,171,0,0.5)]">
-                                Book a Free Demo
+                                Book Free Demo
                                 <ArrowRight size={18} className="group-hover:translate-x-1.5 transition-transform" />
                             </button>
                         </Link>
@@ -505,7 +505,7 @@ function TrainersCTA() {
                             </span>
                         </h3>
                         <p className="text-gray-400 font-medium text-[15px] md:text-[16px]">
-                            One free demo class. No pressure, no pitch — just complete clarity on your next step.
+                            One Book Free Demo Class. No pressure, no pitch — just complete clarity on your next step.
                         </p>
                     </div>
 

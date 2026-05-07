@@ -115,12 +115,12 @@ export default function SMOHeroSection() {
                                         <Star key={i} size={16} className="text-[#ECAB00] fill-[#ECAB00]" />
                                     ))}
                                 </div>
-                                <span className="font-bold text-[15px] text-[#0f172a]">16,000+ Alumni</span>
+                                <span className="font-bold text-[15px] text-[#0f172a]">16000+ Students Trained</span>
                             </div>
                             <span className="hidden sm:block w-1.5 h-1.5 rounded-full bg-gray-300" />
                             <div className="flex items-center gap-2">
                                 <Users size={18} className="text-[#2563eb]" />
-                                <span className="font-medium text-[15px] text-gray-500">Placed at 250+ companies</span>
+                                <span className="font-medium text-[15px] text-gray-500">96% Placement Rate</span>
                             </div>
                         </div>
                     </div>

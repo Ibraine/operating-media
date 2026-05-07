@@ -96,7 +96,7 @@ export default function WPHeroSection() {
                                 <button className="group relative w-full flex items-center justify-center gap-3 bg-[#ECAB00] text-white px-8 py-4 rounded-xl font-bold text-[15px] overflow-hidden transition-all duration-300 hover:shadow-[0_10px_30px_-10px_rgba(236,171,0,0.5)] hover:-translate-y-1">
                                     <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                                     <span className="relative z-10 flex items-center gap-2">
-                                        Apply Now — ₹9,000
+                                        Book Free Demo Class
                                         <ArrowRight size={18} className="transform transition-transform duration-300 group-hover:translate-x-1.5" />
                                     </span>
                                 </button>
@@ -115,12 +115,12 @@ export default function WPHeroSection() {
                                         <Star key={i} size={16} className="text-[#ECAB00] fill-[#ECAB00]" />
                                     ))}
                                 </div>
-                                <span className="font-bold text-[15px] text-[#0f172a]">16,000+ Alumni</span>
+                                <span className="font-bold text-[15px] text-[#0f172a]">16000+ Students Trained</span>
                             </div>
                             <span className="hidden sm:block w-1.5 h-1.5 rounded-full bg-gray-300" />
                             <div className="flex items-center gap-2">
                                 <Users size={18} className="text-[#2563eb]" />
-                                <span className="font-medium text-[15px] text-gray-500">Placed at 250+ companies</span>
+                                <span className="font-medium text-[15px] text-gray-500">96% Placement Rate</span>
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@ export default function WPHeroSection() {
                                 ))}
                                 <Link to="/contact-us/" className="block pt-1">
                                     <button className="group w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#ECAB00] text-white font-black text-[14px] hover:bg-[#0f172a] transition-all duration-300 hover:shadow-lg">
-                                        Enroll Now — ₹9,000
+                                        Book Free Demo
                                         <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                                     </button>
                                 </Link>

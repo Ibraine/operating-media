@@ -118,7 +118,7 @@ export default function SMOFAQSection() {
                     </div>
                     <a href="/contact-us/">
                         <button className="relative z-10 shrink-0 flex items-center justify-center gap-2 bg-[#ECAB00] hover:bg-white text-[#0f172a] font-black text-[15px] px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_10px_20px_-10px_rgba(236,171,0,0.5)] active:scale-95 group">
-                            Speak to an Expert
+                            Get 1:1 Career Counseling
                             <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                         </button>
                     </a>

@@ -498,7 +498,7 @@ export default function BlogPostPage() {
                                     onMouseEnter={e => e.currentTarget.style.transform = "translateY(-2px)"}
                                     onMouseLeave={e => e.currentTarget.style.transform = "none"}
                                 >
-                                    Book a Free Demo →
+                                    Book Free Demo →
                                 </a>
                             </div>
 
