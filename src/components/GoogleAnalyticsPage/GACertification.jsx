@@ -72,7 +72,7 @@ export default function GACertification() {
                             <motion.div animate={{ y: [0, -15, 0] }} transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }} className="bg-white p-3 md:p-4 rounded-[1.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/10 w-full sm:w-1/2 z-20 group transform rotate-[-2deg] hover:rotate-0 hover:z-30 hover:scale-105 transition-all duration-500">
                                 <div className="overflow-hidden rounded-xl border border-gray-100 bg-[#fdfdfd] p-1 shadow-inner relative">
                                     <div className="absolute inset-0 bg-gradient-to-tr from-[#0A0F1C]/5 to-transparent pointer-events-none" />
-                                    <img src="/images/OM-Certificate-New.webp" alt="Advanced Diploma Certificate" className="w-full h-auto object-cover rounded-lg" loading="lazy" />
+                                    <img src="/images/OM-Certificate-New.png" alt="Advanced Diploma Certificate" className="w-full h-auto object-cover rounded-lg" loading="lazy" />
                                 </div>
                                 <div className="mt-4 px-2 pb-2 text-center">
                                     <p className="text-[10px] md:text-[11px] uppercase text-[#2563eb] font-bold tracking-[0.2em] mb-1">Outcome 01</p>
@@ -82,7 +82,7 @@ export default function GACertification() {
                             <motion.div animate={{ y: [0, 15, 0] }} transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 1 }} className="bg-white p-3 md:p-4 rounded-[1.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/10 w-full sm:w-1/2 sm:mt-16 z-10 group transform rotate-[3deg] hover:rotate-0 hover:z-30 hover:scale-105 transition-all duration-500">
                                 <div className="overflow-hidden rounded-xl border border-gray-100 bg-[#fdfdfd] p-1 shadow-inner relative">
                                     <div className="absolute inset-0 bg-gradient-to-tr from-[#ECAB00]/10 to-transparent pointer-events-none" />
-                                    <img src="/images/Om-Certificate-Masters.webp" alt="Google Certification" className="w-full h-auto object-cover rounded-lg" loading="lazy" />
+                                    <img src="/images/Om-Certificate-Masters.png" alt="Google Certification" className="w-full h-auto object-cover rounded-lg" loading="lazy" />
                                 </div>
                                 <div className="mt-4 px-2 pb-2 text-center">
                                     <p className="text-[10px] md:text-[11px] uppercase text-[#ECAB00] font-bold tracking-[0.2em] mb-1">Outcome 02</p>

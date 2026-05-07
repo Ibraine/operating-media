@@ -128,7 +128,7 @@ export default function CertificationSection() {
                 <div className="overflow-hidden rounded-xl border border-gray-100 bg-[#fdfdfd] p-1 shadow-inner relative">
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#0A0F1C]/5 to-transparent pointer-events-none" />
                   <img
-                    src="/images/OM-Certificate-New.webp"
+                    src="/images/OM-Certificate-New.png"
                     alt="Diploma Certificate"
                     className="w-full h-auto object-cover rounded-lg"
                     loading="lazy"
@@ -153,7 +153,7 @@ export default function CertificationSection() {
                 <div className="overflow-hidden rounded-xl border border-gray-100 bg-[#fdfdfd] p-1 shadow-inner relative">
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#ECAB00]/10 to-transparent pointer-events-none" />
                   <img
-                    src="/images/Om-Certificate-Masters.webp"
+                    src="/images/Om-Certificate-Masters.png"
                     alt="Master's Certificate"
                     className="w-full h-auto object-cover rounded-lg"
                     loading="lazy"
