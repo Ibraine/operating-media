@@ -226,7 +226,7 @@ function WhoWeAre() {
                     <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} className="flex flex-col gap-6">
                         <div className="rounded-[2rem] overflow-hidden">
                             <img
-                                src="https://www.operatingmedia.com/wp-content/uploads/2025/01/office-desk-with-accessories-keyboard-smartphone-pens-marketing-milestones-concept-1.webp"
+                                src="/images/gg.webp"
                                 alt="Operating Media Institute"
                                 className="w-full h-[280px] object-cover"
                             />
