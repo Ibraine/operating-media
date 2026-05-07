@@ -205,7 +205,7 @@ export default function AboutSectionPremium() {
                 <span className="w-8 h-8 rounded-full flex items-center justify-center bg-[#ecab00]/10 text-[#ecab00] group-hover:scale-110 group-hover:bg-[#ecab00] group-hover:text-white transition-all">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3" /></svg>
                 </span>
-                Free Demo Class
+                Book Free Demo Class
               </button>
             </div>
 

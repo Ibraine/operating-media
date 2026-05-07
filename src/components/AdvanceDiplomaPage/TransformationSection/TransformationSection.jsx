@@ -167,7 +167,7 @@ function BookDemoModal({ isOpen, onClose }) {
     return (
         <AnimatePresence>
             {isOpen && (
-                <div role="dialog" aria-modal="true" aria-label="Book a free demo class" className="fixed inset-0 z-[100] flex items-center justify-center p-4 font-['Satoshi',sans-serif]">
+                <div role="dialog" aria-modal="true" aria-label="Book Free Demo Class" className="fixed inset-0 z-[100] flex items-center justify-center p-4 font-['Satoshi',sans-serif]">
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} className="absolute inset-0 bg-[#0f172a]/70 backdrop-blur-md" />
                     <motion.div
                         initial={{ opacity: 0, scale: 0.94, y: 24 }}

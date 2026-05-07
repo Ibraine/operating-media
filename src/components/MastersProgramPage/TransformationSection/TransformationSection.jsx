@@ -212,7 +212,7 @@ function BookDemoModal({ isOpen, onClose }) {
         <div
           role="dialog"
           aria-modal="true"
-          aria-label="Book a free demo class"
+          aria-label="Book Free Demo Class"
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 font-['Satoshi',sans-serif]"
         >
           {/* Backdrop */}
