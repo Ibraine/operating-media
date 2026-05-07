@@ -66,7 +66,7 @@ export default function FAQSection() {
 
   return (
     <section className="relative w-full py-10 md:py-[50px] lg:py-[60px] px-6 lg:px-14 bg-[#fcfaf2] font-['Satoshi',sans-serif] selection:bg-[#ECAB00] selection:text-white overflow-hidden">
-      
+
       {/* ── Subtle Background Glow ── */}
       <div className="absolute top-[10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-[#ECAB00]/10 blur-[120px] pointer-events-none z-0" />
       <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] rounded-full bg-[#2563eb]/5 blur-[120px] pointer-events-none z-0" />
@@ -94,7 +94,7 @@ export default function FAQSection() {
               Everything you <span className="relative inline-block text-[#ECAB00]">
                 need to know
                 <svg className="absolute w-full h-[10px] -bottom-1 left-0 text-[#ECAB00]/40 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
-                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="transparent"/>
+                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="transparent" />
                 </svg>
               </span>
             </h2>
@@ -110,8 +110,8 @@ export default function FAQSection() {
           {faqs.map((item, i) => {
             const isOpen = open === i;
             return (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className={`bg-white rounded-2xl overflow-hidden transition-all duration-300 border 
                   ${isOpen ? 'border-[#2563eb] shadow-[0_10px_30px_-10px_rgba(37,99,235,0.15)]' : 'border-gray-200 shadow-sm hover:border-[#2563eb]/30 hover:shadow-md'}`}
               >
@@ -120,18 +120,16 @@ export default function FAQSection() {
                   className="w-full flex items-start justify-between gap-4 px-5 py-5 md:px-6 md:py-6 text-left group focus:outline-none"
                 >
                   <span
-                    className={`text-[16px] md:text-[18px] font-bold leading-snug transition-colors duration-300 ${
-                      isOpen ? "text-[#2563eb]" : "text-[#0f172a] group-hover:text-[#2563eb]"
-                    }`}
+                    className={`text-[16px] md:text-[18px] font-bold leading-snug transition-colors duration-300 ${isOpen ? "text-[#2563eb]" : "text-[#0f172a] group-hover:text-[#2563eb]"
+                      }`}
                   >
                     {item.q}
                   </span>
                   <span
-                    className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-                      isOpen
-                        ? "bg-[#2563eb] text-white rotate-180"
-                        : "bg-blue-50 text-[#2563eb] group-hover:bg-[#2563eb] group-hover:text-white"
-                    }`}
+                    className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen
+                      ? "bg-[#2563eb] text-white rotate-180"
+                      : "bg-blue-50 text-[#2563eb] group-hover:bg-[#2563eb] group-hover:text-white"
+                      }`}
                   >
                     {isOpen ? <Minus size={16} /> : <Plus size={16} />}
                   </span>
@@ -159,7 +157,7 @@ export default function FAQSection() {
         </div>
 
         {/* ── BOTTOM CTA (Dark Premium Box) ── */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -177,11 +175,12 @@ export default function FAQSection() {
               Our team is ready to help you plan your next step.
             </p>
           </div>
-
-          <button className="relative z-10 shrink-0 flex items-center justify-center gap-2 bg-[#ECAB00] hover:bg-white text-[#0f172a] font-black text-[15px] px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_10px_20px_-10px_rgba(236,171,0,0.5)] active:scale-95 group">
-            Speak to an Expert
-            <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-          </button>
+          <a href="/contact-us/">
+            <button className="relative z-10 shrink-0 flex items-center justify-center gap-2 bg-[#ECAB00] hover:bg-white text-[#0f172a] font-black text-[15px] px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_10px_20px_-10px_rgba(236,171,0,0.5)] active:scale-95 group">
+              Speak to an Expert
+              <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </button>
+          </a>
         </motion.div>
 
       </div>

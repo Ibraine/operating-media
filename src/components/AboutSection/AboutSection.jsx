@@ -37,10 +37,10 @@ function useCounter(target, duration = 2000, active = false) {
 }
 
 // ── Icons (Pixel-Perfect Custom SVGs) ────────────────────────
-const IconClock = () => <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>;
-const IconStar = () => <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>;
-const IconUsers = () => <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>;
-const IconTrendingUp = () => <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>;
+const IconClock = () => <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>;
+const IconStar = () => <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>;
+const IconUsers = () => <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>;
+const IconTrendingUp = () => <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></svg>;
 const IconArrow = () => <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" /></svg>;
 const IconCheck = () => <svg className="w-5 h-5 text-[#ecab00] shrink-0 drop-shadow-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>;
 const StarFilled = () => <svg className="w-4 h-4 text-[#ecab00] fill-[#ecab00] drop-shadow-sm" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>;
@@ -83,14 +83,14 @@ const TRUST = [
 // ── Components ───────────────────────────────────────────────
 function StatCard({ stat, inView, delay }) {
   const counted = useCounter(stat.num, 2000, inView);
-  
+
   return (
     <div
       className={`group relative flex flex-col items-center justify-center text-center rounded-3xl border border-gray-100 bg-white p-6 sm:p-8 hover:shadow-[0_20px_40px_-15px_rgba(236,171,0,0.15)] hover:border-[#ecab00]/30 transition-all duration-500 cursor-default transform ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#ecab00]/10 to-transparent rounded-bl-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      
+
       <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 bg-[#ecab00]/10 text-[#ecab00] shadow-sm border border-[#ecab00]/20 group-hover:bg-[#ecab00] group-hover:text-white group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500">
         <stat.Icon />
       </div>
@@ -162,7 +162,7 @@ export default function AboutSectionPremium() {
 
           {/* ── LEFT: Copy & Details ── */}
           <div className="flex flex-col gap-8">
-            
+
             {/* Badge */}
             <div className={`inline-flex items-center gap-2.5 px-4 py-2 w-fit rounded-full bg-white border border-[#ecab00]/30 shadow-sm transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               <span className="relative flex h-2.5 w-2.5">
@@ -180,7 +180,7 @@ export default function AboutSectionPremium() {
               <span className="relative inline-block text-[#ecab00] pb-1">
                 Digital Marketing
                 <svg className={`absolute w-full h-[8px] -bottom-0.5 left-0 text-[#ecab00] transition-all duration-1000 ease-out delay-500 ${inView ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"}`} viewBox="0 0 100 20" preserveAspectRatio="none" style={{ transformOrigin: 'left' }}>
-                  <path d="M0 15 Q 50 0 100 15" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round"/>
+                  <path d="M0 15 Q 50 0 100 15" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round" />
                 </svg>
               </span> <br />
               Training Institute.
@@ -194,19 +194,17 @@ export default function AboutSectionPremium() {
             {/* CTAs */}
             <div className={`flex flex-col sm:flex-row items-center gap-4 transition-all duration-700 delay-300 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               <a href="/courses/masters-program-in-digital-marketing/">
-              <button className="group relative w-full sm:w-auto h-[56px] px-8 rounded-2xl bg-[#ecab00] text-white font-bold text-[16px] overflow-hidden shadow-[0_8px_20px_-6px_rgba(236,171,0,0.6)] hover:-translate-y-1 hover:shadow-[0_15px_30px_-10px_rgba(236,171,0,0.8)] transition-all active:scale-[0.98] flex items-center justify-center gap-3">
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-shine" />
-                <span className="relative z-10 text-[#0f172a] drop-shadow-sm">Explore Courses</span>
-                <span className="relative z-10 text-[#0f172a] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><IconArrow /></span>
-              </button>
+                <button className="group relative w-full sm:w-auto h-[56px] px-8 rounded-2xl bg-[#ecab00] text-white font-bold text-[16px] overflow-hidden shadow-[0_8px_20px_-6px_rgba(236,171,0,0.6)] hover:-translate-y-1 hover:shadow-[0_15px_30px_-10px_rgba(236,171,0,0.8)] transition-all active:scale-[0.98] flex items-center justify-center gap-3">
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-shine" />
+                  <span className="relative z-10 text-[#0f172a] drop-shadow-sm">Explore Courses</span>
+                  <span className="relative z-10 text-[#0f172a] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><IconArrow /></span>
+                </button>
               </a>
-
-              <button className="group w-full sm:w-auto h-[56px] px-8 rounded-2xl bg-white border-2 border-gray-200 text-[#0f172a] font-bold text-[16px] hover:border-[#ecab00] hover:bg-[#ecab00]/5 transition-all active:scale-[0.98] flex items-center justify-center gap-3 shadow-sm">
-                <span className="w-8 h-8 rounded-full flex items-center justify-center bg-[#ecab00]/10 text-[#ecab00] group-hover:scale-110 group-hover:bg-[#ecab00] group-hover:text-white transition-all">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3" /></svg>
-                </span>
-                Free Demo Class
-              </button>
+              <a href="/contact-us/">
+                <button className="group w-full sm:w-auto h-[56px] px-8 rounded-2xl bg-white border-2 border-gray-200 text-[#0f172a] font-bold text-[16px] hover:border-[#ecab00] hover:bg-[#ecab00]/5 transition-all active:scale-[0.98] flex items-center justify-center gap-3 shadow-sm">
+                  Free Demo Class
+                </button>
+              </a>
             </div>
 
             {/* Checklist */}
@@ -223,12 +221,12 @@ export default function AboutSectionPremium() {
 
           {/* ── RIGHT: Image & Features ── */}
           <div className="flex flex-col gap-6 lg:pl-8 mt-10 lg:mt-0">
-            
+
             {/* Image Card */}
             <div className={`relative transition-all duration-1000 delay-300 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}>
               {/* Image Glow */}
               <div className="absolute inset-0 bg-[#ecab00] rounded-3xl transform rotate-3 scale-[1.02] opacity-20 blur-xl" />
-              
+
               <div className="relative rounded-3xl overflow-hidden shadow-[0_20px_50px_-10px_rgba(15,23,42,0.2)] border border-white">
                 <div className="aspect-[16/10] overflow-hidden group">
                   <img src="/images/imag-2.webp" alt="Classroom" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[10s] ease-linear" />
@@ -265,7 +263,7 @@ export default function AboutSectionPremium() {
         </div>
       </div>
 
-     
+
 
       {/* ── CUSTOM ANIMATIONS ── */}
       <style>{`
@@ -276,7 +274,7 @@ export default function AboutSectionPremium() {
         .animate-pulse-slow { animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
         @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.8; transform: scale(1.05); } }
       `}</style>
-      
+
     </section>
   );
 }

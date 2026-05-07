@@ -145,7 +145,7 @@ export default function SyllabusSection() {
           transition={{ duration: 0.65, delay: 0.1 }}
           className="hidden md:grid md:grid-cols-[220px_1fr_1.6fr] lg:grid-cols-[248px_1fr_1.6fr] rounded-[1.75rem] overflow-hidden border border-gray-200 shadow-[0_24px_64px_-16px_rgba(15,23,42,0.12)] bg-white"
         >
-          {/* LEFT — dark sidebar */}
+          {/* LEFT — dark sidebar (unchanged) */}
           <div className="border-r border-white/10 overflow-y-auto max-h-[560px] custom-scroll bg-[#0f172a]">
             <div className="px-4 pt-5 pb-2">
               <p className="text-[9px] font-black uppercase tracking-[0.35em] text-white/25 mb-4 px-2">7 Modules</p>
@@ -185,14 +185,16 @@ export default function SyllabusSection() {
             </div>
           </div>
 
-          {/* MIDDLE — subtopics */}
+          {/* MIDDLE — subtopics — font bumped up */}
           <div className="border-r border-gray-100 overflow-y-auto max-h-[560px] custom-scroll bg-white">
             {/* Sticky header */}
             <div className="sticky top-0 z-10 px-5 py-4 border-b border-gray-100 bg-[#FAFCFF]">
-              <span className="inline-block text-[9px] font-black uppercase tracking-[0.2em] text-[#ECAB00] bg-[#ECAB00]/10 border border-[#ECAB00]/20 px-2.5 py-1 rounded-full mb-2">
+              <span className="inline-block text-[10px] font-black uppercase tracking-[0.2em] text-[#ECAB00] bg-[#ECAB00]/10 border border-[#ECAB00]/20 px-2.5 py-1 rounded-full mb-2">
+                {/* was text-[9px], now text-[10px] */}
                 {mod.id} · {mod.subtopics.length} Topics
               </span>
-              <p className="font-black text-[13px] text-[#0f172a] leading-snug">{mod.title}</p>
+              <p className="font-black text-[14.5px] text-[#0f172a] leading-snug">{mod.title}</p>
+              {/* was text-[13px], now text-[14.5px] */}
             </div>
             <div className="p-3 flex flex-col gap-0.5">
               {mod.subtopics.map((s, i) => {
@@ -203,7 +205,6 @@ export default function SyllabusSection() {
                     onClick={() => setActiveSubtopic(i)}
                     className="w-full flex items-start gap-3 px-3.5 py-3 rounded-xl text-left transition-all duration-200"
                     style={{
-                      background: isActive ? '#ECAB00/10' : 'transparent',
                       backgroundColor: isActive ? 'rgba(236,171,0,0.08)' : 'transparent',
                       border: isActive ? '1px solid rgba(236,171,0,0.2)' : '1px solid transparent',
                     }}
@@ -219,9 +220,10 @@ export default function SyllabusSection() {
                       {isActive && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
                     </span>
                     <span
-                      className="font-semibold text-[13px] leading-snug transition-colors duration-200"
+                      className="font-semibold text-[14.5px] leading-snug transition-colors duration-200"
                       style={{ color: isActive ? '#0f172a' : '#6b7280' }}
                     >
+                      {/* was text-[13px], now text-[14.5px] */}
                       {s.title}
                     </span>
                   </button>
@@ -230,7 +232,7 @@ export default function SyllabusSection() {
             </div>
           </div>
 
-          {/* RIGHT — content */}
+          {/* RIGHT — content — fonts bumped up */}
           <AnimatePresence mode="wait">
             <motion.div
               key={`${activeModule}-${activeSubtopic}`}
@@ -246,26 +248,31 @@ export default function SyllabusSection() {
               <div className="p-6 lg:p-8 flex-1">
                 {/* Breadcrumb */}
                 <div className="flex items-center gap-1.5 mb-5">
-                  <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">{mod.id}</span>
+                  <span className="text-[11px] font-bold text-gray-300 uppercase tracking-widest">{mod.id}</span>
+                  {/* was text-[10px], now text-[11px] */}
                   <ChevronRight size={10} className="text-gray-200" />
-                  <span className="text-[10px] font-bold text-[#ECAB00] uppercase tracking-widest">
+                  <span className="text-[11px] font-bold text-[#ECAB00] uppercase tracking-widest">
+                    {/* was text-[10px], now text-[11px] */}
                     Topic {activeSubtopic + 1} of {mod.subtopics.length}
                   </span>
                 </div>
 
                 {/* Heading */}
-                <h3 className="font-black text-[20px] lg:text-[22px] text-[#0f172a] leading-[1.2] tracking-tight mb-1">
+                <h3 className="font-black text-[22px] lg:text-[24px] text-[#0f172a] leading-[1.2] tracking-tight mb-1">
+                  {/* was text-[20px] lg:text-[22px], now text-[22px] lg:text-[24px] */}
                   {sub.title}
                 </h3>
                 <div className="h-[3px] w-10 rounded-full bg-[#ECAB00] mb-4" />
 
                 {/* Description */}
-                <p className="text-[14px] lg:text-[15px] font-medium text-gray-500 leading-relaxed mb-6 pb-6 border-b border-gray-100">
+                <p className="text-[15.5px] lg:text-[16.5px] font-medium text-gray-500 leading-relaxed mb-6 pb-6 border-b border-gray-100">
+                  {/* was text-[14px] lg:text-[15px], now text-[15.5px] lg:text-[16.5px] */}
                   {sub.desc}
                 </p>
 
                 {/* Also in this module */}
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-300 mb-3">
+                <p className="text-[11px] font-black uppercase tracking-[0.2em] text-gray-300 mb-3">
+                  {/* was text-[10px], now text-[11px] */}
                   Also in this Module
                 </p>
                 <div className="flex flex-col gap-2">
@@ -275,7 +282,8 @@ export default function SyllabusSection() {
                     .map((related, ri) => (
                       <div key={ri} className="flex items-start gap-3 px-3.5 py-2.5 rounded-xl bg-[#ECAB00]/6 border border-[#ECAB00]/12">
                         <CheckCircle2 size={14} className="shrink-0 mt-0.5 text-[#ECAB00]" />
-                        <span className="text-[12.5px] font-medium text-gray-600 leading-snug">{related.title}</span>
+                        <span className="text-[13.5px] font-medium text-gray-600 leading-snug">{related.title}</span>
+                        {/* was text-[12.5px], now text-[13.5px] */}
                       </div>
                     ))}
                 </div>
@@ -395,10 +403,6 @@ export default function SyllabusSection() {
           <p className="font-medium text-[15px] text-gray-500 mb-5">
             Want the complete curriculum with all tools?
           </p>
-          {/* <button className="group flex items-center gap-2 bg-[#0f172a] hover:bg-[#ECAB00] text-white hover:text-[#0f172a] transition-all duration-300 rounded-xl px-8 py-4 font-bold text-[15px] shadow-lg hover:shadow-[0_10px_30px_-10px_rgba(236,171,0,0.5)] active:scale-95">
-            Download Full Syllabus
-            <Download size={16} className="group-hover:-translate-y-0.5 transition-transform" />
-          </button> */}
         </motion.div>
       </div>
 
