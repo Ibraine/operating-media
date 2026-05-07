@@ -166,8 +166,13 @@ const Footer = () => {
             </p>
 
             <div className="flex items-center gap-3">
-              {[FbIcon, InstaIcon, XIcon, LinkedInIcon].map((Icon, idx) => (
-                <a key={idx} href="#" className="social-icon">
+              {[
+                { Icon: FbIcon, href: "https://www.facebook.com/operatingmedia/" },
+                { Icon: InstaIcon, href: "https://www.instagram.com/operatingmedia/" },
+                { Icon: XIcon, href: "https://x.com/OperatingMedia/" },
+                { Icon: LinkedInIcon, href: "https://www.linkedin.com/company/operating-media" },
+              ].map(({ Icon, href }, idx) => (
+                <a key={idx} href={href} className="social-icon" target="_blank" rel="noopener noreferrer">
                   <Icon />
                 </a>
               ))}
