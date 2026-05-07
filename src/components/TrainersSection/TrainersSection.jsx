@@ -2,17 +2,16 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { ChevronLeft, ChevronRight, GraduationCap, Linkedin, Award } from "lucide-react";
 
 const MENTORS = [
-  { name: "Harsh Pareek",       role: "SEO & Growth Strategist",      img: "/images/Harsh-Ibraine.webp", initials: "HP" },
-  { name: "Shraddha Rane",      role: "Digital Marketing Expert",      img: "/images/shraddha.png",       initials: "SR" },
-  { name: "Nilkamal Mukharjee", role: "E-Commerce Expert",             img: "/images/neel.png",           initials: "NM" },
-  { name: "Rahul Shinde",       role: "Analytics Lead",                img: "/images/rahul.png",          initials: "RS" },
-  { name: "Hemant Mane",        role: "Performance Marketing Lead",    img: "/images/hemant.png",         initials: "HM" },
-  { name: "Zahid Shaikh",       role: "Social Media Specialist",       img: "/images/zahid.png",          initials: "ZS" },
-  { name: "Rahul Singh",        role: "Content Strategy Head",         img: "/images/rahuls.png",         initials: "RS" },
-  { name: "Vikram Kamble",      role: "Brand Manager",                 img: "/images/vikram.png",         initials: "VK" },
+  { name: "Harsh Pareek", role: "SEO & Growth Strategist", img: "/images/Harsh-Ibraine.webp", initials: "HP" },
+  { name: "Shraddha Rane", role: "Digital Marketing Expert", img: "/images/shraddha.png", initials: "SR" },
+  { name: "Nilkamal Mukharjee", role: "E-Commerce Expert", img: "/images/neel.png", initials: "NM" },
+  { name: "Rahul Shinde", role: "Analytics Lead", img: "/images/rahul.png", initials: "RS" },
+  { name: "Hemant Mane", role: "Performance Marketing Lead", img: "/images/hemant.png", initials: "HM" },
+  { name: "Zahid Shaikh", role: "Social Media Specialist", img: "/images/zahid.png", initials: "ZS" },
+  { name: "Rahul Singh", role: "Content Strategy Head", img: "/images/rahuls.png", initials: "RS" },
+  { name: "Vikram Kamble", role: "Brand Manager", img: "/images/vikram.png", initials: "VK" },
 ];
 
-// Triple the list so we always have cards on both sides
 const LOOPED = [...MENTORS, ...MENTORS, ...MENTORS];
 
 const AVATAR_COLORS = [
@@ -26,7 +25,13 @@ const AVATAR_COLORS = [
   { bg: "#FBEAF0", text: "#993556" },
 ];
 
-const GAP = 20; // px gap between cards
+const GAP = 20;
+const AUTO_SPEED = 0.6;   // px per frame for auto-scroll
+const EASE_DURATION = 420; // ms for manual step easing
+
+function easeInOutCubic(t) {
+  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+}
 
 function MentorCard({ mentor, cardWidth }) {
   const [imgError, setImgError] = useState(false);
@@ -82,10 +87,8 @@ function MentorCard({ mentor, cardWidth }) {
           ref={el => {
             if (!el) return;
             const card = el.closest(".group");
-            const show = () => el.style.opacity = "1";
-            const hide = () => el.style.opacity = "0";
-            card.addEventListener("mouseenter", show);
-            card.addEventListener("mouseleave", hide);
+            card.addEventListener("mouseenter", () => el.style.opacity = "1");
+            card.addEventListener("mouseleave", () => el.style.opacity = "0");
           }}
         />
 
@@ -140,23 +143,6 @@ function MentorCard({ mentor, cardWidth }) {
         >
           {mentor.name}
         </h3>
-        {/* <p
-          className="font-bold uppercase text-gray-400"
-          style={{
-            fontSize: "9.5px",
-            letterSpacing: "0.18em",
-            fontFamily: "'Satoshi', sans-serif",
-            transition: "color 0.3s ease",
-          }}
-          ref={el => {
-            if (!el) return;
-            const card = el.closest(".group");
-            card.addEventListener("mouseenter", () => el.style.color = "#ecab00");
-            card.addEventListener("mouseleave", () => el.style.color = "#9ca3af");
-          }}
-        >
-          {mentor.role}
-        </p> */}
       </div>
     </div>
   );
@@ -164,16 +150,14 @@ function MentorCard({ mentor, cardWidth }) {
 
 export default function TrainersSection() {
   const trackRef = useRef(null);
-  const offsetRef = useRef(0);          // current translateX (negative = moved left)
+  const offsetRef = useRef(0);        // current translateX in px (always negative or 0)
   const rafRef = useRef(null);
-  const pausedRef = useRef(false);
+  const pausedRef = useRef(false);    // true when hovered
+  const easingRef = useRef(null);     // active easing job { startOffset, delta, startTime }
   const [cardWidth, setCardWidth] = useState(280);
-  const [itemsPerView, setItemsPerView] = useState(4);
   const containerRef = useRef(null);
 
-  const SPEED = 0.6; // px per frame
-
-  // Calculate card width from container
+  // Responsive card width
   const recalc = useCallback(() => {
     if (!containerRef.current) return;
     const w = containerRef.current.offsetWidth;
@@ -181,7 +165,6 @@ export default function TrainersSection() {
     if (w < 500) ipv = 1;
     else if (w < 780) ipv = 2;
     else if (w < 1060) ipv = 3;
-    setItemsPerView(ipv);
     const cw = (w - GAP * (ipv - 1)) / ipv;
     setCardWidth(cw);
   }, []);
@@ -193,51 +176,53 @@ export default function TrainersSection() {
     return () => ro.disconnect();
   }, [recalc]);
 
-  // The width of one full set of MENTORS cards
-  const oneSetWidth = useCallback(() => {
-    return MENTORS.length * (cardWidth + GAP);
+  // Wrap offset to stay within [-setWidth, 0)
+  const wrapOffset = useCallback((val) => {
+    const setW = MENTORS.length * (cardWidth + GAP);
+    let v = val;
+    while (v <= -setW) v += setW;
+    while (v > 0) v -= setW;
+    return v;
   }, [cardWidth]);
 
-  // Animation loop
+  // Main RAF loop — handles both auto-scroll and easing
   useEffect(() => {
     if (!trackRef.current || cardWidth === 0) return;
 
-    const animate = () => {
-      if (!pausedRef.current) {
-        offsetRef.current -= SPEED;
+    const loop = (timestamp) => {
+      if (easingRef.current) {
+        // --- Manual easing in progress ---
+        const { startOffset, delta, startTime } = easingRef.current;
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / EASE_DURATION, 1);
+        const eased = easeInOutCubic(progress);
+        offsetRef.current = wrapOffset(startOffset + delta * eased);
 
-        // When we've scrolled exactly one full set, jump back silently
-        const setW = MENTORS.length * (cardWidth + GAP);
-        if (Math.abs(offsetRef.current) >= setW) {
-          offsetRef.current += setW;
+        if (progress >= 1) {
+          easingRef.current = null; // done
         }
-
-        if (trackRef.current) {
-          trackRef.current.style.transform = `translateX(${offsetRef.current}px)`;
-        }
+      } else if (!pausedRef.current) {
+        // --- Auto-scroll ---
+        offsetRef.current = wrapOffset(offsetRef.current - AUTO_SPEED);
       }
-      rafRef.current = requestAnimationFrame(animate);
+
+      if (trackRef.current) {
+        trackRef.current.style.transform = `translateX(${offsetRef.current}px)`;
+      }
+      rafRef.current = requestAnimationFrame(loop);
     };
 
-    rafRef.current = requestAnimationFrame(animate);
+    rafRef.current = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(rafRef.current);
-  }, [cardWidth]);
+  }, [cardWidth, wrapOffset]);
 
-  // Manual nav — snap to next/prev card
-  const manualStep = (dir) => {
+  // Manual step — kicks off an easing job (no CSS transition needed)
+  const manualStep = useCallback((dir) => {
     const step = cardWidth + GAP;
-    offsetRef.current -= dir * step;
-    const setW = MENTORS.length * (cardWidth + GAP);
-    if (Math.abs(offsetRef.current) >= setW) offsetRef.current += setW;
-    if (offsetRef.current > 0) offsetRef.current -= setW;
-    if (trackRef.current) {
-      trackRef.current.style.transition = "transform 0.35s ease";
-      trackRef.current.style.transform = `translateX(${offsetRef.current}px)`;
-      setTimeout(() => {
-        if (trackRef.current) trackRef.current.style.transition = "none";
-      }, 350);
-    }
-  };
+    const startOffset = offsetRef.current;
+    const delta = -dir * step;
+    easingRef.current = { startOffset, delta, startTime: performance.now() };
+  }, [cardWidth]);
 
   const NavBtn = ({ onClick, label, children }) => (
     <button
@@ -303,7 +288,6 @@ export default function TrainersSection() {
             <ChevronLeft size={22} strokeWidth={1.8} />
           </NavBtn>
 
-          {/* Track container */}
           <div
             ref={containerRef}
             className="flex-1 overflow-hidden"
