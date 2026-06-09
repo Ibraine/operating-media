@@ -48,9 +48,7 @@ function ModuleCard({ data, isOpen, onClick }) {
                     </div>
                 </div>
                 <div className="flex items-center gap-3 shrink-0">
-                    <span className="hidden md:flex items-center justify-center text-[13px] font-bold text-gray-500 bg-gray-50 border border-gray-100 px-3.5 py-1.5 rounded-full">
-                        {data.topics.length} topics
-                    </span>
+                    
                     <div className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 shrink-0 ${isOpen ? 'bg-[#ECAB00] text-[#0f172a]' : 'bg-gray-100 text-gray-400'}`}>
                         <ChevronDown size={18} style={{ transform: isOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)' }} />
                     </div>
@@ -104,7 +102,7 @@ export default function SEOSyllabus() {
                     <h2 className="font-black text-[32px] md:text-[40px] lg:text-[46px] text-[#0f172a] leading-[1.1] tracking-tight mb-6">
                         Industry-Approved{' '}
                         <span className="relative inline-block text-[#ECAB00]">
-                            Curriculum & 15 Topics
+                            Curriculum & Topics
                             <svg className="absolute w-full h-[10px] -bottom-1 left-0 text-[#ECAB00]/40 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="transparent" />
                             </svg>
@@ -126,13 +124,6 @@ export default function SEOSyllabus() {
                     ))}
                 </div>
 
-                <div className="mt-14 flex flex-col items-center justify-center text-center">
-                    <p className="font-medium text-[16px] text-gray-500 mb-6">Want to see the complete curriculum and tools list?</p>
-                    {/* <button className="group bg-[#0f172a] text-white hover:bg-[#ECAB00] hover:text-[#0f172a] transition-all duration-300 rounded-xl px-8 py-4 font-bold text-[15px] flex items-center gap-2 cursor-pointer shadow-lg active:scale-95">
-                        Download Full Syllabus
-                        <Download size={18} className="group-hover:-translate-y-1 transition-transform" />
-                    </button> */}
-                </div>
             </div>
         </section>
     );

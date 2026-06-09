@@ -30,6 +30,7 @@ import GoogleAnalytics from './pages/GoogleAnalytics/GoogleAnalytics.jsx';
 import WordPress from './pages/WordPress/WordPress.jsx';
 import SocialMediaOptimization from './pages/SocialMediaOptimization/SocialMediaOptimization.jsx';
 import SearchEngineOptimization from './pages/SearchEngineOptimization/SearchEngineOptimization.jsx';
+import CorporateTraining from './pages/CorporateTraining/CorporateTraining.jsx'
 
 
 
@@ -70,6 +71,7 @@ function App() {
         <Route path="/upcoming-batches/" element={<UpcomingBatches />} />
         <Route path="/frequently-asked-questions/" element={< Faq/>} />
         <Route path="/gallery/" element={<Gallery />} />
+        <Route path="/corporate-training/" element={<CorporateTraining />} />
 
 
 

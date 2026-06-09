@@ -37,6 +37,28 @@ const HireFromUsPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Hire Digital Marketing Experts | Operating Media" />
         <meta name="twitter:description" content="Hire trained digital marketing professionals from Operating Media." />
+
+        {/* ✅ Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://operatingmedia.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Hire From Us",
+                "item": "https://operatingmedia.com/hire-from-us/"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       {/* Page Content */}

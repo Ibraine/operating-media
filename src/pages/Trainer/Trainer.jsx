@@ -22,10 +22,10 @@ const trainers = [
    {
         name: "Harsh Pareek",
         role: "Digital Marketing Agency Owner",
-        exp: "15+ Years",
+        exp: "16+ Years",
         tag: "1000+ Campaigns",
         bio: "An out-and-out strategist when it comes to growing a small idea into a profitable business. Harsh has implemented his expertise in 1000+ successful campaigns for clients all over the globe. He runs Ibraine — a successful Digital Marketing Agency serving clients from over 18 countries.",
-        skills: ["SEM & PPC", "Campaign Strategy", "Business Growth", "Global Marketing"],
+        skills: [""],
         img: "/images/Harsh-Ibraine.webp",
         linkedin: "https://www.linkedin.com/in/pharsh88/",
         accent: "#ECAB00",
@@ -34,31 +34,31 @@ const trainers = [
     {
         name: "Neelkamal Mukharjee",
         role: "E-Commerce & Marketplace Specialist",
-        exp: "10+ Years",
+        exp: "15+ Years",
         tag: "Amazon Expert",
-        bio: "Neelkamal has built and scaled dozens of e-commerce brands from zero to revenue. His D2C expertise and marketplace strategy make him one of India's most sought-after educators in the e-commerce space — covering Amazon Ads, marketplace SEO, and direct-to-consumer growth.",
+        bio: "AI-powered Digital Marketing Trainer with 15+ years of experience, having trained 6000+ students, executed 500+ marketing campaigns, generated 90M+ organic impressions, and mentored professionals across 15+ industries.",
         skills: ["E-Commerce", "Amazon Ads", "D2C Growth", "Marketplace SEO"],
         img: "/images/neel.png",
-        linkedin: "https://www.linkedin.com/",
+        linkedin: "https://www.linkedin.com/in/nilkamalmukharjee/",
         accent: "#EC4899",
         num: "07",
     },
     {
         name: "Rahul Shinde",
         role: "AI & Automation Marketing Lead",
-        exp: "9+ Years",
+        exp: "10+ Years",
         tag: "AI Pioneer",
-        bio: "At the frontier of AI-powered marketing, helping brands integrate ChatGPT, automation, and machine learning into everyday campaigns. With 9+ years of experience, Rahul has transformed 50+ companies across India and Southeast Asia with cutting-edge growth hacking and AI-driven workflows.",
+        bio: "Training students for over 10+ years. Has expertise in SEO, Social Media, Paid Ads, and AI Performance Marketing. Known for his practical, hands-on teaching approach and has helped students and businesses achieve measurable results through real-world strategies.",
         skills: ["AI Marketing", "Automation", "ChatGPT Workflows", "Growth Hacking"],
         img: "/images/rahul.png",
-        linkedin: "https://www.linkedin.com/",
+        linkedin: "https://www.linkedin.com/in/rahul-v-shende/",
         accent: "#0EA5E9",
         num: "08",
     },
     {
         name: "Shraddha Rane",
         role: "Corporate Trainer & Digital Marketing Expert",
-        exp: "8+ Years",
+        exp: "10+ Years",
         tag: "Gen-Z Favourite",
         bio: "A dynamic and results-driven professional with a passion for corporate training and digital marketing. Shraddha designs and delivers engaging training programs that empower teams to reach their full potential. Her sessions foster a positive and collaborative learning environment — innovative, informative, and inspiring.",
         skills: ["Corporate Training", "Content Strategy", "Social Media", "Brand Building"],
@@ -94,9 +94,9 @@ const trainers = [
     {
         name: "Zahid Shaikh",
         role: "SEO & Internet Marketing Expert",
-        exp: "14+ Years",
+        exp: "12+ Years",
         tag: "SEO Authority",
-        bio: "A Strategic Internet Marketing Expert and SEO Specialist with over 14 years of online branding experience. Expert in natural and ethical Google Search Engine Optimization. His expertise is in building websites and ranking them to the top of Google and Bing search engines.",
+        bio: "A Strategic Internet Marketing Expert and SEO Specialist with over 12 years of online branding experience. Expert in natural and ethical Google Search Engine Optimization. His expertise is in building websites and ranking them to the top of Google and Bing search engines.",
         skills: ["SEO Strategy", "Link Building", "Google Rankings", "Online Branding"],
         img: "/images/zahid.png",
         linkedin: "https://www.linkedin.com/in/zahid-shaikh/",
@@ -106,9 +106,9 @@ const trainers = [
     {
         name: "Vikram Kamble",
         role: "Digital Marketing Coach & Mentor",
-        exp: "8+ Years",
+        exp: "10+ Years",
         tag: "Career Transformer",
-        bio: "A seasoned Digital Marketing Coach and Mentor specializing in empowering students and professionals with hands-on digital marketing skills. With 8+ years of experience, Vikram has helped dozens of aspirants build confidence in SEO, social media, content strategy, and performance advertising.",
+        bio: "A seasoned Digital Marketing Coach and Mentor specializing in empowering students and professionals with hands-on digital marketing skills. With 10+ years of experience, Vikram has helped dozens of aspirants build confidence in SEO, social media, content strategy, and performance advertising.",
         skills: ["SEO", "Social Media", "Content Strategy", "Performance Ads"],
         img: "/images/vikram.png",
         linkedin: "https://www.linkedin.com/in/vikram-kamble/",
@@ -166,7 +166,7 @@ function TrainersHero() {
                         </h1>
 
                         <p className={`text-[16px] md:text-[18px] text-gray-600 font-medium leading-relaxed max-w-[520px] mb-10 transition-all duration-700 delay-400 ease-out ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                            Not lecturers reading off slides — our <span className="font-bold text-[#0f172a]">8 trainers are agency owners, campaign runners, and brand builders</span> who teach what they live every single day.
+                            Not lecturers reading off slides — our <span className="font-bold text-[#0f172a]">20 trainers are agency owners, campaign runners, and brand builders</span> who teach what they live every single day.
                         </p>
 
                         <div className={`flex flex-col sm:flex-row gap-4 mb-10 transition-all duration-700 delay-500 ease-out ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -224,7 +224,7 @@ function TrainersHero() {
                                 ))}
                             </div>
                             <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
-                                <span className="text-[13px] font-medium text-gray-400">+4 more expert trainers</span>
+                                <span className="text-[13px] font-medium text-gray-400">20 more expert trainers</span>
                                 <span className="text-[12px] font-bold text-[#ECAB00]">See all below ↓</span>
                             </div>
                         </div>
@@ -236,8 +236,8 @@ function TrainersHero() {
             <div className="relative z-20 mx-6 lg:mx-14 max-w-[1400px] xl:mx-auto pb-16">
                 <div className="bg-[#0f172a] rounded-2xl shadow-xl p-6 lg:p-8 flex flex-wrap lg:flex-nowrap justify-between gap-6">
                     {[
-                        { icon: <Globe size={20} />, title: "8 Expert Trainers", sub: "Active Industry Professionals" },
-                        { icon: <ShieldCheck size={20} />, title: "57+ Years Combined", sub: "Real-World Experience" },
+                        { icon: <Globe size={20} />, title: "20 Expert Trainers", sub: "Active Industry Professionals" },
+                        { icon: <ShieldCheck size={20} />, title: "100+ Years Combined", sub: "Real-World Experience" },
                         { icon: <Users size={20} />, title: "1000+ Campaigns", sub: "Run Across 18 Countries" },
                         { icon: <Star size={20} />, title: "16,000+ Students", sub: "Successfully Placed" },
                     ].map((s, i) => (
@@ -332,7 +332,7 @@ function TrainerCard({ trainer, index }) {
 
                     {/* Skills */}
                     <div className="flex flex-wrap gap-2">
-                        {trainer.skills.map((s, i) => (
+                        {/* {trainer.skills.map((s, i) => (
                             <span
                                 key={i}
                                 className="text-[11px] font-bold px-3 py-1.5 rounded-full border border-gray-100 bg-gray-50 text-gray-600 hover:text-white transition-all duration-200 cursor-default"
@@ -350,17 +350,17 @@ function TrainerCard({ trainer, index }) {
                             >
                                 {s}
                             </span>
-                        ))}
+                        ))} */}
                     </div>
 
                     {/* Tag */}
                     <div>
-                        <span
+                        {/* <span
                             className="inline-flex items-center text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full"
                             style={{ background: `${trainer.accent}15`, color: trainer.accent, border: `1px solid ${trainer.accent}30` }}
                         >
                             {trainer.tag}
-                        </span>
+                        </span> */}
                     </div>
                 </div>
             </div>
@@ -383,7 +383,7 @@ function RosterGrid() {
                         <span className="font-bold text-[11px] md:text-xs text-[#ECAB00] uppercase tracking-[0.2em]">Our Faculty</span>
                     </div>
                     <h2 className="font-black text-[32px] md:text-[40px] lg:text-[46px] text-[#0f172a] leading-[1.1] tracking-tight mb-6">
-                        08 Industry Experts.{' '}
+                        Industry Experts.{' '}
                         <span className="relative inline-block text-[#ECAB00]">
                             Zero
                             <svg className="absolute w-full h-[10px] -bottom-1 left-0 text-[#ECAB00]/40 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">

@@ -5,7 +5,7 @@ import { ArrowUpRight, Instagram, Play } from 'lucide-react';
 // ── Bento Grid Unit (Repeated for infinite scroll) ──
 const BentoGridUnit = ({ images }) => (
   <div className="flex gap-3 md:gap-4 h-[320px] md:h-[450px] lg:h-[500px] shrink-0 px-1.5 md:px-2">
-    
+
     {/* ════ Left Feature (Tall) ════ */}
     <div className="w-[200px] md:w-[260px] lg:w-[300px] h-full relative group overflow-hidden rounded-[1.5rem] md:rounded-[2rem] bg-[#0A0F1C] shadow-sm border border-gray-100">
       <img
@@ -16,36 +16,36 @@ const BentoGridUnit = ({ images }) => (
       />
       {/* Dark gradient overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F1C]/90 via-[#0A0F1C]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
-      
-      <div className="absolute bottom-6 left-6 z-20 transition-transform duration-500 group-hover:-translate-y-2">
+
+      {/* <div className="absolute bottom-6 left-6 z-20 transition-transform duration-500 group-hover:-translate-y-2">
         <span className="inline-block bg-[#ecab00] text-[#0A0F1C] font-bold text-[10px] md:text-[11px] tracking-widest uppercase px-3 py-1.5 rounded-full mb-3 shadow-[0_5px_15px_rgba(236,171,0,0.4)]">
           Events
         </span>
         <h3 className="text-white font-black text-lg md:text-xl leading-tight drop-shadow-md">Annual Meetups</h3>
-      </div>
+      </div> */}
     </div>
 
     {/* ════ Center Column (2x2 Grid) ════ */}
     <div className="w-[320px] md:w-[500px] lg:w-[600px] grid grid-rows-2 gap-3 md:gap-4 h-full">
-      
+
       {/* ── Top Row ── */}
       <div className="grid grid-cols-12 gap-3 md:gap-4">
         {/* Top Left (Wider Video Thumb) */}
         <div className="col-span-7 relative group overflow-hidden rounded-[1.5rem] md:rounded-[2rem] bg-gray-100 shadow-sm border border-gray-100 cursor-pointer">
           <div className="absolute inset-0 bg-[#ecab00]/0 group-hover:bg-[#ecab00]/20 transition-colors duration-500 z-10" />
           <img src={images[1].url} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Agency Visit" />
-          
+
           {/* Glowing Play Button on Hover */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-[#ecab00] opacity-0 group-hover:opacity-100 transition-all duration-500 scale-75 group-hover:scale-100 shadow-[0_0_30px_rgba(236,171,0,0.5)]">
             <Play fill="currentColor" size={24} className="ml-1" />
           </div>
         </div>
-        
+
         {/* Top Right (Square-ish, Brand Theme) */}
         <div className="col-span-5 relative group overflow-hidden rounded-[1.5rem] md:rounded-[2rem] bg-[#ecab00] shadow-sm flex flex-col items-center justify-center text-center p-4 border border-[#ecab00]/20 cursor-pointer hover:shadow-[0_10px_30px_-10px_rgba(236,171,0,0.6)] transition-all">
-          <img src={images[2].url} loading="lazy" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-30 transition-transform duration-[8s] group-hover:scale-110" alt="Workshops" />
-          <Instagram size={32} className="text-[#0A0F1C] mb-2 relative z-10 drop-shadow-sm group-hover:scale-110 transition-transform duration-300" />
-          <p className="text-[#0A0F1C] font-black text-[13px] md:text-[15px] leading-tight relative z-10 uppercase tracking-wide">Follow our <br/> Journey</p>
+          <img src={images[2].url} loading="lazy" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-100 transition-transform duration-[8s] group-hover:scale-110" alt="Workshops" />
+          {/* <Instagram size={32} className="text-[#0A0F1C] mb-2 relative z-10 drop-shadow-sm group-hover:scale-110 transition-transform duration-300" /> */}
+          {/* <p className="text-[#0A0F1C] font-black text-[13px] md:text-[15px] leading-tight relative z-10 uppercase tracking-wide">Follow our <br/> Journey</p> */}
         </div>
       </div>
 
@@ -55,16 +55,16 @@ const BentoGridUnit = ({ images }) => (
         <div className="col-span-5 relative group overflow-hidden rounded-[1.5rem] md:rounded-[2rem] bg-[#0A0F1C] shadow-sm border border-gray-100">
           <img src={images[3].url} loading="lazy" className="w-full h-full object-cover grayscale-[0.9] opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" alt="Socials" />
         </div>
-        
+
         {/* Bottom Right (Wider) */}
         <div className="col-span-7 relative group overflow-hidden rounded-[1.5rem] md:rounded-[2rem] shadow-sm border border-gray-100 cursor-pointer">
           <img src={images[4].url} loading="lazy" className="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-110" alt="Team Huddle" />
           <div className="absolute inset-0 bg-gradient-to-tr from-[#0A0F1C]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          
-          <div className="absolute bottom-5 left-5 md:bottom-6 md:left-6 z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+
+          {/* <div className="absolute bottom-5 left-5 md:bottom-6 md:left-6 z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
             <p className="text-white font-black text-[16px] md:text-[18px] drop-shadow-md">Masterclasses</p>
-          </div>
-          
+          </div> */}
+
           <div className="absolute top-4 right-4 md:top-5 md:right-5 z-20">
             <div className="bg-white/90 backdrop-blur-sm p-2.5 rounded-full text-[#0A0F1C] shadow-lg group-hover:bg-[#ecab00] group-hover:text-[#0A0F1C] transition-colors duration-300">
               <ArrowUpRight size={20} strokeWidth={2.5} className="group-hover:rotate-45 transition-transform duration-300" />
@@ -79,13 +79,13 @@ const BentoGridUnit = ({ images }) => (
     <div className="w-[200px] md:w-[260px] lg:w-[300px] h-full relative group overflow-hidden rounded-[1.5rem] md:rounded-[2rem] bg-[#0A0F1C] shadow-sm border border-gray-100">
       <img src={images[5].url} loading="lazy" className="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-110 opacity-90" alt="Graduation" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F1C] via-[#0A0F1C]/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500" />
-      
-      <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 transition-transform duration-500 group-hover:-translate-y-2">
+
+      {/* <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 transition-transform duration-500 group-hover:-translate-y-2">
         <p className="text-[#ecab00] font-black text-[11px] uppercase tracking-[0.2em] mb-3">Graduation</p>
         <p className="text-white italic text-[18px] md:text-[22px] leading-snug drop-shadow-lg" style={{ fontFamily: "'Lora', serif" }}>
           "Where education meets celebration."
         </p>
-      </div>
+      </div> */}
     </div>
 
   </div>
@@ -93,7 +93,7 @@ const BentoGridUnit = ({ images }) => (
 
 export default function InstitutionCampus() {
   // Stable Unsplash image links that won't break
-  const images = [
+  const allImages = [
     { id: 1, url: "/images/imag-1.webp" },
     { id: 2, url: "/images/imag-2.webp" },
     { id: 3, url: "/images/imag-3.webp" },
@@ -103,6 +103,15 @@ export default function InstitutionCampus() {
     { id: 7, url: "/images/imag-7.webp" },
     { id: 8, url: "/images/imag-8.webp" },
     { id: 9, url: "/images/imag-9.webp" },
+    { id: 10, url: "/images/imag-10.jpeg" },
+    { id: 11, url: "/images/imag-11.jpeg" },
+    { id: 12, url: "/images/imag-12.jpeg" },
+    { id: 13, url: "/images/imag-13.jpeg" },
+    { id: 14, url: "/images/imag-14.jpeg" },
+    { id: 15, url: "/images/imag-15.jpeg" },
+    { id: 16, url: "/images/imag-16.jpeg" },
+     { id: 17, url: "/images/imag-17.jpeg" },
+    { id: 18, url: "/images/imag-19.jpeg" },
   ];
 
   // Inject Fonts Dynamically
@@ -122,15 +131,15 @@ export default function InstitutionCampus() {
   }, []);
 
   return (
-    <section 
+    <section
       // Changed from #FCFAF2 to plain bg-white
       className="relative bg-white py-16 lg:py-24 overflow-hidden selection:bg-[#ecab00] selection:text-[#0A0F1C]"
       style={{ fontFamily: "'Satoshi', sans-serif" }}
     >
-      
+
       {/* ── HEADER AREA ── */}
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12 mb-12 lg:mb-16">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -151,14 +160,14 @@ export default function InstitutionCampus() {
               Operating Media.
             </h2>
             <p className="max-w-md text-gray-600 font-medium text-[15px] md:text-[16px] leading-relaxed border-l-[3px] border-[#ecab00] pl-5 lg:pb-2">
-Experience a dynamic learning environment filled with creativity, collaboration, live projects, industry exposure, and unforgettable student experiences beyond the classroom.            </p>
+              Experience a dynamic learning environment filled with creativity, collaboration, live projects, industry exposure, and unforgettable student experiences beyond the classroom.            </p>
           </div>
         </motion.div>
       </div>
 
       {/* ── INFINITE MOVING BENTO TRACK ── */}
       <div className="relative w-full overflow-hidden flex flex-col group py-4">
-        
+
         {/* Edge Fade Masks adjusted for Pure White background */}
         <div className="absolute inset-y-0 left-0 w-16 md:w-40 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
         <div className="absolute inset-y-0 right-0 w-16 md:w-40 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
@@ -166,9 +175,9 @@ Experience a dynamic learning environment filled with creativity, collaboration,
         {/* The Scrolling Track (Pauses on hover for usability) */}
         <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
           {/* Render 3 times to ensure smooth loop even on ultrawide screens */}
-          <BentoGridUnit images={images} />
-          <BentoGridUnit images={images} />
-          <BentoGridUnit images={images} />
+           <BentoGridUnit images={allImages.slice(0, 6)} />
+          <BentoGridUnit images={allImages.slice(6, 12)} />
+          <BentoGridUnit images={allImages.slice(12, 18)} />
         </div>
 
       </div>
@@ -187,7 +196,7 @@ Experience a dynamic learning environment filled with creativity, collaboration,
           .animate-marquee { animation-duration: 25s; }
         }
       `}</style>
-      
+
     </section>
   );
 }

@@ -49,7 +49,7 @@ const CHECKLIST = [
 
 const BATCH_STATS = [
   { target: 8, suffix: '', label: 'Months' },
-  { target: 380, suffix: '+', label: 'Hours' },
+  { target: 200, suffix: '+', label: 'Hours' },
   { target: 12, suffix: '', label: 'Students' },
 ];
 
@@ -360,7 +360,7 @@ export default function TransformationSection() {
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="transparent" />
                 </svg>
               </span>{' '}
-              in 7 Months.
+              in 8 Months.
             </motion.h2>
 
             {/* Sub-copy */}

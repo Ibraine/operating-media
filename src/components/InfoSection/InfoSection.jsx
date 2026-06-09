@@ -16,14 +16,14 @@ const PROGRAMS = [
     students: "16000+",
     level: "15+",
     desc: "Don’t just watch videos. Manage REAL money on Google & Meta Ads. The only course in Mumbai where we fund your ad campaigns for practical learning.",
-outcomes: [
-  "Ecommerce Creation",
-  "Video Editing Tool",
-  "Lead Generation",
-  "Photoshop Basics",
-  "Real Market Places Listing",
-  "Free Hosting + Domain",
-],
+    outcomes: [
+      "Ecommerce Creation",
+      "Video Editing Tool",
+      "Lead Generation",
+      "Photoshop Basics",
+      "Real Market Places Listing",
+      "Free Hosting + Domain",
+    ],
   },
   {
     id: "Advance",
@@ -34,14 +34,14 @@ outcomes: [
     students: "16000+",
     level: "15+",
     desc: "The fast-track program for students and business owners. Master the ‘Big 3’ revenue drivers: Google Ads, Social Media, and SEO along with 25 other modules. No fluff, just execution.",
-outcomes: [
-  "Blog Creation & Monetization",
-  "Digital Planning and Strategy",
-  "Content and Media Marketing",
-  "Media Buying and Planning",
-  "Influencer Marketing",
-  "Whatsapp Chat & Automation"
-],
+    outcomes: [
+      "Blog Creation & Monetization",
+      "Digital Planning and Strategy",
+      "Content and Media Marketing",
+      "Media Buying and Planning",
+      "Influencer Marketing",
+      "Whatsapp Chat & Automation"
+    ],
   },
   {
     id: "Diploma",
@@ -49,17 +49,18 @@ outcomes: [
     label: "Diploma in Digital Marketing",
     badge: "Diploma",
     duration: "2-3 Months",
-   students: "16000+",
+    students: "16000+",
     level: "15+",
     desc: "This course offers a comprehensive overview of digital media, teaching you how to integrate and use it to meet business and marketing goals.",
-outcomes: [
-  "Website Creation on WordPress",
-  "Page Design using Elementor",
-  "Search Engine Optimization",
-  "Google Analytics 4",
-  "Search Engine Marketing (SEM)",
-  "Social Media Advertising (Paid)"
-],  },
+    outcomes: [
+      "Website Creation on WordPress",
+      "Page Design using Elementor",
+      "Search Engine Optimization",
+      "Google Analytics 4",
+      "Search Engine Marketing (SEM)",
+      "Social Media Advertising (Paid)"
+    ],
+  },
   {
     id: "Certification",
     icon: "📋",
@@ -69,12 +70,14 @@ outcomes: [
     students: "16000+",
     level: "15+",
     desc: "Industry-recognized certification programs designed to build practical digital skills with real-world project experience.",
-    outcomes: [ "Hands-on practical training",
-  "Live campaign execution",
-  "Website & landing page creation",
-  "SEO and social media strategies",
-  "Google Ads & analytics setup",
-  "Industry certification guidance"],
+    outcomes: [
+      "Hands-on practical training",
+      "Live campaign execution",
+      "Website & landing page creation",
+      "SEO and social media strategies",
+      "Google Ads & analytics setup",
+      "Industry certification guidance"
+    ],
   }
 ];
 
@@ -85,7 +88,8 @@ const fadeUp = {
 };
 
 export default function InfoSection() {
-  const [activeIdx, setActiveIdx] = useState(1);
+  // SET TO 0 TO DEFAULT TO MASTER'S
+  const [activeIdx, setActiveIdx] = useState(0);
   const prog = PROGRAMS[activeIdx];
 
   // Inject Satoshi font dynamically
@@ -126,7 +130,6 @@ export default function InfoSection() {
             </span>
           </div>
           
-          {/* Main Heading: Exactly 46px on Desktop */}
           <h2 className="font-black text-[2.2rem] sm:text-[3rem] lg:text-[46px] leading-[1.1] tracking-tight text-[#0A0F1C]">
             Find the Perfect <span className="text-[#ecab00] relative inline-block">Program for You</span>
           </h2>
@@ -138,7 +141,6 @@ export default function InfoSection() {
           {/* ════ LEFT: Navigation Tabs ════ */}
           <div className="w-full lg:w-[38%] flex flex-col gap-4">
             
-            {/* Mobile horizontal scroll / Desktop vertical stack */}
             <div className="flex lg:flex-col gap-3 lg:gap-4 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 scrollbar-hide snap-x">
               {PROGRAMS.map((p, i) => {
                 const isActive = activeIdx === i;
@@ -204,11 +206,9 @@ export default function InfoSection() {
                 className="flex flex-col h-full"
               >
                 
-                {/* ── Top Hero Area (Dark Premium Theme) ── */}
+                {/* ── Top Hero Area ── */}
                 <div className="relative px-8 lg:px-12 py-10 lg:py-12 bg-[#0A0F1C] overflow-hidden">
-                  {/* Decor shape */}
                   <div className="absolute -top-10 -right-10 w-64 h-64 rounded-full bg-[#ecab00]/20 blur-[80px]" />
-                  
                   <div className="relative z-10">
                     <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/10 backdrop-blur-md text-white font-bold text-[10px] uppercase tracking-widest mb-5">
                       ★ {prog.badge}
@@ -224,8 +224,6 @@ export default function InfoSection() {
 
                 {/* ── Bottom Content Area ── */}
                 <div className="px-8 lg:px-12 py-10 flex-1 flex flex-col justify-between">
-                  
-                  {/* Grid Features */}
                   <div className="mb-10">
                     <p className="font-bold text-[12px] text-gray-400 uppercase tracking-widest mb-6">What You'll Learn</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-6">
@@ -242,9 +240,7 @@ export default function InfoSection() {
                     </div>
                   </div>
 
-                  {/* Actions & Meta */}
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-8 pt-8 border-t border-gray-100">
-                    
                     <div className="flex gap-8 w-full sm:w-auto">
                       <div>
                         <p className="font-black text-[24px] lg:text-[28px] text-[#0A0F1C] leading-none mb-1">{prog.students}</p>
@@ -265,16 +261,11 @@ export default function InfoSection() {
                         <ArrowRight size={18} strokeWidth={3} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                       </button></a>
                     </div>
-
                   </div>
-
                 </div>
-
               </motion.div>
             </AnimatePresence>
-
           </div>
-
         </div>
       </div>
 

@@ -125,14 +125,14 @@ export default function SyllabusSection() {
             <h2 className="font-black text-[30px] sm:text-[36px] md:text-[40px] lg:text-[46px] text-[#0f172a] leading-[1.1] tracking-tight mb-5">
               Industry-Approved{' '}
               <span className="relative inline-block text-[#ECAB00]">
-                Curriculum & 7 Modules
+                Curriculum & 45 Modules
                 <svg className="absolute w-full h-[10px] -bottom-1 left-0 text-[#ECAB00]/40 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="transparent" />
                 </svg>
               </span>
             </h2>
             <p className="text-[15px] md:text-[17px] font-medium text-gray-600 leading-relaxed">
-              From digital foundations to AI-driven strategies — 7 verticals covering every aspect of modern marketing.
+              From digital foundations to AI-driven strategies — 45 modules covering every aspect of modern marketing.
             </p>
           </motion.div>
         </div>
@@ -148,7 +148,7 @@ export default function SyllabusSection() {
           {/* LEFT — dark sidebar (unchanged) */}
           <div className="border-r border-white/10 overflow-y-auto max-h-[560px] custom-scroll bg-[#0f172a]">
             <div className="px-4 pt-5 pb-2">
-              <p className="text-[9px] font-black uppercase tracking-[0.35em] text-white/25 mb-4 px-2">7 Modules</p>
+              <p className="text-[9px] font-black uppercase tracking-[0.35em] text-white/25 mb-4 px-2">45 Modules</p>
             </div>
             <div className="px-3 pb-5 flex flex-col gap-0.5">
               {modulesData.map((m, i) => {
@@ -173,7 +173,7 @@ export default function SyllabusSection() {
                       {m.id}
                     </span>
                     <span
-                      className="font-bold text-[12.5px] leading-snug flex-1 transition-colors duration-200"
+                      className="font-bold text-[13.5px] leading-snug flex-1 transition-colors duration-200"
                       style={{ color: isActive ? '#fff' : 'rgba(255,255,255,0.4)' }}
                     >
                       {m.title}
@@ -193,7 +193,7 @@ export default function SyllabusSection() {
                 {/* was text-[9px], now text-[10px] */}
                 {mod.id} · {mod.subtopics.length} Topics
               </span>
-              <p className="font-black text-[14.5px] text-[#0f172a] leading-snug">{mod.title}</p>
+              <p className="font-black text-[15.5px] text-[#0f172a] leading-snug">{mod.title}</p>
               {/* was text-[13px], now text-[14.5px] */}
             </div>
             <div className="p-3 flex flex-col gap-0.5">
@@ -220,7 +220,7 @@ export default function SyllabusSection() {
                       {isActive && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
                     </span>
                     <span
-                      className="font-semibold text-[14.5px] leading-snug transition-colors duration-200"
+                      className="font-semibold text-[15.5px] leading-snug transition-colors duration-200"
                       style={{ color: isActive ? '#0f172a' : '#6b7280' }}
                     >
                       {/* was text-[13px], now text-[14.5px] */}
@@ -400,9 +400,7 @@ export default function SyllabusSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-12 flex flex-col items-center text-center"
         >
-          <p className="font-medium text-[15px] text-gray-500 mb-5">
-            Want the complete curriculum with all tools?
-          </p>
+          
         </motion.div>
       </div>
 

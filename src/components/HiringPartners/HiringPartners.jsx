@@ -19,48 +19,46 @@ function FadeUp({ children, delay = 0, className = "" }) {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   LOGOS DATA (Fixed Broken Links - Only Stable SVGs)
+   LOGOS DATA
 ═══════════════════════════════════════════════════════════ */
 const ROW_1 = [
-  { name: "Google", url: "/icon/Google_2015_logo.svg" },
-  { name: "Meta", url: "/images/Meta.svg" },
-  { name: "Amazon", url: "/icon/Amazon_logo.svg" },
-  { name: "LinkedIn", url: "/icon/LinkedIn_Logo.svg" },
-  { name: "Spotify", url: "/icon/Spotify_logo_with_text.svg" },
-  { name: "Airbnb", url: "/icon/Airbnb_Logo_Bélo.svg" },
-  { name: "Oyo", url: "/icon/oyo.svg" },
-  { name: "Paytm", url: "/icon/Paytm_Logo_(standalone).svg" },
-  { name: "MakeMyTrip", url: "/icon/mmt.svg" },
+  { name: "", url: "/icon/Group-190.webp" },
+  { name: "", url: "/icon/Group-191.webp" },
+  { name: "", url: "/icon/Group-192.webp" },
+  { name: "", url: "/icon/Group-193.webp" },
+  { name: "", url: "/icon/Group-197.webp" },
+  { name: "", url: "/icon/Group-198.webp" },
+  { name: "", url: "/icon/Group-179.webp" },
+  { name: "", url: "/icon/Group-180.webp" },
 ];
 
 const ROW_2 = [
-  { name: "Ogilvy", url: "/icon/Ogilvy.svg" },
-  { name: "GroupM", url: "/icon/groupm.png" },
-  { name: "WPP", url: "/icon/wpp.svg" },
-  { name: "Publicis", url: "/icon/pg.png" },
-  { name: "Dentsu", url: "/icon/dentsu.svg" },
-  { name: "Havas", url: "/icon/havas.svg" },
-  { name: "Adobe", url: "/icon/adobe.svg" },
-  { name: "HubSpot", url: "/icon/HubSpot_Logo.svg" },
+  { name: "", url: "/icon/Group-182.webp" },
+  { name: "", url: "/icon/Group-183.webp" },
+  { name: "", url: "/icon/Group-184.webp" },
+  { name: "", url: "/icon/Group-187.webp" },
+  { name: "", url: "/icon/Group-195.webp" },
+  { name: "", url: "/icon/Group-181.webp" },
+  { name: "", url: "/icon/Group-188.webp" },
 ];
 
 const ROW_3 = [
-  { name: "ICICI Bank", url: "/icon/ICICI_Bank_Logo.svg" },
-  { name: "HDFC Bank", url: "/icon/HDFC_Bank_Logo.svg" },
-  { name: "Colgate", url: "/icon/colgate.svg" },
-  { name: "Godrej", url: "/icon/godrej.svg" },
-  { name: "Marico", url: "/icon/marico.svg" },
-  { name: "Bajaj", url: "/icon/bajaj.svg" },
-  { name: "Jio", url: "/icon/jio.svg" },
-  { name: "Airtel", url: "/icon/airtel.svg" },
+  { name: "", url: "/icon/Group-194.webp" },
+  { name: "", url: "/icon/Group-196.webp" },
+  { name: "", url: "/icon/Group-185.webp" },
+  { name: "", url: "/icon/Group-186.webp" },
+  { name: "", url: "/icon/Group-180.webp" },
+  { name: "", url: "/icon/Group-184.webp" },
+  { name: "", url: "/icon/Group-192.webp" },
+  { name: "", url: "/icon/Group-189.webp" },
 ];
 
 /* ═══════════════════════════════════════════════════════════
-   LOGO CARD
+   LOGO CARD (Sized for visibility)
 ═══════════════════════════════════════════════════════════ */
 function LogoCard({ logo }) {
   return (
-    <div className="shrink-0 group cursor-default flex items-center justify-center bg-white rounded-2xl w-[140px] md:w-[170px] h-[64px] md:h-[76px] border border-gray-100 shadow-[0_4px_15px_rgba(0,0,0,0.03)] hover:border-[#ecab00]/40 hover:shadow-[0_10px_30px_rgba(236,171,0,0.15)] hover:-translate-y-1 transition-all duration-300 px-6">
+    <div className="shrink-0 group cursor-default flex items-center justify-center bg-white rounded-2xl w-[160px] md:w-[200px] h-[70px] md:h-[85px] border border-gray-100 shadow-[0_4px_15px_rgba(0,0,0,0.03)] hover:border-[#ecab00]/40 hover:shadow-[0_10px_30px_rgba(236,171,0,0.15)] hover:-translate-y-1 transition-all duration-300 px-4">
       <img
         src={logo.url}
         alt={logo.name}
@@ -68,8 +66,7 @@ function LogoCard({ logo }) {
           e.currentTarget.style.display = "none";
           e.currentTarget.nextElementSibling?.classList.remove("hidden");
         }}
-        // Light theme setting: Grayscale by default, color on hover
-        className="max-h-[30px] max-w-full w-auto h-auto object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 ease-out"
+        className="max-h-[45px] w-full h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 ease-out"
       />
       <span className="hidden text-center leading-tight font-bold text-[13px] text-gray-500 group-hover:text-gray-900 transition-colors">
         {logo.name}
@@ -85,7 +82,7 @@ function MarqueeRow({ logos, direction = "left", duration = 40 }) {
   const isLeft = direction === "left";
   return (
     <div className="flex overflow-hidden select-none py-2 w-full hover:[&>div]:![animation-play-state:paused]">
-      <div 
+      <div
         className={`flex gap-4 md:gap-5 shrink-0 items-center w-max ${isLeft ? 'animate-marquee-left' : 'animate-marquee-right'}`}
         style={{ animationDuration: `${duration}s` }}
       >
@@ -113,21 +110,16 @@ export default function HiringPartners() {
   }, []);
 
   return (
-    // Background updated to #FCFAF2, Spacing reduced to py-12 lg:py-16
     <section className="relative bg-[#FCFAF2] overflow-hidden py-12 lg:py-16 selection:bg-[#ecab00] selection:text-[#0A0F1C]" style={{ fontFamily: "'Satoshi', sans-serif" }}>
-      
-      {/* ── Subtle Background Pattern ── */}
+
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000004_1px,transparent_1px),linear-gradient(to_bottom,#00000004_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
-      
-      {/* Glow Orbs matched to Theme */}
+
       <div className="absolute -top-[10%] -right-[5%] w-[400px] h-[400px] rounded-full bg-[#ecab00]/15 blur-[120px] pointer-events-none animate-pulse-slow" />
       <div className="absolute -bottom-[10%] -left-[5%] w-[400px] h-[400px] rounded-full bg-[#ecab00]/10 blur-[120px] pointer-events-none" style={{ animationDelay: "2s" }} />
 
-      {/* ── Header & Stats Area ── */}
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12 mb-10 lg:mb-14">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 lg:gap-10">
 
-          {/* Left Text Area */}
           <FadeUp delay={0} className="w-full lg:w-[50%]">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#ecab00]/30 bg-[#ecab00]/10 backdrop-blur-md mb-6 shadow-sm">
               <span className="h-2 w-2 rounded-full bg-[#ecab00] animate-pulse" />
@@ -136,7 +128,6 @@ export default function HiringPartners() {
               </span>
             </div>
 
-            {/* Exactly 46px on Desktop, Dark Gray Text */}
             <h2 className="font-black text-[2.2rem] sm:text-[2.8rem] lg:text-[46px] leading-[1.1] tracking-tight text-gray-900 mb-5">
               Trusted by <br className="hidden sm:block" />
               <span className="text-[#ecab00] relative inline-block">
@@ -149,13 +140,9 @@ export default function HiringPartners() {
             </p>
           </FadeUp>
 
-          {/* Right Area: Premium Stats Box (Light Theme) */}
           <FadeUp delay={0.2} className="w-full lg:w-auto">
             <div className="relative flex flex-wrap sm:flex-nowrap justify-between gap-8 sm:gap-12 bg-white px-8 sm:px-10 py-8 rounded-[2rem] border border-gray-100 shadow-[0_15px_40px_-10px_rgba(0,0,0,0.08)] overflow-hidden">
-              
-              {/* Inner subtle glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#ecab00]/5 to-transparent opacity-50" />
-
               {[
                 { value: "250+", label: "Hiring Partners" },
                 { value: "16k+", label: "Alumni Placed" },
@@ -172,41 +159,23 @@ export default function HiringPartners() {
               ))}
             </div>
           </FadeUp>
-
         </div>
       </div>
 
-      {/* ── Marquee Section ── */}
       <div className="relative z-10 flex flex-col gap-4 md:gap-5 w-full">
-        {/* Edge Fade Masks for smooth blend with #FCFAF2 Background */}
         <div className="absolute inset-y-0 left-0 w-20 md:w-40 z-20 pointer-events-none bg-gradient-to-r from-[#FCFAF2] to-transparent" />
         <div className="absolute inset-y-0 right-0 w-20 md:w-40 z-20 pointer-events-none bg-gradient-to-l from-[#FCFAF2] to-transparent" />
-
-        {/* 3 Infinite Moving Rows with different speeds */}
         <MarqueeRow logos={ROW_1} direction="left" duration={55} />
         <MarqueeRow logos={ROW_2} direction="right" duration={65} />
         <MarqueeRow logos={ROW_3} direction="left" duration={60} />
       </div>
 
-      {/* ── Custom Animations ── */}
       <style>{`
-        @keyframes marqueeLeft {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-50%); }
-        }
-        @keyframes marqueeRight {
-          0% { transform: translateX(-50%); }
-          100% { transform: translateX(0%); }
-        }
-        .animate-marquee-left {
-          animation: marqueeLeft linear infinite;
-        }
-        .animate-marquee-right {
-          animation: marqueeRight linear infinite;
-        }
-        .animate-pulse-slow {
-          animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
+        @keyframes marqueeLeft { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+        @keyframes marqueeRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0%); } }
+        .animate-marquee-left { animation: marqueeLeft linear infinite; }
+        .animate-marquee-right { animation: marqueeRight linear infinite; }
+        .animate-pulse-slow { animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
       `}</style>
     </section>
   );

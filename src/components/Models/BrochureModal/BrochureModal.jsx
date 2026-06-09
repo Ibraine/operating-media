@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Send, User, Mail, Phone, MapPin, Sparkles } from "lucide-react";
+import { X, Send, User, Mail, Phone, MapPin, Sparkles, Loader2 } from "lucide-react"; // Loader2 import kiya
 import { useModal } from "../../../context/ModalContext";
 import emailjs from "@emailjs/browser";
 
@@ -12,6 +12,7 @@ export default function BrochureModal() {
   const [mounted, setMounted] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "", location: "" });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false); // Loading state add kiya
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
@@ -22,7 +23,9 @@ export default function BrochureModal() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.phone || !form.location) return;
+    if (loading || !form.name || !form.email || !form.phone || !form.location) return;
+
+    setLoading(true); // Process shuru hone par loading on
 
     const templateParams = {
       user_name: form.name,
@@ -32,22 +35,21 @@ export default function BrochureModal() {
     };
 
     try {
-      // Email 1: brochure sent to whoever filled the form
       await emailjs.send(
-        "service_ujpmo0q",     // ← paste your Service ID here
-        "template_99mvsff",    // ← paste your Template 1 ID here
+        "service_mavz9y7",
+        "template_ar1kjuc",
         templateParams,
-        "A6giUtbZPDY6B9SGg"   // ← paste your Public Key here
+        "JMF5tdRNG_za6035w"
       );
 
-      // Email 2: lead details sent to your 3 team addresses
       await emailjs.send(
-        "service_ujpmo0q",     // ← same Service ID
-        "template_xnf7fef",    // ← paste your Template 2 ID here
+        "service_mavz9y7",
+        "template_o7emg6i",
         templateParams,
-        "A6giUtbZPDY6B9SGg"   // ← same Public Key
+        "JMF5tdRNG_za6035w"
       );
 
+      setLoading(false);
       setSent(true);
       setTimeout(() => {
         setSent(false);
@@ -57,6 +59,7 @@ export default function BrochureModal() {
 
     } catch (error) {
       console.error("Email failed:", error);
+      setLoading(false); // Error aane par loading off
     }
   };
 
@@ -70,7 +73,6 @@ export default function BrochureModal() {
     <AnimatePresence>
       {isBrochureModalOpen && (
         <>
-          {/* PREMIUM BACKDROP */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -79,7 +81,6 @@ export default function BrochureModal() {
             className="fixed inset-0 bg-[#0f172a]/40 backdrop-blur-[6px] z-[99998]"
           />
 
-          {/* PREMIUM MODAL - Bottom Right */}
           <motion.div
             initial={{ opacity: 0, y: 40, scale: 0.95, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
@@ -88,12 +89,10 @@ export default function BrochureModal() {
             className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-[99999] bg-white/95 backdrop-blur-xl rounded-[2.5rem] w-[95%] max-w-[400px] shadow-[0_40px_100px_rgba(15,23,42,0.15)] border border-white/20 overflow-visible"
             style={{ fontFamily: "'Satoshi', sans-serif" }}
           >
-            {/* Glossy Overlay Effect */}
             <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden pointer-events-none">
               <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-white/40 to-transparent rotate-12" />
             </div>
 
-            {/* Close Button - Premium Style */}
             <button
               onClick={closeBrochureModal}
               className="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#0f172a] shadow-xl hover:bg-[#ECAB00] hover:text-white transition-all duration-300 z-[100000] border border-gray-100"
@@ -102,9 +101,7 @@ export default function BrochureModal() {
             </button>
 
             <div className="relative p-8 md:p-10">
-              {/* Header with Sparkle */}
               <div className="mb-8 relative">
-
                 <h3 className="text-2xl font-black text-[#0f172a] tracking-tight leading-tight">
                   Download Our <br />
                   <span className="text-[#ECAB00]">Digital Brochure</span>
@@ -115,95 +112,40 @@ export default function BrochureModal() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className={inputWrapperCls}>
                   <User size={18} className={iconCls} />
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Full Name"
-                    value={form.name}
-                    onChange={handleChange}
-                    className={inputCls}
-                    required
-                  />
+                  <input type="text" name="name" placeholder="Full Name" value={form.name} onChange={handleChange} className={inputCls} required />
                 </div>
-
                 <div className={inputWrapperCls}>
                   <Mail size={18} className={iconCls} />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    value={form.email}
-                    onChange={handleChange}
-                    className={inputCls}
-                    required
-                  />
+                  <input type="email" name="email" placeholder="Email Address" value={form.email} onChange={handleChange} className={inputCls} required />
                 </div>
-
                 <div className={inputWrapperCls}>
                   <Phone size={18} className={iconCls} />
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone Number"
-                    value={form.phone}
-                    onChange={handleChange}
-                    className={inputCls}
-                    required
-                  />
+                  <input type="tel" name="phone" placeholder="Phone Number" value={form.phone} onChange={handleChange} className={inputCls} required />
                 </div>
-
                 <div className={inputWrapperCls}>
                   <MapPin size={18} className={iconCls} />
-                  <select
-                    name="location"
-                    value={form.location}
-                    onChange={handleChange}
-                    className={`${inputCls} appearance-none`}
-                    required
-                  >
+                  <select name="location" value={form.location} onChange={handleChange} className={`${inputCls} appearance-none`} required>
                     <option value="" disabled>Preferred Campus</option>
-                    {locations.map((l) => (
-                      <option key={l} value={l}>
-                        {l}
-                      </option>
-                    ))}
+                    {locations.map((l) => (<option key={l} value={l}>{l}</option>))}
                   </select>
                 </div>
 
                 <button
                   type="submit"
-                  disabled={sent}
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                  className={`relative mt-4 w-full py-4.5 rounded-2xl font-black text-white transition-all duration-500 overflow-hidden shadow-[0_20px_40px_-10px_rgba(236,171,0,0.3)] group ${sent ? "bg-green-500" : "bg-[#0f172a]"
-                    }`}
+                  disabled={loading || sent}
+                  className={`relative mt-4 w-full py-4.5 rounded-2xl font-black text-white transition-all duration-500 overflow-hidden shadow-[0_20px_40px_-10px_rgba(236,171,0,0.3)] ${sent ? "bg-green-500" : loading ? "bg-gray-500" : "bg-[#0f172a]"}`}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#ECAB00] to-[#FF6A00] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
                   <div className="relative flex items-center justify-center gap-3">
-                    {sent ? (
-                      <>
-                        <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: "spring" }}>
-                          ✓
-                        </motion.div>
-                        <span>Brochure Sent!</span>
-                      </>
+                    {loading ? (
+                      <><Loader2 className="animate-spin" size={20} /> Sending...</>
+                    ) : sent ? (
+                      <><motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}>✓</motion.div> Brochure Sent!</>
                     ) : (
-                      <>
-                        <span className="text-[16px] tracking-tight">Request Brochure</span>
-                        <motion.div
-                          animate={{ x: isHovered ? 5 : 0 }}
-                          transition={{ type: "spring", stiffness: 400 }}
-                        >
-                          <Send size={18} strokeWidth={2.5} />
-                        </motion.div>
-                      </>
+                      <><span className="text-[16px]">Request Brochure</span><Send size={18} /></>
                     )}
                   </div>
                 </button>
               </form>
-
-
             </div>
           </motion.div>
         </>

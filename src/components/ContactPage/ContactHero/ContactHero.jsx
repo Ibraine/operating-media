@@ -18,10 +18,11 @@ const campuses = [
     phone: "+91 77000 22882",
     email: "contact@operatingmedia.com",
     hours: "Mon–Sat · 9am – 7pm",
-    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.827086054441!2d72.8469753150028!3d19.11862768709886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c90e9b9c6255%3A0x8c8a7e6c9e5a4b8b!2sChandra%20Niwas%20Office%20No.%202%2C%20Old%20Police%20Lane%2C%20Andheri%20East%2C%20Mumbai%2C%20Maharashtra%20400069!5e0!3m2!1sen!2sin!4v1701301234567",
+    // Yahan maine updated embed link diya hai jo exact location point karega
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d120588.26536087263!2d72.7587173!3d19.1784542!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63c593f05f5%3A0xc0f619459ea4fdfb!2sOperating%20Media%20%E2%80%93%20Agency-Led%20Digital%20Marketing%20Institute!5e0!3m2!1sen!2sin!4v1778497965808!5m2!1sen!2sin",
     directionsUrl: "https://maps.app.goo.gl/2sQRkudEBixh3wEh7",
     accent: "#2563eb",
-    tag: "Main Campus",
+    tag: "Andheri Campus",
   },
   {
     city: "Borivali",
@@ -30,10 +31,10 @@ const campuses = [
     phone: "+91 93264 74007",
     email: "contact@operatingmedia.com",
     hours: "Mon–Sat · 9am – 7pm",
-    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.1!2d72.8560!3d19.2307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b1e7c3e3b3e3%3A0x3e3b3e3b3e3b3e3b!2sGold%20Crest%20Business%20Center%2C%20Borivali%20West!5e0!3m2!1sen!2sin!4v1701301234568",
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d120588.26536087263!2d72.7587173!3d19.1784542!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0d77286d955%3A0x65b9d8623f1bf43c!2sOperating%20Media%20%E2%80%93%20Agency-Led%20Digital%20Marketing%20Institute!5e0!3m2!1sen!2sin!4v1778498048925!5m2!1sen!2sin",
     directionsUrl: "https://maps.app.goo.gl/jwWwd8iTVBLyWHbe8",
     accent: "#ECAB00",
-    tag: "Suburbs Campus",
+    tag: "Borivali Campus",
   },
 ];
 
@@ -48,7 +49,11 @@ const contactInfo = [
     icon: <Phone size={18} />,
     label: "Call Us",
     value: "+91 77000 22882",
-    sub: "+91 93264 74007",
+  },
+  {
+    icon: <Phone size={18} />,
+    label: "Call Us",
+    value: "+91 93264 74007",
   },
   {
     icon: <Clock size={18} />,

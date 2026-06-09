@@ -72,12 +72,18 @@ const FEATURES = [
 ];
 
 const TRUST = [
+  "Trusted Institute since 2011",
+  "Agency Style Training",
+  "250+ Placement Partners",
+  "Hybrid Training Mode",
   "Placement in 30 Days",
   "Live Projects Included",
   "Google Certified Trainers",
   "EMI Options Available",
   "Small Batch Sizes",
-  "Lifetime LMS Access",
+  "LMS with over 200 Videos",
+  
+
 ];
 
 // ── Components ───────────────────────────────────────────────
