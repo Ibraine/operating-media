@@ -88,7 +88,7 @@ export default function WhyUsAuthority() {
               {...scaleIn(0)}
             >
               <img 
-                src="/images/OM-images.jpg" 
+                src="/images/gallery-16.jpeg" 
                 alt="Classroom Training" 
                 className="w-full h-full object-cover transition-transform duration-[10s] ease-out hover:scale-110"
               />
@@ -101,7 +101,7 @@ export default function WhyUsAuthority() {
               {...scaleIn(0.2)}
             >
               <img 
-                src="/images/OM-images2.jpg" 
+                src="/images/imag-3.webp" 
                 alt="Student Success" 
                 className="w-full h-full object-cover transition-transform duration-[10s] ease-out hover:scale-110"
               />

@@ -50,8 +50,8 @@ const facultyPoints = [
 ];
 
 const stats = [
-    { num: 14, suffix: "+", label: "Years Experience" },
-    { num: 11000, suffix: "+", label: "Students Trained" },
+    { num: 15, suffix: "+", label: "Years Experience" },
+    { num: 16000, suffix: "+", label: "Students Trained" },
     { num: 250, suffix: "+", label: "Hiring Partners" },
     { num: 100, suffix: "%", label: "Placement Assistance" },
 ];
@@ -102,7 +102,7 @@ function AboutHero() {
                         </h1>
 
                         <p className={`text-[16px] md:text-[18px] text-gray-600 font-medium leading-relaxed max-w-[520px] mb-10 transition-all duration-700 delay-300 ease-out ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                            One in Top 5 Institutes Since 14 Years — training <span className="font-bold text-[#0f172a]">16,000+ students</span> with one mission: genuine job-readiness, not just a certificate.
+                            One in Top 5 Institutes Since 15+ Years — training <span className="font-bold text-[#0f172a]">16,000+ students</span> with one mission: genuine job-readiness, not just a certificate.
                         </p>
 
                         <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-400 ease-out ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -153,9 +153,9 @@ function AboutHero() {
                 <div className="bg-[#0f172a] rounded-2xl shadow-xl p-6 lg:p-8 flex flex-wrap lg:flex-nowrap justify-between gap-6">
                     {[
                         { icon: <Globe size={20} />, title: "Andheri & Borivali", sub: "Two Mumbai Campuses" },
-                        { icon: <Users size={20} />, title: "Max 10 Students", sub: "Personalised Batches" },
+                        { icon: <Users size={20} />, title: "Max 12 Students", sub: "Personalised Batches" },
                         { icon: <ShieldCheck size={20} />, title: "Google Certified", sub: "Industry Recognised" },
-                        { icon: <Award size={20} />, title: "Since 2011", sub: "14 Years of Excellence" },
+                        { icon: <Award size={20} />, title: "Since 2011", sub: "15+ Years of Excellence" },
                     ].map((s, i) => (
                         <div key={i} className="flex items-center gap-4 flex-1 min-w-[200px]">
                             <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white backdrop-blur-sm">
@@ -199,7 +199,7 @@ function WhoWeAre() {
                                     <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="transparent" />
                                 </svg>
                             </span>{' '}
-                            Since 14 Years.
+                            Since 15+ Years.
                         </h2>
 
                         <div className="space-y-5 text-gray-600 text-[16px] md:text-[17px] font-medium leading-relaxed mb-8">

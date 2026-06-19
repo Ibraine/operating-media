@@ -96,7 +96,7 @@ export default function SMOHeroSection() {
                                 <button className="group relative w-full flex items-center justify-center gap-3 bg-[#ECAB00] text-white px-8 py-4 rounded-xl font-bold text-[15px] overflow-hidden transition-all duration-300 hover:shadow-[0_10px_30px_-10px_rgba(236,171,0,0.5)] hover:-translate-y-1">
                                     <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                                     <span className="relative z-10 flex items-center gap-2">
-                                        Apply Now — ₹12,000
+                                      Book Free Demo Class
                                         <ArrowRight size={18} className="transform transition-transform duration-300 group-hover:translate-x-1.5" />
                                     </span>
                                 </button>
@@ -139,12 +139,7 @@ export default function SMOHeroSection() {
                             </div>
 
                             <div className="px-2 py-6 grid grid-cols-3 divide-x divide-gray-100">
-                                {[{ v: '2', l: 'Modules' }, { v: '50+', l: 'Tools' }, { v: 'Max 10', l: 'Students' }].map((s, i) => (
-                                    <div key={i} className="flex flex-col items-center">
-                                        <span className="font-black text-2xl text-[#0f172a] leading-none mb-1">{s.v}</span>
-                                        <span className="font-bold text-[10px] text-[#2563eb] uppercase tracking-widest">{s.l}</span>
-                                    </div>
-                                ))}
+                                
                             </div>
 
                             <div className="px-3 pb-4 space-y-2">
@@ -163,14 +158,14 @@ export default function SMOHeroSection() {
                                 ))}
                                 <Link to="/contact-us/" className="block pt-1">
                                     <button className="group w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#ECAB00] text-white font-black text-[14px] hover:bg-[#0f172a] transition-all duration-300 hover:shadow-lg">
-                                        Enroll Now — ₹12,000
+                                        Book Free Demo
                                         <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                                     </button>
                                 </Link>
                             </div>
                         </div>
 
-                        <div className="absolute -bottom-6 -left-6 z-20 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-gray-100 float-anim-1">
+                        <div className="absolute -bottom-12 -left-25 z-20 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-gray-100 float-anim-1">
                             <div className="flex items-center gap-3">
                                 <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[#2563eb]">
                                     <ShieldCheck size={20} />
@@ -186,8 +181,8 @@ export default function SMOHeroSection() {
                             <div className="flex items-center gap-3">
                                 <Share2 size={24} className="text-white" />
                                 <div>
-                                    <p className="font-bold text-sm text-white leading-tight">₹12,000 Only</p>
-                                    <p className="font-medium text-xs text-white/90">Limited Seats</p>
+                                    <p className="font-bold text-sm text-white leading-tight">Limited Seats</p>
+                                    <p className="font-medium text-xs text-white/90">Only</p>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +197,7 @@ export default function SMOHeroSection() {
                         { icon: <Globe size={20} />, title: "Andheri & Borivali", sub: "On-Campus Training" },
                         { icon: <Share2 size={20} />, title: "Organic + Paid Social", sub: "5 Major Platforms" },
                         { icon: <ShieldCheck size={20} />, title: "Diploma Certificate", sub: "Industry Recognised" },
-                        { icon: <Users size={20} />, title: "Max 10 Students", sub: "Personalised Batches" },
+                        { icon: <Users size={20} />, title: "Max 12 Students", sub: "Personalised Batches" },
                     ].map((s, i) => (
                         <div key={i} className="flex items-center gap-4 flex-1 min-w-[200px]">
                             <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white backdrop-blur-sm">

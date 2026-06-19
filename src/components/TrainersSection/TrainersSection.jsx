@@ -2,14 +2,14 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { ChevronLeft, ChevronRight, GraduationCap, Linkedin, Award } from "lucide-react";
 
 const MENTORS = [
-  { name: "Harsh Pareek", role: "SEO & Growth Strategist", img: "/images/Harsh-Ibraine.webp", initials: "HP" },
-  { name: "Shraddha Rane", role: "Digital Marketing Expert", img: "/images/shraddha.png", initials: "SR" },
-  { name: "Nilkamal Mukharjee", role: "E-Commerce Expert", img: "/images/neel.png", initials: "NM" },
-  { name: "Rahul Shinde", role: "Analytics Lead", img: "/images/rahul.png", initials: "RS" },
-  { name: "Hemant Mane", role: "Performance Marketing Lead", img: "/images/hemant.png", initials: "HM" },
-  { name: "Zahid Shaikh", role: "Social Media Specialist", img: "/images/zahid.png", initials: "ZS" },
-  { name: "Rahul Singh", role: "Content Strategy Head", img: "/images/rahuls.png", initials: "RS" },
-  { name: "Vikram Kamble", role: "Brand Manager", img: "/images/vikram.png", initials: "VK" },
+  { name: "Harsh Pareek", img: "/images/Harsh-Ibraine.webp", initials: "HP", linkedin: "https://www.linkedin.com/in/pharsh88/" },
+  { name: "Shraddha Rane", img: "/images/shraddha.png", initials: "SR", linkedin: "https://www.linkedin.com/in/shraddha-rane-95025b128/" },
+  { name: "Nilkamal Mukharjee", img: "/images/neel.png", initials: "NM", linkedin: "https://www.linkedin.com/in/nilkamalmukharjee/" },
+  { name: "Rahul Shinde", img: "/images/rahul.png", initials: "RS", linkedin: "https://www.linkedin.com/in/rahul-v-shende/" },
+  { name: "Hemant Mane", img: "/images/hemant.png", initials: "HM", linkedin: "https://www.linkedin.com/in/hemantm26/" },
+  { name: "Zahid Shaikh", img: "/images/zahid.png", initials: "ZS", linkedin: "https://www.linkedin.com/in/zahid-shaikh/" },
+  { name: "Rahul Singh", img: "/images/rahuls.png", initials: "RS", linkedin: "https://www.linkedin.com/in/therahulsingh/" },
+  { name: "Vikram Kamble", img: "/images/vikram.png", initials: "VK", linkedin: "https://www.linkedin.com/in/vikram-kamble/" },
 ];
 
 const LOOPED = [...MENTORS, ...MENTORS, ...MENTORS];
@@ -114,8 +114,11 @@ function MentorCard({ mentor, cardWidth }) {
           <span className="text-white font-bold uppercase tracking-widest" style={{ fontSize: "9px" }}>Expert</span>
         </div>
 
-        {/* LinkedIn */}
-        <div
+        {/* LinkedIn Link Updated */}
+        <a
+          href={mentor.linkedin || "#"}
+          target="_blank"
+          rel="noopener noreferrer"
           className="absolute bottom-3 right-3 w-9 h-9 flex items-center justify-center rounded-xl cursor-pointer"
           style={{
             background: "#ecab00",
@@ -123,6 +126,7 @@ function MentorCard({ mentor, cardWidth }) {
             boxShadow: "0 4px 12px rgba(236,171,0,0.4)",
             opacity: 0,
             transition: "opacity 0.3s ease",
+            zIndex: 10 // Ensure it's clickable above other overlays
           }}
           ref={el => {
             if (!el) return;
@@ -132,7 +136,7 @@ function MentorCard({ mentor, cardWidth }) {
           }}
         >
           <Linkedin size={17} fill="currentColor" strokeWidth={0} />
-        </div>
+        </a>
       </div>
 
       {/* Info */}
@@ -143,6 +147,7 @@ function MentorCard({ mentor, cardWidth }) {
         >
           {mentor.name}
         </h3>
+        <p className="text-gray-500 font-medium" style={{ fontSize: "13px" }}>{mentor.role}</p>
       </div>
     </div>
   );
@@ -150,14 +155,13 @@ function MentorCard({ mentor, cardWidth }) {
 
 export default function TrainersSection() {
   const trackRef = useRef(null);
-  const offsetRef = useRef(0);        // current translateX in px (always negative or 0)
+  const offsetRef = useRef(0);
   const rafRef = useRef(null);
-  const pausedRef = useRef(false);    // true when hovered
-  const easingRef = useRef(null);     // active easing job { startOffset, delta, startTime }
+  const pausedRef = useRef(false);
+  const easingRef = useRef(null);
   const [cardWidth, setCardWidth] = useState(280);
   const containerRef = useRef(null);
 
-  // Responsive card width
   const recalc = useCallback(() => {
     if (!containerRef.current) return;
     const w = containerRef.current.offsetWidth;
@@ -176,7 +180,6 @@ export default function TrainersSection() {
     return () => ro.disconnect();
   }, [recalc]);
 
-  // Wrap offset to stay within [-setWidth, 0)
   const wrapOffset = useCallback((val) => {
     const setW = MENTORS.length * (cardWidth + GAP);
     let v = val;
@@ -185,13 +188,11 @@ export default function TrainersSection() {
     return v;
   }, [cardWidth]);
 
-  // Main RAF loop — handles both auto-scroll and easing
   useEffect(() => {
     if (!trackRef.current || cardWidth === 0) return;
 
     const loop = (timestamp) => {
       if (easingRef.current) {
-        // --- Manual easing in progress ---
         const { startOffset, delta, startTime } = easingRef.current;
         const elapsed = timestamp - startTime;
         const progress = Math.min(elapsed / EASE_DURATION, 1);
@@ -199,10 +200,9 @@ export default function TrainersSection() {
         offsetRef.current = wrapOffset(startOffset + delta * eased);
 
         if (progress >= 1) {
-          easingRef.current = null; // done
+          easingRef.current = null;
         }
       } else if (!pausedRef.current) {
-        // --- Auto-scroll ---
         offsetRef.current = wrapOffset(offsetRef.current - AUTO_SPEED);
       }
 
@@ -216,7 +216,6 @@ export default function TrainersSection() {
     return () => cancelAnimationFrame(rafRef.current);
   }, [cardWidth, wrapOffset]);
 
-  // Manual step — kicks off an easing job (no CSS transition needed)
   const manualStep = useCallback((dir) => {
     const step = cardWidth + GAP;
     const startOffset = offsetRef.current;
@@ -242,7 +241,6 @@ export default function TrainersSection() {
       className="relative w-full py-20 lg:py-28 overflow-hidden"
       style={{ background: "#FAFBFF", fontFamily: "'Satoshi', sans-serif" }}
     >
-      {/* Grid bg */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -253,8 +251,6 @@ export default function TrainersSection() {
       />
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-14">
-
-        {/* Header */}
         <div className="flex flex-col items-center text-center mb-14 lg:mb-20">
           <div
             className="flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-gray-100 mb-6"
@@ -282,7 +278,6 @@ export default function TrainersSection() {
           </h2>
         </div>
 
-        {/* Carousel */}
         <div className="flex items-center gap-4 lg:gap-6">
           <NavBtn onClick={() => manualStep(-1)} label="Previous">
             <ChevronLeft size={22} strokeWidth={1.8} />
@@ -314,7 +309,6 @@ export default function TrainersSection() {
           </NavBtn>
         </div>
 
-        {/* Mobile nav */}
         <div className="mt-8 flex lg:hidden items-center justify-center gap-4">
           <button
             onClick={() => manualStep(-1)}
@@ -333,7 +327,6 @@ export default function TrainersSection() {
             <ChevronRight size={20} strokeWidth={1.8} />
           </button>
         </div>
-
       </div>
 
       <style>{`

@@ -1,0 +1,57 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ChevronRight } from 'lucide-react';
+
+export default function CorporateTrainingHero() {
+    return (
+        <section className="relative w-full h-auto md:h-[300px] flex items-center bg-[#0A0F1C] font-['Satoshi',sans-serif] selection:bg-[#ECAB00] selection:text-[#0f172a] overflow-hidden py-10 md:py-0">
+
+            {/* ── 1. BACKGROUND IMAGE & OVERLAYS ── */}
+            {/* Professional corporate/meeting themed background */}
+            <img
+                src="/images/corporate-bg.png"
+                alt="Corporate training session"
+                className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
+            />
+
+            {/* Solid Dark Overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0A0F1C] via-[#0A0F1C]/80 to-transparent" />
+
+            {/* Brand Color Blend (Professional Blue Tint) */}
+            <div className="absolute inset-0 bg-[#2563eb]/20 mix-blend-multiply" />
+
+            {/* Gold Glow Effect (Accent) */}
+            <div className="absolute top-1/2 left-[10%] -translate-y-1/2 w-[300px] h-[300px] bg-[#ECAB00]/15 rounded-full blur-[100px] pointer-events-none z-0" />
+
+            {/* ── 2. MAIN CONTENT CONTAINER ── */}
+            <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-14">
+
+                <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="max-w-2xl"
+                >
+                    {/* Breadcrumb Navigation */}
+                    <nav className="flex items-center gap-2 text-[12px] md:text-[13px] font-bold text-gray-400 mb-4 uppercase tracking-widest">
+                        <a href="/" className="hover:text-[#2563eb] transition-colors">Home</a>
+                        <ChevronRight size={14} className="text-[#2563eb]" />
+                        <span className="text-[#ECAB00]">Corporate Training</span>
+
+                    </nav>
+
+                    {/* Main Heading */}
+                    <h1 className="font-black text-[32px] md:text-[48px] text-white leading-[1.1] tracking-tight mb-4">
+                        Empower Your <span className="text-[#ECAB00]">Workforce</span>
+                    </h1>
+
+                    {/* Short Description Text */}
+                    <p className="font-medium text-[15px] md:text-[17px] text-gray-300 leading-relaxed max-w-xl">
+                        Customized learning solutions designed to upskill your team, drive innovation, and bridge the digital skills gap. Scalable programs built for modern enterprises.
+                    </p>
+
+                </motion.div>
+            </div>
+        </section>
+    );
+}

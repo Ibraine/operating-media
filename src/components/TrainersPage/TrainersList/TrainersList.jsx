@@ -19,7 +19,7 @@ const trainers = [
   {
     name: "Harsh Pareek",
     role: "Digital Marketing Agency Owner",
-    exp: "15+ Years",
+    exp: "16 Years",
     tag: "1000+ Campaigns",
     tagColor: "#FF6B00",
     bio: "A savvy strategist who turns small ideas into profitable businesses. Harsh runs a successful Digital Marketing Agency serving clients across 18+ countries, with deep expertise in high-performance online marketing.",

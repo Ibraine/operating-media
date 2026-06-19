@@ -38,6 +38,28 @@ const GalleryPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Gallery | Operating Media" />
         <meta name="twitter:description" content="See campus life and student activities at Operating Media." />
+
+        {/* ✅ Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://operatingmedia.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Gallery",
+                "item": "https://operatingmedia.com/gallery/"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       {/* Page Content */}

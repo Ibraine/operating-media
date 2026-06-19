@@ -364,7 +364,7 @@ export default function BlogsPage() {
     useFonts();
     const [activeCategory, setActiveCategory] = useState("All");
     const [currentPage, setCurrentPage] = useState(1);
-    const ITEMS_PER_PAGE = 13;
+    const ITEMS_PER_PAGE = 12;
 
     const categories = ["All", ...new Set(blogs.map(b => b.category))];
     const filtered = activeCategory === "All" ? blogs : blogs.filter(b => b.category === activeCategory);

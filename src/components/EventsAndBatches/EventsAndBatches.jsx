@@ -12,11 +12,13 @@ const ANDHERI_BATCHES = [
 ];
 
 const BORIVALI_BATCHES = [
-  { type: 'Weekday', time: '08:00 AM – 09:30 AM' },
   { type: 'Weekday', time: '10:00 AM – 12:00 PM' },
-  { type: 'Weekday', time: '02:30 PM – 04:30 PM' },
+  { type: 'Weekday', time: '02:00 PM – 04:00 PM' },
+  { type: 'Weekday', time: '04:30 PM – 06:30 PM' },
+   { type: 'Weekday', time: '07:00 PM – 09:00 PM' },
   { type: 'Sunday', time: '11:00 AM – 04:00 PM' },
 ];
+
 
 const TRUST = [
   'ISO 21001:2025 Certified',
@@ -135,7 +137,7 @@ export default function EventsAndBatches() {
             <h2 className="font-black text-[32px] md:text-[38px] lg:text-[46px] leading-[1.15] tracking-tight text-[#0f172a] mb-4 bg-white/50 backdrop-blur-sm inline-block rounded-lg px-2 -ml-2">
               Upcoming <br className="hidden lg:block" />
               <span className="text-[#ecab00]">
-                Batches 2025
+                Batches 2026
               </span>
             </h2>
           </div>

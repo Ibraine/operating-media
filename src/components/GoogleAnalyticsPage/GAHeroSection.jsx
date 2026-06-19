@@ -148,12 +148,7 @@ export default function GAHeroSection() {
 
                             {/* Inside Card Stats */}
                             <div className="px-2 py-6 grid grid-cols-3 divide-x divide-gray-100">
-                                {[{ v: '8+', l: 'Modules' }, { v: '20+', l: 'Tools' }, { v: 'Max 10', l: 'Students' }].map((s, i) => (
-                                    <div key={i} className="flex flex-col items-center">
-                                        <span className="font-black text-2xl text-[#0f172a] leading-none mb-1">{s.v}</span>
-                                        <span className="font-bold text-[10px] text-[#2563eb] uppercase tracking-widest">{s.l}</span>
-                                    </div>
-                                ))}
+                               
                             </div>
 
                             {/* Course rows */}
@@ -181,7 +176,7 @@ export default function GAHeroSection() {
                         </div>
 
                         {/* Floating Badges */}
-                        <div className="absolute -bottom-6 -left-6 z-20 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-gray-100 float-anim-1">
+                        <div className="absolute -bottom-12 -left-25 z-20 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-gray-100 float-anim-1">
                             <div className="flex items-center gap-3">
                                 <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[#2563eb]">
                                     <ShieldCheck size={20} />
@@ -197,8 +192,8 @@ export default function GAHeroSection() {
                             <div className="flex items-center gap-3">
                                 <BarChart2 size={24} className="text-white" />
                                 <div>
-                                    <p className="font-bold text-sm text-white leading-tight">₹9,000 Only</p>
-                                    <p className="font-medium text-xs text-white/90">Limited Seats</p>
+                                    <p className="font-bold text-sm text-white leading-tight">Limited Seats </p>
+                                    <p className="font-medium text-xs text-white/90">Only</p>
                                 </div>
                             </div>
                         </div>
@@ -213,7 +208,7 @@ export default function GAHeroSection() {
                         { icon: <Globe size={20} />, title: "Andheri & Borivali", sub: "On-Campus Training" },
                         { icon: <TrendingUp size={20} />, title: "GA4 Training", sub: "Data & Analytics Focus" },
                         { icon: <ShieldCheck size={20} />, title: "Google Certification", sub: "Industry Recognised" },
-                        { icon: <Users size={20} />, title: "Max 10 Students", sub: "Personalised Batches" },
+                        { icon: <Users size={20} />, title: "Max 12 Students", sub: "Personalised Batches" },
                     ].map((s, i) => (
                         <div key={i} className="flex items-center gap-4 flex-1 min-w-[200px]">
                             <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white backdrop-blur-sm">
