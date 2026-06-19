@@ -107,7 +107,7 @@ export default function ContactHero() {
       );
 
       // Also save to CRM database (non-blocking)
-      axios.post("https://www.operatingmedia.org/api/brochure/create/", templateParams).catch((err) => {
+      axios.post("https://www.operatingmedia.org/api/contact-enquiry/create/", templateParams).catch((err) => {
         console.error("CRM save failed:", err);
       });
 
