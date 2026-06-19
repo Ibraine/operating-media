@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, MapPin, Mail, Phone, Clock, User, ChevronDown, ArrowRight } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import axios from "axios";
 
 // ── YOUR EMAILJS CREDENTIALS ──
 const EMAILJS_SERVICE_ID = "service_h6tdnuh";   // ← replace
@@ -104,6 +105,11 @@ export default function ContactHero() {
         templateParams,
         EMAILJS_PUBLIC_KEY
       );
+
+      // Also save to CRM database (non-blocking)
+      axios.post("https://www.operatingmedia.org/api/brochure/create/", templateParams).catch((err) => {
+        console.error("CRM save failed:", err);
+      });
 
       setSent(true);
       setTimeout(() => setSent(false), 3000);

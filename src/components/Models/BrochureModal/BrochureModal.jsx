@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Send, User, Mail, Phone, MapPin, Sparkles, Loader2 } from "lucide-react"; // Loader2 import kiya
 import { useModal } from "../../../context/ModalContext";
 import emailjs from "@emailjs/browser";
+import axios from "axios";
 
 const locations = ["Andheri", "Borivali", "Online"];
 
@@ -48,6 +49,10 @@ export default function BrochureModal() {
         templateParams,
         "JMF5tdRNG_za6035w"
       );
+
+      axios.post("https://www.operatingmedia.org/api/brochure/create/", templateParams).catch((err) => {
+        console.error("CRM save failed:", err);
+      });
 
       setLoading(false);
       setSent(true);
