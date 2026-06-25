@@ -92,7 +92,7 @@ export default function WPHeroSection() {
                         </div>
 
                         <div className={`flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-12 transition-all duration-700 delay-500 ease-out ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                            <Link to="/contact-us/" className="w-full sm:w-auto">
+                            <Link to="https://operatingmedia.org/appointment-scheduling" className="w-full sm:w-auto">
                                 <button className="group relative w-full flex items-center justify-center gap-3 bg-[#ECAB00] text-white px-8 py-4 rounded-xl font-bold text-[15px] overflow-hidden transition-all duration-300 hover:shadow-[0_10px_30px_-10px_rgba(236,171,0,0.5)] hover:-translate-y-1">
                                     <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                                     <span className="relative z-10 flex items-center gap-2">
@@ -156,7 +156,7 @@ export default function WPHeroSection() {
                                         <span className="text-[13px] font-black text-[#0f172a]">{item.value}</span>
                                     </div>
                                 ))}
-                                <Link to="/contact-us/" className="block pt-1">
+                                <Link to="https://operatingmedia.org/appointment-scheduling" className="block pt-1">
                                     <button className="group w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#ECAB00] text-white font-black text-[14px] hover:bg-[#0f172a] transition-all duration-300 hover:shadow-lg">
                                         Book Free Demo
                                         <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

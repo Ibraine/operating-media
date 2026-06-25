@@ -160,7 +160,7 @@ function CourseCard({ course, inView, index }) {
         {/* ── Buttons Section: Fixed side-by-side grid ── */}
         <div className="grid grid-cols-2 gap-3 w-full mt-auto">
           {/* Primary Button */}
-          <a href="/contact-us/" className="w-full">
+          <a href="https://operatingmedia.org/appointment-scheduling" className="w-full">
             <button className="w-full flex items-center justify-center gap-1.5 py-3.5 px-2 rounded-xl bg-[#FFB800] hover:bg-[#F5A500] text-gray-900 font-black text-[12px] xl:text-[13px] transition-all duration-300 active:scale-95 shadow-sm">
               <span className="whitespace-nowrap">Book Free Demo</span>
               <ArrowRight />
