@@ -200,7 +200,14 @@ export default function ContactHero() {
                   <input
                     type="tel"
                     placeholder="Phone Number"
-                    onChange={(e) => phoneRef.current = e.target.value}
+                    maxLength={10}
+                    pattern="[0-9]{10}"
+                    title="Enter a valid 10-digit mobile number"
+                    onChange={(e) => {
+                      const digits = e.target.value.replace(/\D/g, "").slice(0, 10);
+                      e.target.value = digits;
+                      phoneRef.current = digits;
+                    }}
                     className="w-full bg-transparent py-4 px-4 text-[15px] text-white placeholder-gray-500 outline-none"
                     required
                   />
