@@ -254,7 +254,7 @@ export default function InfoSection() {
                     </div>
 
                     <div className="w-full sm:w-auto">
-                      <a href="/contact-us/">
+                      <a href="https://operatingmedia.org/appointment-scheduling">
                       <button className="group relative w-full sm:w-auto flex items-center justify-center gap-2 px-8 h-[54px] rounded-xl font-bold text-[15px] text-[#0A0F1C] bg-[#ecab00] hover:bg-[#d99c00] shadow-[0_10px_30px_-10px_rgba(236,171,0,0.5)] active:scale-95 transition-all duration-300 overflow-hidden">
                         <span className="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-shine" />
                         <span className="relative z-10">Book Free Demo Class</span>

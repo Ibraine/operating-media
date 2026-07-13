@@ -206,7 +206,7 @@ export default function AboutSectionPremium() {
                   <span className="relative z-10 text-[#0f172a] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><IconArrow /></span>
                 </button>
               </a>
-              <a href="/contact-us/">
+              <a href="https://operatingmedia.org/appointment-scheduling">
                 <button className="group w-full sm:w-auto h-[56px] px-8 rounded-2xl bg-white border-2 border-gray-200 text-[#0f172a] font-bold text-[16px] hover:border-[#ecab00] hover:bg-[#ecab00]/5 transition-all active:scale-[0.98] flex items-center justify-center gap-3 shadow-sm">
                   Book Free Demo Class
                 </button>

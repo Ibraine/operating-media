@@ -76,7 +76,7 @@ export default function HeroUltra() {
 
           {/* Buttons */}
           <div className={`flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto transition-all duration-700 delay-600 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-            <a href="/contact-us/">
+            <a href="https://operatingmedia.org/appointment-scheduling">
               <button className="group relative w-full sm:w-auto bg-[#ECAB00] text-white px-8 py-4 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:shadow-[0_10px_30px_-10px_#ECAB00] hover:-translate-y-1 active:scale-95">
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                 <span className="relative z-10 flex items-center justify-center gap-2">

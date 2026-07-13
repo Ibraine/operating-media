@@ -170,7 +170,7 @@ function TrainersHero() {
                         </p>
 
                         <div className={`flex flex-col sm:flex-row gap-4 mb-10 transition-all duration-700 delay-500 ease-out ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                            <Link to="/contact-us/">
+                            <Link to="https://operatingmedia.org/appointment-scheduling">
                                 <button className="group relative flex items-center gap-3 bg-[#ECAB00] text-white px-8 py-4 rounded-xl font-bold text-[15px] overflow-hidden transition-all duration-300 hover:shadow-[0_10px_30px_-10px_rgba(236,171,0,0.5)] hover:-translate-y-1">
                                     <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                                     <span className="relative z-10 flex items-center gap-2">
@@ -444,7 +444,7 @@ function WhyOurTrainers() {
                             </p>
                         </div>
 
-                        <Link to="/contact-us/">
+                        <Link to="https://operatingmedia.org/appointment-scheduling">
                             <button className="group flex items-center gap-2 bg-[#0f172a] text-white px-8 py-4 rounded-xl font-bold text-[15px] hover:bg-[#ECAB00] hover:text-[#0f172a] transition-all duration-300 shadow-md hover:shadow-[0_10px_20px_-10px_rgba(236,171,0,0.5)]">
                                 Book Free Demo
                                 <ArrowRight size={18} className="group-hover:translate-x-1.5 transition-transform" />
@@ -510,7 +510,7 @@ function TrainersCTA() {
                     </div>
 
                     <div className="relative z-10 shrink-0">
-                        <Link to="/contact-us/">
+                        <Link to="https://operatingmedia.org/appointment-scheduling">
                             <button className="flex items-center gap-2 bg-[#ECAB00] hover:bg-white text-[#0f172a] font-black text-[15px] px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_10px_20px_-10px_rgba(236,171,0,0.5)] active:scale-95 group">
                                 Book Free Demo Class
                                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

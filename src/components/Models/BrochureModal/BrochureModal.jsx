@@ -20,11 +20,19 @@ export default function BrochureModal() {
     setMounted(true);
   }, []);
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    if (e.target.name === "phone") {
+      const digits = e.target.value.replace(/\D/g, "").slice(0, 10);
+      setForm({ ...form, phone: digits });
+    } else {
+      setForm({ ...form, [e.target.name]: e.target.value });
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (loading || !form.name || !form.email || !form.phone || !form.location) return;
+    if (form.phone.length !== 10) return;
 
     setLoading(true); // Process shuru hone par loading on
 
@@ -125,7 +133,7 @@ export default function BrochureModal() {
                 </div>
                 <div className={inputWrapperCls}>
                   <Phone size={18} className={iconCls} />
-                  <input type="tel" name="phone" placeholder="Phone Number" value={form.phone} onChange={handleChange} className={inputCls} required />
+                  <input type="tel" name="phone" placeholder="Phone Number" value={form.phone} onChange={handleChange} maxLength={10} pattern="[0-9]{10}" title="Enter a valid 10-digit mobile number" className={inputCls} required />
                 </div>
                 <div className={inputWrapperCls}>
                   <MapPin size={18} className={iconCls} />
