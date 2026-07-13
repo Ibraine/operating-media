@@ -251,11 +251,19 @@ const Footer = () => {
       </div>
 
       {/* ── COPYRIGHT BAR ── */}
-      <div className="w-full border-t border-white/10 py-6 text-center relative z-10">
-        <p className="text-gray-400 text-[14px]">
-          Operating Media©2026. All Rights
-        </p>
+      <div className="w-full border-t border-white/10 py-6 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-gray-400 text-[14px]">
+            Operating Media©2026. All Rights Reserved.
+          </p>
+          <div className="flex items-center gap-6 text-[14px]">
+            <Link to="/terms-and-conditions/" className="text-gray-400 hover:text-[#ECAB00] transition-colors no-underline">
+              Terms & Conditions
+            </Link>
+          </div>
+        </div>
       </div>
+
 
     </footer>
   );

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { CheckCircle2, ArrowRight, Users, Briefcase, Star, Building2 } from 'lucide-react';
+
 
 const perks = [
   "Hands-on Experience on all Topics",
@@ -214,8 +216,9 @@ export default function HireFromUsSection() {
                   <input type="checkbox" name="agree" checked={form.agree} onChange={handle} required
                     className="mt-1 w-4 h-4 shrink-0 accent-[#2563eb] cursor-pointer" />
                   <span className="font-medium text-[13px] text-gray-500 leading-relaxed group-hover:text-gray-700 transition-colors">
-                    I agree to Operating Media's <span className="text-[#2563eb] underline">Terms and Conditions</span> and <span className="text-[#2563eb] underline">Privacy Policy</span>.
+                    I agree to Operating Media's <Link to="/terms-and-conditions/" className="text-[#2563eb] underline">Terms and Conditions</Link> and <span className="text-[#2563eb] underline">Privacy Policy</span>.
                   </span>
+
                 </label>
 
                 <button type="submit"

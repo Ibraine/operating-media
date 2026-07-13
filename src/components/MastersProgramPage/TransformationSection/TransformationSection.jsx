@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import {
   MapPin, Calendar, Users, ArrowUpRight, ArrowRight,
   X, CheckCircle, Sparkles, Zap, Trophy, Star, Target
 } from 'lucide-react';
+
 
 // ── DATA (outside component — pure data, no JSX) ─────────────────────────────
 
@@ -298,8 +300,9 @@ function BookDemoModal({ isOpen, onClose }) {
                 </button>
 
                 <p className="text-[12px] font-medium text-gray-500 text-center leading-relaxed mt-4">
-                  By continuing you agree to Operating Media&apos;s <span className="underline cursor-pointer hover:text-[#0f172a]">Terms</span> and <span className="underline cursor-pointer hover:text-[#0f172a]">Privacy Policy</span>.
+                  By continuing you agree to Operating Media&apos;s <Link to="/terms-and-conditions/" className="underline cursor-pointer hover:text-[#0f172a]">Terms</Link> and <span className="underline cursor-pointer hover:text-[#0f172a]">Privacy Policy</span>.
                 </p>
+
               </div>
             </div>
           </motion.div>
