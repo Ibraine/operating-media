@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Send, User, Mail, Phone, MapPin, Sparkles, Loader2 } from "lucide-react"; // Loader2 import kiya
+import { X, Send, User, Mail, Phone, MapPin, Loader2 } from "lucide-react";
 import { useModal } from "../../../context/ModalContext";
 import emailjs from "@emailjs/browser";
 import axios from "axios";
@@ -10,15 +11,9 @@ const locations = ["Andheri", "Borivali", "Online"];
 
 export default function BrochureModal() {
   const { isBrochureModalOpen, closeBrochureModal } = useModal();
-  const [mounted, setMounted] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "", location: "" });
   const [sent, setSent] = useState(false);
-  const [loading, setLoading] = useState(false); // Loading state add kiya
-  const [isHovered, setIsHovered] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     if (e.target.name === "phone") {
@@ -64,6 +59,14 @@ export default function BrochureModal() {
 
       setLoading(false);
       setSent(true);
+
+      // Open brochure PDF in new tab
+      window.open(
+        "/images/operating-media-ai-powered-digital-marketing-course-brochure.pdf",
+        "_blank",
+        "noopener,noreferrer"
+      );
+
       setTimeout(() => {
         setSent(false);
         closeBrochureModal();
@@ -75,8 +78,6 @@ export default function BrochureModal() {
       setLoading(false); // Error aane par loading off
     }
   };
-
-  if (!mounted) return null;
 
   const inputWrapperCls = "relative group";
   const iconCls = "absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#ECAB00] transition-colors duration-300";
