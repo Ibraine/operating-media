@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   FileText, 
+  Clock,
   Briefcase, 
   AlertTriangle, 
   ShieldCheck, 
@@ -16,6 +18,7 @@ export default function TermsSection() {
 
   const sections = [
     { id: 'general', title: 'General Terms & Info', icon: FileText },
+    { id: 'course-duration', title: 'Course Duration & Validity', icon: Clock },
     { id: 'job-assistance', title: 'Job Assistance', icon: Briefcase },
     { id: 'refund-policy', title: 'Refund Policy', icon: AlertTriangle },
     { id: 'security', title: 'Security & Safety', icon: ShieldCheck },
@@ -138,6 +141,51 @@ export default function TermsSection() {
               </div>
             </motion.div>
 
+            {/* Course Duration & Validity */}
+            <motion.div 
+              id="course-duration"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)]"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 bg-amber-50 text-amber-600 rounded-2xl">
+                  <Clock size={24} />
+                </div>
+                <h2 className="font-black text-gray-900 text-[22px] md:text-[26px]">
+                  2. What happens if I exceed my course duration?
+                </h2>
+              </div>
+              <div className="space-y-4 text-gray-600 text-[15px] md:text-[16px] leading-[1.8] font-medium">
+                <p>
+                  Each course has a fixed validity period. Students are required to complete their course within the specified duration:
+                </p>
+
+                <div className="bg-gray-50/50 p-6 rounded-2xl border border-gray-100/50 space-y-3">
+                  <ul className="space-y-3">
+                    <li className="flex items-center justify-between pb-2 border-b border-gray-200/60">
+                      <span className="font-semibold text-gray-800">Diploma</span>
+                      <span className="px-3 py-1 bg-amber-50 text-amber-700 font-bold rounded-lg text-[14px]">4 Months</span>
+                    </li>
+                    <li className="flex items-center justify-between py-2 border-b border-gray-200/60">
+                      <span className="font-semibold text-gray-800">Advanced Diploma</span>
+                      <span className="px-3 py-1 bg-amber-50 text-amber-700 font-bold rounded-lg text-[14px]">6 Months</span>
+                    </li>
+                    <li className="flex items-center justify-between pt-2">
+                      <span className="font-semibold text-gray-800">Masters</span>
+                      <span className="px-3 py-1 bg-amber-50 text-amber-700 font-bold rounded-lg text-[14px]">1 Year</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <p>
+                  If a student does not complete the course within the applicable duration, the course will expire (lapse) after the validity period ends, and access to the course/program may no longer be available.
+                </p>
+              </div>
+            </motion.div>
+
             {/* Job Assistance */}
             <motion.div 
               id="job-assistance"
@@ -148,11 +196,11 @@ export default function TermsSection() {
               className="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)]"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-amber-50 text-amber-600 rounded-2xl">
+                <div className="p-3 bg-blue-50 text-blue-600 rounded-2xl">
                   <Briefcase size={24} />
                 </div>
                 <h2 className="font-black text-gray-900 text-[22px] md:text-[26px]">
-                  2. Job Assistance
+                  3. Job Assistance
                 </h2>
               </div>
               <div className="space-y-6 text-gray-600 text-[15px] md:text-[16px] leading-[1.8] font-medium">
@@ -201,7 +249,7 @@ export default function TermsSection() {
                   <AlertTriangle size={24} />
                 </div>
                 <h2 className="font-black text-gray-900 text-[22px] md:text-[26px]">
-                  3. Refund Policy (No Refund)
+                  4. Refund Policy (No Refund)
                 </h2>
               </div>
               <div className="space-y-4 text-gray-600 text-[15px] md:text-[16px] leading-[1.8] font-medium">
@@ -234,7 +282,7 @@ export default function TermsSection() {
                   <ShieldCheck size={24} />
                 </div>
                 <h2 className="font-black text-gray-900 text-[22px] md:text-[26px]">
-                  4. Security
+                  5. Security
                 </h2>
               </div>
               <div className="space-y-4 text-gray-600 text-[15px] md:text-[16px] leading-[1.8] font-medium">
@@ -264,7 +312,7 @@ export default function TermsSection() {
                   <UserCheck size={24} />
                 </div>
                 <h2 className="font-black text-gray-900 text-[22px] md:text-[26px]">
-                  5. Contact Form
+                  6. Contact Form
                 </h2>
               </div>
               <div className="space-y-4 text-gray-600 text-[15px] md:text-[16px] leading-[1.8] font-medium">
@@ -291,7 +339,7 @@ export default function TermsSection() {
                   <Link2 size={24} />
                 </div>
                 <h2 className="font-black text-gray-900 text-[22px] md:text-[26px]">
-                  6. Links
+                  7. Links
                 </h2>
               </div>
               <div className="space-y-4 text-gray-600 text-[15px] md:text-[16px] leading-[1.8] font-medium">
@@ -318,7 +366,7 @@ export default function TermsSection() {
                   <RefreshCw size={24} />
                 </div>
                 <h2 className="font-black text-gray-900 text-[22px] md:text-[26px]">
-                  7. Changes in Terms & Conditions
+                  8. Changes in Terms & Conditions
                 </h2>
               </div>
               <div className="space-y-4 text-gray-600 text-[15px] md:text-[16px] leading-[1.8] font-medium">
