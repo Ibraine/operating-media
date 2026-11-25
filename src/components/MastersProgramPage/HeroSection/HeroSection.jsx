@@ -179,7 +179,7 @@ export default function HeroSection() {
             { icon: <Globe size={20} />, title: "Andheri & Borivali", sub: "On-Campus Training" },
             { icon: <Zap size={20} />, title: "AI-Powered", sub: "ChatGPT & Midjourney" },
             { icon: <ShieldCheck size={20} />, title: "100% Placement", sub: "Dedicated Job Support" },
-            { icon: <Users size={20} />, title: "Small Batches", sub: "Only 12 Students/Batch" },
+            { icon: <Users size={20} />, title: "Small Batches", sub: "Max 12 Students/Batch" },
           ].map((s, i) => (
             <div key={i} className="flex items-center gap-4 flex-1 min-w-[200px]">
               <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white backdrop-blur-sm">

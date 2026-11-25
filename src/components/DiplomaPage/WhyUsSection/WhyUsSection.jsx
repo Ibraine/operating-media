@@ -29,7 +29,7 @@ const FEATURES = [
     {
         Icon: Zap,
         title: 'Small Personalized Batches',
-        desc: 'Maximum 10 students per batch ensures focused, one-on-one attention from expert trainers throughout the program.',
+        desc: 'Maximum 12 students per batch ensures focused, one-on-one attention from expert trainers throughout the program.',
     },
     {
         Icon: CreditCard,

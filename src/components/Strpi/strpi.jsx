@@ -30,7 +30,7 @@ export default function CompactInstituteStats() {
   }, []);
 
   const featuresData = [
-    { icon: "🎯", title: "Micro Batches", desc: "10-12 Students for personal attention" },
+    { icon: "🎯", title: "Micro Batches", desc: "Max 12 Students for personal attention" },
     { icon: "🧠", title: "Expert Trainers", desc: "12+ Yrs Exp. Learn real job skills" },
     { icon: "🛠", title: "100% Practical", desc: "No theory overload, only execution" },
     { icon: "📈", title: "Placement Help", desc: "Resume & mock interviews included" },

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const whyPoints = [
     "Trusted Institute since 2011",
     "Trained over 16,000 students",
-    "Personalized Batches of around 10 students",
+    "Personalized Batches of Max 12 Students",
     "Cover up sessions for missed lectures",
     "Flexible Timings",
     "Weekdays and Weekend Batch",

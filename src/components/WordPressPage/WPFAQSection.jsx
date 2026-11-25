@@ -37,7 +37,7 @@ const faqs = [
     },
     {
         q: "What is the batch size and fee?",
-        a: "Batches are limited to a maximum of 10 students to ensure personalised attention. The course fee is ₹9,000. Flexible EMI options are also available — speak to our counselors for details.",
+        a: "Batches are limited to a maximum of 12 students to ensure personalized attention. The course fee is ₹9,000. Flexible EMI options are also available — speak to our counselors for details.",
     },
     {
         q: "Where are the training centers located?",

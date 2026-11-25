@@ -37,7 +37,7 @@ const faqs = [
     },
     {
         q: "What is the batch size?",
-        a: "We keep Diploma batches to a maximum of 10 students to ensure every student receives personalized attention, hands-on practice time, and a genuine learning environment without distractions.",
+        a: "We keep Diploma batches to a maximum of 12 students to ensure every student receives personalized attention, hands-on practice time, and a genuine learning environment without distractions.",
     },
     {
         q: "Are there any EMI options available?",

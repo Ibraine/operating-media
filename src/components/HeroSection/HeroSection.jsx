@@ -63,7 +63,7 @@ export default function HeroUltra() {
           </h1>
 
           <p className={`text-[16px] sm:text-[18px] text-gray-600 font-medium leading-relaxed max-w-[480px] mb-10 transition-all duration-700 delay-500 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-            With Mumbai's Most Personalized Training (Only 10–12 Students per Batch) <br />
+            With Mumbai's Most Personalized Training (Max 12 Students per Batch) <br />
             ✔ 100% Practical Training on Live Projects <br />
             ✔ 1:1 Mentorship with Industry Experts <br />
             ✔ 100% Placement Assistance <br />
