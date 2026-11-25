@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 import { FileDown, GraduationCap, ArrowRight } from 'lucide-react';
 
 const placementData = [
-  { name: "Shekhar Singh", role: "Social Media Marketing", photo: "/images/Shekhar-Singh-1-1.webp", companyLogo: "/images/Group-802-1.webp" },
-  { name: "Shahnawaaz Khan", role: "Ads Operation", photo: "/images/Shahnawaaz-Khan.webp", companyLogo: "/images/Hotstar_logo.svg.webp" },
-  { name: "Ashish Yadav", role: "E-commerce Executive", photo: "/images/Group-803.webp", companyLogo: "/images/Lumina-Datamatics-Logo-with-TradeMark-and-Registered-Mark-1-1.webp" },
-  { name: "Amruta Singh", role: "SEO Executive", photo: "/images/Amruta-Singh.webp", companyLogo: "/images/Untitled-design-77-Photoroom-1.webp" },
-  { name: "Bhavini Dave", role: "Social Media Marketing", photo: "/images/Bhavini.webp", companyLogo: "/images/Ibraine-Registered-Logo-Transparent-2.webp" },
-  { name: "Tisha Soni", role: "Social Media Marketing", photo: "/images/Tisha-Soni-2.webp", companyLogo: "/images/Group-802-1.webp" },
-  { name: "Akansha Singh", role: "SEO Executive", photo: "/images/Akansha-Singh.webp", companyLogo: "/images/qtq_95.webp" },
-  { name: "Sakina Shaikh", role: "Digital Marketing Intern", photo: "/images/Sakeena.webp", companyLogo: "/images/webisdom-black.webp" },
-  { name: "Aryan Pote", role: "Social Media Executive", photo: "/images/Aryan-Pote.webp", companyLogo: "/images/Ibraine-Registered-Logo-Transparent-2.webp" },
+  { name: "Shekhar Singh", role: "Social Media Marketing", company: "Nimap Infotech", photo: "/images/Shekhar-Singh-1-1.webp", companyLogo: "/images/Group-802-1.webp" },
+  { name: "Shahnawaaz Khan", role: "Ads Operation", company: "Disney+ Hotstar", photo: "/images/Shahnawaaz-Khan.webp", companyLogo: "/images/Hotstar_logo.svg.webp" },
+  { name: "Ashish Yadav", role: "E-commerce Executive", company: "Lumina Datamatics", photo: "/images/Group-803.webp", companyLogo: "/images/Lumina-Datamatics-Logo-with-TradeMark-and-Registered-Mark-1-1.webp" },
+  { name: "Amruta Singh", role: "SEO Executive", company: "The Creator", photo: "/images/Amruta-Singh.webp", companyLogo: "/images/Untitled-design-77-Photoroom-1.webp" },
+  { name: "Bhavini Dave", role: "Social Media Marketing", company: "Ibraine", photo: "/images/Bhavini.webp", companyLogo: "/images/Ibraine-Registered-Logo-Transparent-2.webp" },
+  { name: "Tisha Soni", role: "Social Media Marketing", company: "Nimap Infotech", photo: "/images/Tisha-Soni-2.webp", companyLogo: "/images/Group-802-1.webp" },
+  { name: "Akansha Singh", role: "SEO Executive", company: "Vidalife", photo: "/images/Akansha-Singh.webp", companyLogo: "/images/qtq_95.webp" },
+  { name: "Sakina Shaikh", role: "Digital Marketing Intern", company: "Webisdom", photo: "/images/Sakeena.webp", companyLogo: "/images/webisdom-black.webp" },
+  { name: "Aryan Pote", role: "Social Media Executive", company: "Ibraine", photo: "/images/Aryan-Pote.webp", companyLogo: "/images/Ibraine-Registered-Logo-Transparent-2.webp" },
 ];
 
 // Doubled to ensure seamless infinite marquee scrolling
@@ -47,14 +47,21 @@ const StudentCard = ({ item }) => (
         <span className="text-[11px] uppercase tracking-widest text-gray-400 font-bold mt-1 inline-block">at</span>
       </p>
 
-      {/* Company Logo */}
+      {/* Company Logo & Fallback Label */}
       <div className="mt-4 h-12 flex items-center justify-center w-full">
         <img
           src={item.companyLogo}
-          alt={`${item.name} Placement Partner`}
+          alt={`${item.company} Logo`}
           loading="lazy"
+          onError={(e) => {
+            e.currentTarget.style.display = 'none';
+            e.currentTarget.nextElementSibling?.classList.remove('hidden');
+          }}
           className="max-h-8 md:max-h-9 max-w-[130px] object-contain opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
         />
+        <span className="hidden font-bold text-sm text-[#0f172a] group-hover:text-[#ecab00] transition-colors">
+          {item.company}
+        </span>
       </div>
     </div>
   </div>
