@@ -36,7 +36,7 @@ export default function CourseSelection() {
              Lead the Future of Digital Business
             </h3>
             <p className="text-gray-300 font-medium text-[15px] mb-5 pb-5 border-b border-white/10">
-              Learning Duration: 8 Months
+              Learning Duration: 7 Months
             </p>
 
             {/* List */}

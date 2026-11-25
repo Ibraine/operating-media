@@ -36,7 +36,7 @@ const PROGRAMS = [
 ];
 
 const ROWS = [
-    { label: 'Duration', values: ['2 Months', '4 Months', '8 Months'] },
+    { label: 'Duration', values: ['2 Months', '4 Months', '7 Months'] },
     { label: 'Learning Hours', values: ['80 Hours', '110 Hours', '200 Hours'] },
     { label: 'Core Modules', values: ['12 Modules', '28 Modules', '45 Modules'] },
     {

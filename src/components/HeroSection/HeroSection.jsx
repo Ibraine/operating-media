@@ -55,7 +55,7 @@ export default function HeroUltra() {
             <div className="overflow-hidden pb-1">
               <div className={`transition-all duration-700 delay-400 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[100%]'}`}>
                 <span className="relative inline-block text-[#2563eb]">
-                  4–8 Months
+                  4–7 Months
                   <span className={`absolute -bottom-2 left-0 h-[6px] bg-[#ECAB00] rounded-full transition-all duration-1000 delay-700 ease-out ${mounted ? 'w-full' : 'w-0'}`} />
                 </span>
               </div>

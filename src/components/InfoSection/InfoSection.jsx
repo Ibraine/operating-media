@@ -12,7 +12,7 @@ const PROGRAMS = [
     icon: "🎓",
     label: "Master's in Digital Marketing",
     badge: "Master's",
-    duration: "8 Months",
+    duration: "7 Months",
     students: "16000+",
     level: "15+",
     desc: "Don’t just watch videos. Manage REAL money on Google & Meta Ads. The only course in Mumbai where we fund your ad campaigns for practical learning.",

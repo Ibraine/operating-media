@@ -135,7 +135,7 @@ export default function HeroSection() {
 
               {/* Inside Card Stats */}
               <div className="px-2 py-6 grid grid-cols-3 divide-x divide-gray-100">
-                {[{ v: '8', l: 'Months' }, { v: '200+', l: 'Hours' }, { v: '120+', l: 'Tools' }].map((s, i) => (
+                {[{ v: '7', l: 'Months' }, { v: '200+', l: 'Hours' }, { v: '120+', l: 'Tools' }].map((s, i) => (
                   <div key={i} className="flex flex-col items-center">
                     <span className="font-black text-2xl text-[#0f172a] leading-none mb-1">{s.v}</span>
                     <span className="font-bold text-[10px] text-[#2563eb] uppercase tracking-widest">{s.l}</span>
