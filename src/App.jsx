@@ -1,11 +1,10 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'; // 
 import TopHeader from './components/TopHeader/TopHeader';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import BrochureModal from './components/Models/BrochureModal/BrochureModal';
-import LocationsSection from './components/LocationsSection/LocationsSection.jsx';
 import FloatingButtons from './components/FloatingButtons/FloatingButtons.jsx';
 
 import Homepage from './pages/Homepage/Homepage.jsx';
@@ -76,11 +75,11 @@ function App() {
         <Route path="/corporate-training/" element={<CorporateTraining />} />
         <Route path="/terms-and-conditions/" element={<TermsConditions />} />
 
-
-
+        {/* Redirects for legacy location URLs */}
+        <Route path="/digital-marketing-courses-in-:slug/" element={<Navigate to="/courses/masters-program-in-digital-marketing/" replace />} />
+        <Route path="/digital-marketing-courses-in-:slug" element={<Navigate to="/courses/masters-program-in-digital-marketing/" replace />} />
 
       </Routes>
-      {/* <LocationsSection /> */}
       <Footer />
       <FloatingButtons />
       <BrochureModal />
