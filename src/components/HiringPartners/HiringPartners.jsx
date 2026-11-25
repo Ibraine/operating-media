@@ -145,7 +145,7 @@ export default function HiringPartners() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#ecab00]/5 to-transparent opacity-50" />
               {[
                 { value: "250+", label: "Hiring Partners" },
-                { value: "16k+", label: "Alumni Placed" },
+                { value: "16k+", label: "Alumni" },
                 { value: "96%", label: "Placement Rate" },
               ].map((stat, idx) => (
                 <div key={stat.label} className={`relative z-10 flex flex-col text-center ${idx !== 2 ? 'sm:border-r border-gray-100 sm:pr-12' : ''}`}>
