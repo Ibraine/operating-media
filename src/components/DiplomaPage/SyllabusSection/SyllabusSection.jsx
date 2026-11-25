@@ -63,8 +63,8 @@ const modulesData = [
                 desc: "Google Ads basics, campaign structure, keyword research, ad copywriting, bidding strategies, quality score, campaign optimization, remarketing, budget management, and advanced SEM techniques.",
             },
             {
-                title: "Google Ads Campaign Optimisation",
-                desc: "Optimising live Google Ads campaigns — improving quality scores, refining keyword match types, setting up remarketing lists, using bid adjustments, and applying advanced techniques to lower cost-per-click and increase conversions.",
+                title: "Google Ads Campaign Optimization",
+                desc: "Optimizing live Google Ads campaigns — improving quality scores, refining keyword match types, setting up remarketing lists, using bid adjustments, and applying advanced techniques to lower cost-per-click and increase conversions.",
             },
         ],
     },
@@ -108,7 +108,7 @@ const modulesData = [
                 desc: "Combine data from Google Analytics 4, Search Console, Google Ads, and social platforms to build unified performance reports. Understand attribution models, interpret traffic sources, measure ROI across channels, and present insights to stakeholders.",
             },
             {
-                title: "Conversion Tracking & Optimisation",
+                title: "Conversion Tracking & Optimization",
                 desc: "Set up conversion tracking across Google Ads, Meta Ads, and GTM. Track leads, purchases, and micro-conversions. Use data to identify drop-off points, run A/B tests on landing pages, and continuously improve campaign performance.",
             },
         ],

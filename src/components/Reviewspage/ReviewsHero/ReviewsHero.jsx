@@ -12,7 +12,7 @@ const ReviewsHero = () => {
     },
     {
       id: 2,
-      quote: "Trainers at iBraine are very friendly and always ready to help.",
+      quote: "Trainers at Operating Media are very friendly and always ready to help.",
       image: "https://www.operatingmedia.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
     },
     {
@@ -53,13 +53,13 @@ const ReviewsHero = () => {
         <div className="lg:col-span-4 flex flex-col justify-center text-center lg:text-left pr-0 lg:pr-8">
           
           <h2 className="font-jakarta text-4xl md:text-[42px] font-extrabold text-slate-900 leading-[1.1] tracking-tight mb-6">
-            iBraine Reviews: <br />
+            Operating Media Reviews: <br />
             Real <span className="text-blue-800">Success <br/> Stories</span>
           </h2>
 
           <p className="font-inter text-slate-500 text-[15px] leading-relaxed mb-10 max-w-md mx-auto lg:mx-0">
             Giving industry-relevant education in fun-filled classrooms is the vibe we aim for. 
-            Here's what our alumni have to say about their time at iBraine!
+            Here's what our alumni have to say about their time at Operating Media!
           </p>
 
           {/* Stats Row */}
@@ -104,7 +104,7 @@ const ReviewsHero = () => {
                 {/* Background Image */}
                 <img 
                   src={review.image} 
-                  alt="Alumni" 
+                  alt="Operating Media Alumni Testimonial" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 

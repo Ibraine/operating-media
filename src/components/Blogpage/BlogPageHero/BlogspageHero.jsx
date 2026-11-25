@@ -29,7 +29,7 @@ const BlogspageHero = () => {
             
             {/* THE HEADLINE: EXACT SPECS (Inter 32px 600w) */}
             <h1 className="font-inter font-semibold text-[32px] md:text-[52px] text-white leading-tight tracking-tight mb-10 max-w-2xl">
-              The iBraine Journal: Digital Resources, <br />
+              The Operating Media Journal: Digital Resources, <br />
               Interviews, and Industry News
             </h1>
 

@@ -97,7 +97,7 @@ const BlogListing = () => {
                     {/* Card Footer (Exact IIDE Match) */}
                     <div className="mt-auto pt-6 border-t border-black/5 flex items-center justify-between">
                       <div className="w-8 h-8 rounded-full bg-gray-100 grayscale flex-shrink-0">
-                         <img src="https://i.pravatar.cc/150?u=ibraine" className="rounded-full" alt="avatar" />
+                         <img src="https://i.pravatar.cc/150?u=ibraine" className="rounded-full" alt="Author avatar" />
                       </div>
                       <div className="flex items-center gap-2 text-black/40 font-inter font-medium text-[11px] uppercase tracking-tighter">
                         <Clock size={12} className="text-[#FF6B00]" />
