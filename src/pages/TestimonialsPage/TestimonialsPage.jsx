@@ -517,7 +517,7 @@ export default function TestimonialsPage() {
         <>
             <Helmet>
                 <title>Testimonials: See What Our Students Have to Say - Operating Media</title>
-                <meta name="description" content="With over 11000 students trained in digital marketing course, we have some wonderful experiences shared by our alumni." />
+                <meta name="description" content="With over 16,000+ students trained in digital marketing course, we have some wonderful experiences shared by our alumni." />
                 <meta name="keywords" content="digital marketing testimonials, operating media reviews, student success stories, digital marketing course reviews" />
                 <link rel="canonical" href="https://www.operatingmedia.com/testimonials/" />
             </Helmet>

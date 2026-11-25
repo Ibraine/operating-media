@@ -130,7 +130,7 @@ const AboutHero = () => {
                   className="flex items-center justify-center w-10 h-10 rounded-full bg-[#bef264] border-2 border-[#064e3b]"
                   style={{ fontFamily: SATOSHI, fontWeight: 700, fontSize: '10px', color: '#064e3b' }}
                 >
-                  +11K
+                  +16K
                 </div>
               </div>
             </motion.div>

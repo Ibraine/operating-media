@@ -9,7 +9,7 @@ const FEATURES = [
     {
         Icon: Users,
         title: 'Trusted Since 2011',
-        desc: 'Over 11,000 students trained across Andheri and Borivali — Mumbai\'s most experienced digital marketing institute.',
+        desc: 'Over 16,000+ students trained across Andheri and Borivali — Mumbai\'s most experienced digital marketing institute.',
     },
     {
         Icon: Wrench,

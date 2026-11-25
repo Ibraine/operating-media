@@ -35,7 +35,7 @@ const CounterValue = ({ value, isDecimal = false }) => {
 /* ── Data ── */
 const STATS = [
   {
-    num: 11000, suffix: "+",
+    num: 16000, suffix: "+",
     label: "Professionals", sub: "Trained",
     Icon: Users,
     color: "orange"

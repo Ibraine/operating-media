@@ -440,7 +440,7 @@ export default function AboutUs() {
 
                 <meta
                     name="description"
-                    content="Operating Media is a leading digital marketing institute in mumbai. Since its inception in 2011, it have trained over 11000 students."
+                    content="Operating Media is a leading digital marketing institute in mumbai. Since its inception in 2011, it have trained over 16,000+ students."
                 />
 
                 <meta

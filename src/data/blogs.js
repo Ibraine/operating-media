@@ -1702,7 +1702,7 @@ export const blogs = [
       <li><strong>Real Spends on Ads:</strong> Work on live ad campaigns with real ROI</li>
       <li><strong>Intimate Batch Sizes:</strong> Maximum 12 students for mentorship</li>
       <li><strong>35+ Modules:</strong> SEO, GA4, E-commerce, AI Marketing, and more</li>
-      <li><strong>100% Job Assistance:</strong> 200+ corporate placement partners</li>
+      <li><strong>100% Job Assistance:</strong> 250+ corporate placement partners</li>
       <li><strong>Industry Mentors:</strong> Learn from active professionals</li>
     </ul>
 
@@ -2293,7 +2293,7 @@ export const blogs = [
 
     <p>The professional world of 2026 does not promise stability; it only promises change. In such an environment, the only logical move is to invest in an asset that grows more valuable as the world becomes more digital.</p>
 
-    <p>Digital Marketing is that asset. It is the “Universal Language” of business, the “Revenue Engine” of the economy, and the “Safety Net” for your personal finances. Since 2011, Operating Media has helped over 11,000+ professionals write their own insurance policies. Whether you join us at our Andheri hub or our Borivali center, you are making an investment that will pay dividends for the rest of your life.</p>
+    <p>Digital Marketing is that asset. It is the “Universal Language” of business, the “Revenue Engine” of the economy, and the “Safety Net” for your personal finances. Since 2011, Operating Media has helped over 16,000+ professionals write their own insurance policies. Whether you join us at our Andheri hub or our Borivali center, you are making an investment that will pay dividends for the rest of your life.</p>
 
     <p><strong>The algorithm is changing. The economy is shifting. Is your career insured?</strong></p>
 
@@ -2677,7 +2677,7 @@ export const blogs = [
 
     <h2>5. Why Operating Media Is Mumbai’s Preferred Digital Marketing Institute</h2>
 
-    <p>Since 2011, we have trained over 11,000+ professionals. Our success is built on the “Simulated Agency Experience.” We don’t just show videos; we put you in the driver’s seat.</p>
+    <p>Since 2011, we have trained over 16,000+ professionals. Our success is built on the “Simulated Agency Experience.” We don’t just show videos; we put you in the driver’s seat.</p>
 
     <ul>
       <li><strong>Personalized Learning:</strong> Small batches ensure direct mentorship from industry experts.</li>

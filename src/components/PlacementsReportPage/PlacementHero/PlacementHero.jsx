@@ -208,7 +208,7 @@ export default function PlacementHero() {
               transition={{ duration: 0.5, delay: 0.8 }}
               className="absolute bottom-4 right-4 px-4 py-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20"
             >
-              <p className="text-white font-bold text-xl leading-none">500+</p>
+              <p className="text-white font-bold text-xl leading-none">250+</p>
               <p className="text-white/70 text-[11px] mt-0.5">Hiring Partners</p>
             </motion.div>
           </div>

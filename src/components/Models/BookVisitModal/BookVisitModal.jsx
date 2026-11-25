@@ -182,7 +182,7 @@ const BookVisitPage = () => {
       {/* 4. FOOTER STATS STRIP */}
       <div className="max-w-7xl mx-auto px-12 pb-24 grid grid-cols-2 md:grid-cols-4 gap-8">
          {[
-           { val: "11k+", label: "Successful Alumni" },
+           { val: "16k+", label: "Successful Alumni" },
            { val: "250+", label: "Hiring Partners" },
            { val: "14yrs", label: "Legacy in Mumbai" },
            { val: "93%", label: "Placement Rate" }
