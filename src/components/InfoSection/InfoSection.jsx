@@ -28,8 +28,8 @@ const PROGRAMS = [
   {
     id: "Advance",
     icon: "🏆",
-    label: "Advance in Digital Marketing",
-    badge: "Advance",
+    label: "Advanced Diploma in Digital Marketing",
+    badge: "Advanced Diploma",
     duration: "4 Months",
     students: "16000+",
     level: "15+",

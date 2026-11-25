@@ -250,7 +250,7 @@ export default function ContactHero() {
                 >
                   <option value="">Course Interested</option>
                   <option value="Master's Program in Digital Marketing">Master's Program in Digital Marketing</option>
-                  <option value="Advance Diploma in Digital Marketing">Advance Diploma in Digital Marketing</option>
+                  <option value="Advanced Diploma in Digital Marketing">Advanced Diploma in Digital Marketing</option>
                   <option value="Diploma in Digital Marketing">Diploma in Digital Marketing</option>
                   <option value="Others">Others</option>
                 </select>

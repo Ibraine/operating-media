@@ -67,7 +67,7 @@ const COURSES = [
     title: "Advanced Diploma in Digital Marketing",
     desc: "Best for: Skill upgrade, working professionals",
     image: "/images/advance-cource.png",
-    badgeText: "Advance Diploma",
+    badgeText: "Advanced Diploma",
 
     // Updated Tag Colors
     topStripBg: "bg-[#2563EB]",

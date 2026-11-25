@@ -27,7 +27,7 @@ const Footer = () => {
 
   const courses = [
     { label: "Master's in Digital Marketing", to: "/courses/masters-program-in-digital-marketing/" },
-    { label: "Advance Diploma in Digital Marketing", to: "/courses/advance-diploma-in-digital-marketing/" },
+    { label: "Advanced Diploma in Digital Marketing", to: "/courses/advance-diploma-in-digital-marketing/" },
     { label: "Diploma in Digital Marketing", to: "/courses/diploma-in-digital-marketing/" },
     { label: "Social Media Optimization", to: "/courses/social-media-optimization-courses/" },
     { label: "PPC Course", to: "/courses/pay-per-click-management-courses/" },

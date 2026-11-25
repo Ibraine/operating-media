@@ -55,7 +55,7 @@ const Navbar = () => {
         <div className="flex items-center gap-8">
 
           {/* BIGGER LOGO */}
-          <Link to="/"><img src="/images/OM-logo.png" className="h-14 md:h-16" /></Link>
+          <Link to="/"><img src="/images/OM-logo.png" alt="Operating Media - Digital Marketing Institute" className="h-14 md:h-16" /></Link>
 
           {/* PROGRAM BUTTON */}
           <div
@@ -80,7 +80,7 @@ const Navbar = () => {
                 >
                   {[
                     { label: "Master's Program in Digital Marketing", to: "/courses/masters-program-in-digital-marketing/" },
-                    { label: "Advance Diploma in Digital Marketing", to: "/courses/advance-diploma-in-digital-marketing/" },
+                    { label: "Advanced Diploma in Digital Marketing", to: "/courses/advance-diploma-in-digital-marketing/" },
                     { label: "Diploma in Digital Marketing", to: "/courses/diploma-in-digital-marketing/" },
                   ].map((item, i) => (
                     <Link key={i} to={item.to} className="block px-6 py-4 hover:bg-gray-50 cursor-pointer text-gray-800 no-underline">
@@ -254,7 +254,7 @@ const Navbar = () => {
               <MobileAccordion label="Programs" color="#ECAB00">
                 {[
                   { label: "Master's Program in Digital Marketing", to: "/courses/masters-program-in-digital-marketing/" },
-                  { label: "Advance Diploma in Digital Marketing", to: "/courses/advance-diploma-in-digital-marketing/" },
+                  { label: "Advanced Diploma in Digital Marketing", to: "/courses/advance-diploma-in-digital-marketing/" },
                   { label: "Diploma in Digital Marketing", to: "/courses/diploma-in-digital-marketing/" },
                 ].map((item, i) => (
                   <Link key={i} to={item.to} onClick={closeMobile} className="block px-3 py-2.5 text-sm text-gray-700 hover:text-[#ECAB00] hover:bg-gray-50 rounded-lg no-underline">
