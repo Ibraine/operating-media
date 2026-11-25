@@ -268,7 +268,7 @@ const Footer = () => {
       <div className="w-full border-t border-white/10 py-6 relative z-10">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-400 text-[14px]">
-            Operating Media©2026. All Rights Reserved.
+            Operating Media © {new Date().getFullYear()}. All Rights Reserved.
           </p>
 
         </div>
