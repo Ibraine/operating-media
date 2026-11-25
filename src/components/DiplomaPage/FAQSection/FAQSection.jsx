@@ -17,7 +17,7 @@ const faqs = [
     },
     {
         q: "How is the Diploma different from the Advanced Diploma?",
-        a: "The Diploma is a 2-month foundational program (65+ hours, 50+ tools) covering the core channels — ideal for beginners and those wanting a quick, focused entry into digital marketing. The Advanced Diploma is a 4-month fast-track (500+ hours, 70+ tools) that goes deeper into execution, AI automation, WhatsApp marketing, influencer marketing, and more.",
+        a: "The Diploma is a 2-month foundational program (80+ hours, 50+ tools) covering the core channels — ideal for beginners and those wanting a quick, focused entry into digital marketing. The Advanced Diploma is a 4-month fast-track (500+ hours, 70+ tools) that goes deeper into execution, AI automation, WhatsApp marketing, influencer marketing, and more.",
     },
     {
         q: "What tools will I learn during the course?",
