@@ -15,7 +15,7 @@ import {
 /* ── Animated Counter Logic ── */
 const CounterValue = ({ value, isDecimal = false }) => {
   const ref = useRef(null);
-  const motionValue = useMotionValue(0);
+  const motionValue = useMotionValue(value);
   const springValue = useSpring(motionValue, { damping: 50, stiffness: 80 });
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 

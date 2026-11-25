@@ -17,7 +17,7 @@ function useInView(threshold = 0.1) {
 
 // ── Animated Counter Hook ────────────────────────────────────
 function useCounter(target, duration = 2000, active = false) {
-  const [val, setVal] = useState(0);
+  const [val, setVal] = useState(target);
   useEffect(() => {
     if (!active) return;
     const n = parseFloat(String(target).replace(/[^0-9.]/g, ""));
