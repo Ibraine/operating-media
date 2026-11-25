@@ -49,7 +49,7 @@ const CHECKLIST = [
 
 const BATCH_STATS = [
     { target: 4, suffix: '', label: 'Months' },
-    { target: 180, suffix: '+', label: 'Hours' },
+    { target: 110, suffix: '+', label: 'Hours' },
     { target: 12, suffix: '', label: 'Students' },
 ];
 
