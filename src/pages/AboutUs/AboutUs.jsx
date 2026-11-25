@@ -361,7 +361,7 @@ function TrustedBrands() {
                         >
                             <img
                                 src={`https://www.operatingmedia.com/wp-content/uploads/2024/08/Group-${n}.png`}
-                                alt={`Brand ${n}`}
+                                alt={`Operating Media Placement Partner - Brand ${n}`}
                                 className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                                 onError={(e) => { e.currentTarget.parentElement.style.display = 'none'; }}
                             />

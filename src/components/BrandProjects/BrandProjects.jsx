@@ -92,13 +92,13 @@ const BrandProjects = () => {
                 whileHover={{ scale: 1.02 }}
                 className="relative h-[380px] rounded-[2.5rem] overflow-hidden group shadow-2xl cursor-pointer border border-white/10"
               >
-                <img src={item.image} className="w-full h-full object-cover grayscale-[0.2] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" alt="student" />
+                <img src={item.image} className="w-full h-full object-cover grayscale-[0.2] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" alt={`${item.student} - Operating Media Student`} />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
                 
                 {/* Brand Logo in Center */}
                 <div className="absolute inset-0 flex items-center justify-center">
                    <div className="bg-white p-6 rounded-3xl shadow-2xl transform group-hover:scale-110 transition-transform">
-                      <img src={item.brandLogo} className="h-10 w-24 object-contain" alt="brand" />
+                      <img src={item.brandLogo} className="h-10 w-24 object-contain" alt={`${item.brand} Logo`} />
                    </div>
                 </div>
 
@@ -118,7 +118,7 @@ const BrandProjects = () => {
                 {/* Mentor Info Row */}
                 <div className="flex items-center justify-between mb-6">
                    <div className="flex items-center gap-3">
-                      <img src={item.mentorPic} className="w-10 h-10 rounded-full border-2 border-slate-50" alt="mentor" />
+                      <img src={item.mentorPic} className="w-10 h-10 rounded-full border-2 border-slate-50" alt={`${item.mentor} - ${item.mentorRole}`} />
                       <div>
                          <h5 className="text-slate-900 font-black text-sm leading-none">{item.mentor}</h5>
                          <p className="text-slate-400 text-[9px] font-bold mt-1 uppercase tracking-tighter">{item.mentorRole}</p>
@@ -136,7 +136,7 @@ const BrandProjects = () => {
 
                 {/* Brand Pill at Bottom Center */}
                 <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-white px-6 py-3 rounded-2xl shadow-xl border border-slate-50 flex items-center justify-center">
-                   <img src={item.brandLogo} className="h-4 w-12 object-contain opacity-60" alt="brand pill" />
+                   <img src={item.brandLogo} className="h-4 w-12 object-contain opacity-60" alt={`${item.brand} Partner Logo`} />
                 </div>
               </motion.div>
 

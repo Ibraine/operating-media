@@ -51,7 +51,7 @@ const StudentCard = ({ item }) => (
       <div className="mt-4 h-12 flex items-center justify-center w-full">
         <img
           src={item.companyLogo}
-          alt="Company"
+          alt={`${item.name} Placement Partner`}
           loading="lazy"
           className="max-h-8 md:max-h-9 max-w-[130px] object-contain opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
         />

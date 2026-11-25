@@ -22,35 +22,35 @@ function FadeUp({ children, delay = 0, className = "" }) {
    LOGOS DATA
 ═══════════════════════════════════════════════════════════ */
 const ROW_1 = [
-  { name: "", url: "/icon/Group-190.webp" },
-  { name: "", url: "/icon/Group-191.webp" },
-  { name: "", url: "/icon/Group-192.webp" },
-  { name: "", url: "/icon/Group-193.webp" },
-  { name: "", url: "/icon/Group-197.webp" },
-  { name: "", url: "/icon/Group-198.webp" },
-  { name: "", url: "/icon/Group-179.webp" },
-  { name: "", url: "/icon/Group-180.webp" },
+  { name: "DigiChefs", url: "/icon/Group-190.webp" },
+  { name: "VSC", url: "/icon/Group-191.webp" },
+  { name: "Global Advertisers", url: "/icon/Group-192.webp" },
+  { name: "Disney+ Hotstar", url: "/icon/Group-193.webp" },
+  { name: "Bluebit Technologies", url: "/icon/Group-197.webp" },
+  { name: "NetSearch Digital", url: "/icon/Group-198.webp" },
+  { name: "Digi Baap", url: "/icon/Group-179.webp" },
+  { name: "HGS", url: "/icon/Group-180.webp" },
 ];
 
 const ROW_2 = [
-  { name: "", url: "/icon/Group-182.webp" },
-  { name: "", url: "/icon/Group-183.webp" },
-  { name: "", url: "/icon/Group-184.webp" },
-  { name: "", url: "/icon/Group-187.webp" },
-  { name: "", url: "/icon/Group-195.webp" },
-  { name: "", url: "/icon/Group-181.webp" },
-  { name: "", url: "/icon/Group-188.webp" },
+  { name: "Infidigit", url: "/icon/Group-182.webp" },
+  { name: "Accenture", url: "/icon/Group-183.webp" },
+  { name: "Excel Productions", url: "/icon/Group-184.webp" },
+  { name: "Jio Studios", url: "/icon/Group-187.webp" },
+  { name: "ReachLocal", url: "/icon/Group-195.webp" },
+  { name: "India Network", url: "/icon/Group-181.webp" },
+  { name: "Force Motors", url: "/icon/Group-188.webp" },
 ];
 
 const ROW_3 = [
-  { name: "", url: "/icon/Group-194.webp" },
-  { name: "", url: "/icon/Group-196.webp" },
-  { name: "", url: "/icon/Group-185.webp" },
-  { name: "", url: "/icon/Group-186.webp" },
-  { name: "", url: "/icon/Group-180.webp" },
-  { name: "", url: "/icon/Group-184.webp" },
-  { name: "", url: "/icon/Group-192.webp" },
-  { name: "", url: "/icon/Group-189.webp" },
+  { name: "FashionTV", url: "/icon/Group-194.webp" },
+  { name: "Coconut Media Box", url: "/icon/Group-196.webp" },
+  { name: "Publicis Groupe", url: "/icon/Group-185.webp" },
+  { name: "eBrandz", url: "/icon/Group-186.webp" },
+  { name: "HGS", url: "/icon/Group-180.webp" },
+  { name: "Excel Productions", url: "/icon/Group-184.webp" },
+  { name: "Global Advertisers", url: "/icon/Group-192.webp" },
+  { name: "Kamari", url: "/icon/Group-189.webp" },
 ];
 
 /* ═══════════════════════════════════════════════════════════
