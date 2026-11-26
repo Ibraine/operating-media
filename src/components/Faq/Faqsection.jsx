@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "How long do the courses take to complete?",
-    a: "Foundational courses take 2–3 months. MBA-level and Advanced Diploma programs range from 7 to 11 months depending on your pace.",
+    a: "Foundational courses take 2 months. MBA-level and Advanced Diploma programs range from 7 to 11 months depending on your pace.",
   },
   {
     q: "Are the courses available online?",

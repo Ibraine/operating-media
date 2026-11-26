@@ -70,7 +70,7 @@ const AdvanceDiploma = () => {
         <ProgramComparisonTable />
         <CounselorCTA />
         <WhyUsSection />
-        <ToolsTicker />
+        <ToolsTicker program="Advanced Diploma's" count="70+" />
         <TrainersSection />
         <StudentReviews />
         <CertificationSection />

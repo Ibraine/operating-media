@@ -11,7 +11,7 @@ const aiTools = [
   { name: "Presentations.ai", src: "/images/Group-216.webp" },
   { name: "PlayHT", src: "/images/Group-414.webp" },
   { name: "Bing", src: "/images/Group-415.webp" },
-  { name: "Bard", src: "/images/Group-418.webp" },
+  { name: "Claude", src: "/images/Group-418.webp" },
   { name: "Lumen5", src: "/images/Group-417.webp" },
   { name: "ChatGPT", src: "/images/Group-153.webp" },
   { name: "HeyGen", src: "images/Group-416.webp" },
@@ -37,7 +37,7 @@ const dmTools = [
   { name: "Freelancer", src: "/images/Group-127.webp" },
   { name: "Fiverr", src: "/images/Group-126.webp" },
   { name: "WebEngage", src: "/images/Group-124-1.webp" },
-  { name: "Oberlo", src: "/images/Group-133.webp" },
+  { name: "Shopify", src: "/images/Group-133.webp" },
   { name: "Elementor", src: "/images/Group-85-1.webp" },
   { name: "Photopea", src: "/images/Group-116.webp" },
   { name: "Adobe Express", src: "/images/Group-115.webp" },
@@ -75,7 +75,7 @@ const LogoCard = ({ tool }) => (
 );
 
 // ── MAIN EXPORT COMPONENT ──
-const ToolsTicker = () => {
+const ToolsTicker = ({ program = "Master's", count = "120+" }) => {
   return (
     <section className="relative w-full py-10 md:py-[40px] lg:py-[50px] bg-[#fcfaf2] font-['Satoshi',sans-serif] overflow-hidden">
       
@@ -101,8 +101,9 @@ const ToolsTicker = () => {
             </div>
 
             <h2 className="font-black text-[32px] md:text-[40px] lg:text-[46px] text-[#0f172a] leading-[1.1] tracking-tight mb-4">
-              Master's <span className="relative inline-block text-[#ECAB00]">
-                120+ Industry
+              {program}{' '}
+              <span className="relative inline-block text-[#ECAB00]">
+                {count} Industry
                 <svg className="absolute w-full h-[10px] -bottom-1 left-0 text-[#ECAB00]/50 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="transparent"/>
                 </svg>
