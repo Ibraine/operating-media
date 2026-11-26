@@ -34,7 +34,7 @@ const MastersProgram = () => {
       <Helmet>
 
         {/* ✅ Primary SEO */}
-        <title>Digital Marketing Masters Program - Operating Media</title>
+        <title>Master's in Digital Marketing with AI & Real Ad Spend | Operating Media</title>
 
         <meta
           name="description"

@@ -33,7 +33,7 @@ const Homepage = () => {
     <>
       <Helmet>
         {/* ✅ Primary SEO */}
-        <title>Digital Marketing Institute Mumbai, Digital Marketing Training & Courses Mumbai, SEO Training Institute, Courses & Classes Mumbai - Operating Media</title>
+        <title>Best Digital Marketing Institute in Mumbai | Operating Media</title>
 
         <meta
           name="description"
