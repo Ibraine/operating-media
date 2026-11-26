@@ -31,7 +31,7 @@ const AdvanceDiploma = () => {
       <Helmet>
 
         {/* ✅ Primary SEO */}
-        <title>Advanced Diploma in Digital Marketing | 4-Month Fast-Track Course | Operating Media</title>
+        <title>Advanced Diploma in Digital Marketing Course & Classes | Digital Marketing Training Institute Andheri | Digital Marketing Short Courses - Operating Media</title>
 
         <meta 
           name="description" 
