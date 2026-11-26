@@ -82,7 +82,7 @@ function Icon({ name, size = 16, className = '' }) {
 }
 
 function Counter({ target, suffix = '' }) {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(target);
     const ref = useRef(null);
     const inView = useInView(ref, { once: true });
 
